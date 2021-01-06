@@ -1,0 +1,45 @@
+3c4,6
+< Xavier prend 2allumettes.
+---
+> Combien prenez-vous d'allumettes ? Xavier prend 2 allumettes.
+> 
+> Nombre d'allumettes restantes : 11
+5c8,10
+< Ordinateur prend 2allumettes.
+---
+> Ordinateur prend 3 allumettes.
+> 
+> Nombre d'allumettes restantes : 8
+7,9c12,17
+< Xavier prend 1allumette.
+< Au tour de Ordinateur.
+< Ordinateur prend 1allumette.
+---
+> Combien prenez-vous d'allumettes ? Vous devez donner un entier.
+> Combien prenez-vous d'allumettes ? Xavier prend 5 allumettes.
+> Erreur ! Prise invalide : 5 (> 3)
+> Recommencez !
+> 
+> Nombre d'allumettes restantes : 8
+11c19,21
+< Xavier prend 1allumette.
+---
+> Combien prenez-vous d'allumettes ? Xavier prend 3 allumettes.
+> 
+> Nombre d'allumettes restantes : 5
+13,17c23,25
+< Ordinateur prend 2allumettes.
+< Au tour de Xavier.
+< Xavier prend 1allumette.
+< Au tour de Ordinateur.
+< Ordinateur prend 1allumette.
+---
+> Ordinateur prend 3 allumettes.
+> 
+> Nombre d'allumettes restantes : 2
+19c27,29
+< Xavier prend 1allumette.
+---
+> Combien prenez-vous d'allumettes ? Xavier prend 1 allumette.
+> 
+> Nombre d'allumettes restantes : 1

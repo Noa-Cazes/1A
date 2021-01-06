@@ -1,0 +1,35 @@
+package allumettes;
+//import java.util.Scanner.*;
+
+/** Stratégie qui consiste à demander au joueur ce qu'il veut jouer.
+ * 
+ * @author ncazes2
+ *
+ */
+public class StrategieHumaine implements Strategie {
+	
+	/** Demander à un joueur le nombre d'allumettes 
+	 * qu'il veut rétirer pour un jeu donné.
+	 * @param jeu le jeu donné
+	 * @return nbAllumettes le nombre d'allumettes que le joueur veut prendre
+	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'allumettes
+	 */
+	public int getPrise(Jeu jeu) {
+		
+		int nbAllumettesPrises;
+		int nbAllumettesEnJeu = jeu.getNombreAllumettes();
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Combien prenez-vous d'allumettes?");
+		nbAllumettesPrises = scanner.nextIn();
+		if (nbAllumettesPrises < 0) {
+			throw CoupInvalideException(nbAllumettesPrises, "< 0");
+		} else if (nbAllumettesPrises > 3) {
+			throw CoupInvalideException(nbAllumettesPrises, "> 3");
+		} else {
+			return nbAllumettesPrises; 
+		}
+		
+	}
+
+}

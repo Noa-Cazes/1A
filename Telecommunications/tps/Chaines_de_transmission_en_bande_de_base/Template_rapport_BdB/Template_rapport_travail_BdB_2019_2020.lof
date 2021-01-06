@@ -1,0 +1,41 @@
+\babel@toc {french}{}
+\contentsline {figure}{\numberline {1}{\ignorespaces Cha\IeC {\^\i }ne de transmission en bande de base}}{3}
+\contentsline {figure}{\numberline {2}{\ignorespaces Produit de convolution entre $h(t)$ et $h_r(t)$.}}{5}
+\contentsline {figure}{\numberline {3}{\ignorespaces Signal $z(t)$ en sortie du filtre de r\IeC {\'e}ception $h_r(t)$ pour $0110100$. }}{5}
+\contentsline {figure}{\numberline {4}{\ignorespaces Diagramme de l'oeil. }}{6}
+\contentsline {figure}{\numberline {5}{\ignorespaces DSP du signal transmis (cha\IeC {\^\i }ne 1). }}{9}
+\contentsline {figure}{\numberline {6}{\ignorespaces Signal en sortie du filtre de r\IeC {\'e}ception (4000 bits transmis). }}{9}
+\contentsline {figure}{\numberline {7}{\ignorespaces Signal en sortie du filtre de r\IeC {\'e}ception (100 bits transmis). }}{10}
+\contentsline {figure}{\numberline {8}{\ignorespaces Diagramme de l'oeil en sortie du filtre de r\IeC {\'e}ception. }}{10}
+\contentsline {figure}{\numberline {9}{\ignorespaces TEB obtenu en fonction de $\left (E_b/N_0\right )_{dB}$. }}{11}
+\contentsline {figure}{\numberline {10}{\ignorespaces TEB simul\IeC {\'e} et le TEB th\IeC {\'e}orique en fonction de $\left (E_b/N_0\right )_{dB}$. }}{11}
+\contentsline {figure}{\numberline {11}{\ignorespaces R\IeC {\'e}ponses impulsionnelles des filtres d'\IeC {\'e}mission et de r\IeC {\'e}ception.}}{12}
+\contentsline {figure}{\numberline {12}{\ignorespaces Produit de convolution entre $h(t)$ et $h_r(t)$.}}{12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Signal $z(t)$ en sortie du filtre de r\IeC {\'e}ception $h_r(t)$ pour $0110100$. }}{12}
+\contentsline {figure}{\numberline {14}{\ignorespaces Diagramme de l'oeil. }}{13}
+\contentsline {figure}{\numberline {15}{\ignorespaces Signal en sortie du filtre de r\IeC {\'e}ception (4000 bits transmis). }}{15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Signal en sortie du filtre de r\IeC {\'e}ception (100 bits transmis). }}{16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Diagramme de l'oeil en sortie du filtre de r\IeC {\'e}ception (cha\IeC {\^\i }ne 2). }}{16}
+\contentsline {figure}{\numberline {18}{\ignorespaces TEB obtenu en fonction de $\left (E_b/N_0\right )_{dB}$ (cha\IeC {\^\i }ne 2). }}{17}
+\contentsline {figure}{\numberline {19}{\ignorespaces TEB simul\IeC {\'e} et le TEB th\IeC {\'e}orique en fonction de $\left (E_b/N_0\right )_{dB}$. }}{18}
+\contentsline {figure}{\numberline {20}{\ignorespaces TEB simul\IeC {\'e} de la cha\IeC {\^\i }ne 2 et TEB simul\IeC {\'e} de la cha\IeC {\^\i }ne de r\IeC {\'e}f\IeC {\'e}rence en fonction de $\left (E_b/N_0\right )_{dB}$. }}{18}
+\contentsline {figure}{\numberline {21}{\ignorespaces DSPs de la cha\IeC {\^\i }ne 2 et de la cha\IeC {\^\i }ne de r\IeC {\'e}f\IeC {\'e}rence. }}{19}
+\contentsline {figure}{\numberline {22}{\ignorespaces Trac\IeC {\'e} utile pour la v\IeC {\'e}rification du crit\IeC {\`e}re de Nyquist en fr\IeC {\'e}quentiel. }}{20}
+\contentsline {figure}{\numberline {23}{\ignorespaces Signal en sortie du filtre de r\IeC {\'e}ception (4000 bits transmis)(cha\IeC {\^\i }ne 3). }}{21}
+\contentsline {figure}{\numberline {24}{\ignorespaces Signal en sortie du filtre de r\IeC {\'e}ception (100 bits transmis)(cha\IeC {\^\i }ne 3). }}{22}
+\contentsline {figure}{\numberline {25}{\ignorespaces Diagramme de l'oeil en sortie du filtre de r\IeC {\'e}ception (cha\IeC {\^\i }ne 3). }}{22}
+\contentsline {figure}{\numberline {26}{\ignorespaces TEB obtenu en fonction de $\left (E_b/N_0\right )_{dB}$ (cha\IeC {\^\i }ne 3). }}{23}
+\contentsline {figure}{\numberline {27}{\ignorespaces TEB simul\IeC {\'e} et le TEB th\IeC {\'e}orique en fonction de $\left (E_b/N_0\right )_{dB}$ (cha\IeC {\^\i }ne 3). }}{23}
+\contentsline {figure}{\numberline {28}{\ignorespaces TEB simul\IeC {\'e} de la cha\IeC {\^\i }ne 3 et TEB simul\IeC {\'e} de la cha\IeC {\^\i }ne de r\IeC {\'e}f\IeC {\'e}rence en fonction de $\left (E_b/N_0\right )_{dB}$. }}{24}
+\contentsline {figure}{\numberline {29}{\ignorespaces DSPs de la cha\IeC {\^\i }ne 3 et de la cha\IeC {\^\i }ne de r\IeC {\'e}f\IeC {\'e}rence. }}{25}
+\contentsline {figure}{\numberline {30}{\ignorespaces Diagramme de l'oeil en sortie du filtre de r\IeC {\'e}ception de la cha\IeC {\^\i }ne 3 sans bruit, avec un filtre canal passe bas de fr\IeC {\'e}quence de coupure $1500$ Hz. }}{25}
+\contentsline {figure}{\numberline {31}{\ignorespaces Diagramme de l'oeil en sortie du filtre de r\IeC {\'e}ception de la cha\IeC {\^\i }ne 3 sans bruit, avec un filtre canal passe bas de fr\IeC {\'e}quence de coupure $3000$ Hz. }}{26}
+\contentsline {figure}{\numberline {32}{\ignorespaces $\mathbb {P}(z_m)$ dans le cas $4-aire$ }}{27}
+\contentsline {figure}{\numberline {33}{\ignorespaces Signal en sortie du filtre d'\IeC {\'e}mission (100 bits transmis)(cha\IeC {\^\i }ne 4). }}{30}
+\contentsline {figure}{\numberline {34}{\ignorespaces DSP du signal en sortie du filtre d'\IeC {\'e}mission(cha\IeC {\^\i }ne 4). }}{30}
+\contentsline {figure}{\numberline {35}{\ignorespaces DSP des signaux transmis pour cette cha\IeC {\^\i }ne et pour la cha\IeC {\^\i }ne de r\IeC {\'e}f\IeC {\'e}rence(cha\IeC {\^\i }ne 4). }}{31}
+\contentsline {figure}{\numberline {36}{\ignorespaces Diagramme de l'oeil en sortie du filtre de r\IeC {\'e}ception (cha\IeC {\^\i }ne 4). }}{32}
+\contentsline {figure}{\numberline {37}{\ignorespaces TES obtenu en fonction de $\left (E_b/N_0\right )_{dB}$ (cha\IeC {\^\i }ne 4). }}{33}
+\contentsline {figure}{\numberline {38}{\ignorespaces TES simul\IeC {\'e} et le TES th\IeC {\'e}orique en fonction de $\left (E_b/N_0\right )_{dB}$ (cha\IeC {\^\i }ne 4). }}{33}
+\contentsline {figure}{\numberline {39}{\ignorespaces TEB obtenu en fonction de $\left (E_b/N_0\right )_{dB}$ (cha\IeC {\^\i }ne 4). }}{34}
+\contentsline {figure}{\numberline {40}{\ignorespaces TEB simul\IeC {\'e} et le TEB th\IeC {\'e}orique en fonction de $\left (E_b/N_0\right )_{dB}$ (cha\IeC {\^\i }ne 4). }}{34}

@@ -1,0 +1,3 @@
+2) Ce qui est attendu est la répétition de la dsp du signal non modulé sur fréquence porteuse, l'une centrée sur fp et l'autre centrée sur -fp. 
+La dsp du signal non modulé sur fréquence porteuse est celui d'un signal tronqué temporellement, ce qui induit une périodisation fréquentielle du signal (de fréquence Fe), donc les courbes présentes en fp et -fp, devraient être présentes si on observe entre 0 et Fe, en Fe-fp = 8000 et en fp = 2000. 
+Ce qui est bien le cas ici. 

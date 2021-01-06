@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__test_vecteurs_creux.o
+[PROJECT FILES]
+/home/ncazes2/pim/tp/tp7/tp7.gpr
+20191023060748
+[BOUND OBJECT FILES]
+/home/ncazes2/pim/tp/tp7/vecteurs_creux.o
+/home/ncazes2/pim/tp/tp7/test_vecteurs_creux.o
+[GENERATED SOURCE FILES]
+b__test_vecteurs_creux.ads
+b__test_vecteurs_creux.adb
+b__test_vecteurs_creux.ali
+[RESULTING OPTIONS]
+-L/home/ncazes2/pim/tp/tp7/
+-L/home/ncazes2/pim/tp/tp7/
+-L/applications/gnat/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/
+-static
+-static-libgcc
+/applications/gnat/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/libgnat.a
+-ldl

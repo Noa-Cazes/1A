@@ -1,0 +1,161 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnatwa
+A -gnata
+A -g
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U abr%b			abr.adb			ed9ec50b NE OO PK IU
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+Z system.assertions%s	s-assert.adb		s-assert.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+
+U abr%s			abr.ads			85092cf1 EE OO PK IU
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D abr.ads		20200102110103 85092cf1 abr%s
+D abr.adb		20200102110556 dfdbd611 abr%b
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-inteio.ads		20190518041256 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-tiinio.ads		20190518041254 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20190518041255 eff36322 ada.unchecked_deallocation%s
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-assert.ads		20190518041255 cd8d2c94 system.assertions%s
+D s-conca2.ads		20190518041255 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [initialiser abr 9 19 none]
+G c Z s b [est_vide abr 14 18 none]
+G c Z s b [taille abr 18 18 none]
+G c Z s b [inserer abr 25 19 none]
+G c Z s b [modifier abr 32 19 none]
+G c Z s b [supprimer abr 38 19 none]
+G c Z s b [la_donnee abr 44 18 none]
+G c Z s b [vider abr 49 19 none]
+G c Z s b [le_noeud abr 54 18 none]
+G c Z s b [decrocher_min abr 58 19 none]
+G c Z s b [afficher abr 68 19 none]
+G c Z s b [afficher_debug abr 80 19 none]
+G c Z s s [t_noeudIP abr 88 14 none]
+G c Z b b [free abr 7 19 none]
+X 1 abr.ads
+1K9*ABR 86E14 99l5 99e8 2|5b14 179l5 179t8
+3P14*T_ABR 9r40 14r34 18r35 25r41 32r42 38r43 44r38 49r39 54r37 54r68 58r47
+. 58r64 68r38 80r44 87c14 92r45 93r44 2|8r76 11r40 17r34 23r35 33r41 47r37
+. 47r68 61r42 67r38 73r47 73r64 85r39 86r22 103r27 118r35 130r34 145r40 156r49
+5X9*Cle_Presente_Exception 2|42r23
+6X9*Cle_Absente_Exception 2|51r23 89r19
+9U19*Initialiser 9<31 2|11b19 14l13 14t24
+9p31 Abr{3P14} 10r35 2|11b31 13m13
+14V18*Est_Vide{boolean} 10s25 14>28 20s51 50s25 59s25 60s25 2|17b18 20t12
+14p28 Abr{3P14} 2|17b28 19r25
+18V18*Taille{integer} 18>26 19r25 20r30 39s26 39s41 61s34 2|23b18 28s29 28s66
+. 30l13 30t19
+18p26 Abr{3P14} 20r61 2|23b26 25r16 28r37 28r74
+25U19*Inserer 25=28 25>49 25>70 2|33b19 38s17 40s17 45l13 45t20
+25p28 Abr{3P14} 26r36 2|33b28 35r16 36m17 37r19 38r25 39r19 40r25
+25e49 Cle{character} 26r41 2|33b49 36r37 37r33 38r51 39r33 40r52
+25i70 Donnee{integer} 26r48 2|33b70 36r42 38r56 40r57
+32U19*Modifier 32=29 32>50 32>71 2|61b19 64l13 64t21
+32p29 Abr{3P14} 33r36 2|61b29 63r22
+32e50 Cle{character} 33r41 2|61b50 63r27
+32i71 Donnee{integer} 33r48 2|61b71 63r46
+38U19*Supprimer 38=30 38>51 2|85b15 91s13 93s13 113l9 113t18
+38p30 Abr{3P14} 39r34 39r49 2|85b26 88r12 90r15 91r23 92r15 93r23 96r27 97r16
+. 98m17 98r24 99r19 100m17 100r24 105r35 106r50 107r50 108m21
+38e51 Cle{character} 2|85b47 90r29 91r49 92r29 93r50
+44V18*La_Donnee{integer} 26s25 33s25 44>29 44>46 2|67b18 70l13 70t22
+44p29 Abr{3P14} 2|67b29 69r29
+44e46 Cle{character} 2|67b46 69r34
+49U19*Vider 49=26 2|118b15 123s17 124s17 127l9 127t14
+49p26 Abr{3P14} 50r35 2|118b22 120r16 123r23 124r23 125m22
+54V18*Le_Noeud{3P14} 54>28 54>44 2|47b18 53s24 55s24 59l13 59t21 63s13 69s20
+54p28 Abr{3P14} 2|47b28 50r16 52r19 53r34 54r19 55r34 57r24
+54e44 Cle{character} 2|47b44 52r33 53r60 54r33 55r61
+58U19*Decrocher_Min 58=34 58<54 2|73b19 80s17 82l13 82t26 105s21
+58p34 Abr{3P14} 59r34 2|73b34 76r16 77r24 78m17 78r24 80r32
+58p54 Min{3P14} 60r34 61r42 2|73b54 77m17 80m59
+68U19*Afficher 68>29 2|130b15 135s13 140s13 142l9 142t17
+68p29 Abr{3P14} 2|130b25 132r12 135r23 136r18 138r18 140r22
+80U19*Afficher_Debug 80>35 2|145b15 174l9 174t23
+80p35 Abr{3P14} 2|145b31 173r29
+86R14 T_Noeud 87r30 88c14 97e27 2|8r59 36r28
+90e25*Cle{character} 2|37r27 39r27 52r27 54r27 90r23 92r23 136r26 163r30
+91i25*Donnee{integer} 2|63m36 69r43 138r26 165r30
+92p25*Sous_Arbre_Gauche{3P14} 2|28r45 40m33 55r42 76r24 80m40 93m31 97r24
+. 100r32 106m29 106r58 107m29 107r58 123m31 135r31 168r46
+93p25*Sous_Arbre_Droit{3P14} 2|28r82 38m33 53r42 78r32 91m31 98r32 99r27
+. 105m43 124m31 140r30 169r46
+X 2 abr.adb
+7U19 Free[12|20] 111s9 125s17
+86p9 A_Detruire{1|3P14} 96m13 111m15 111r15
+103p21 Min{1|3P14} 105m61 105r61 106r21 107r21 108r28
+147U19 Indenter 147b19 147>29 152l13 152t21 161s17
+147i29 Decalage{integer} 149r25
+149i17 I{integer}
+156U19 Afficher_Profondeur 156b19 156>40 156>57 156>83 168s17 169s17 171l13
+. 171t32 173s9
+156p40 Abr{1|3P14} 158r16 163r22 165r22 168r38 169r38
+156i57 Profondeur{integer} 161r27 168r65 169r64
+156e83 Cote{character} 162r22
+X 3 ada.ads
+16K9*Ada 2|1r6 1r34 2r6 2r34 3r6 8r21 3|20e8
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 2|2w10 2r38
+X 9 a-textio.ads
+57K13*Text_IO 2|1w10 1r38 9|727e16
+264U14*New_Line 2|139s13 166s17
+392U14*Put 2|136s13 150s17 163s17
+465U14*Put 2|137s13 162s17 164s17
+X 10 a-tiinio.ads
+80U14*Put 2|138s13[5|18] 165s17[5|18]
+X 12 a-uncdea.ads
+17+9 Object 2|8r49
+18P9 Name(17+9) 2|8r68
+20u15*Unchecked_Deallocation 2|3w10 8r25
+

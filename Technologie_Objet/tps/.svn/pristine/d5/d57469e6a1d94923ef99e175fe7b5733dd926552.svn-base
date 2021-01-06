@@ -1,0 +1,20 @@
+4,9c5,10
+< Au tour de Ordinateur.
+< Ordinateur prend 3 allumettes.
+< Au tour de Ordinateur.
+< Ordinateur prend 3 allumettes.
+< Au tour de Ordinateur.
+< Ordinateur prend 3 allumettes.
+---
+> 
+> Nombre d'allumettes restantes : 10
+> Au tour de Tricheur.
+> Tricheur prend 1 allumette.
+> 
+> Nombre d'allumettes restantes : 1
+12,13c13,14
+< Tricheur a perdu !
+< Ordinateur a gagné !
+---
+> Ordinateur a perdu !
+> Tricheur a gagné !

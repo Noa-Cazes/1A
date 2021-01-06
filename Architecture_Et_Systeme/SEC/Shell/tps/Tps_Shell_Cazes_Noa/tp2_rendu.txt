@@ -1,0 +1,33 @@
+2) 
+resultat = ""
+until [`echo $resultat` = o || `echo $resultat` = n]
+do 
+    echo 'Etes-vous satisfait ? (o/n)'
+    read resultat
+done
+
+4)
+function arbre 
+(
+if ["$1" = "-d"]
+     then if [$# -eq 2]
+               then find $2 -type d -print
+               else find . -type d -print
+          if
+     else if [$# -eq 2]
+               then find $2 -type f -print
+               else find . -type f -print
+          if
+fi
+
+6)
+echo `$* | xargs tr -d '-T'` && `$* | xargs tr -d '-e'` && `$* | xargs tr '-x' '-t'`
+
+7)
+function inv 
+(
+if [$# -eq 1]
+   then echo `$1 | xargs rev`
+   else echo 'Veuillez saisir une commande de la forme inv <chaine non vide>'
+fi
+)

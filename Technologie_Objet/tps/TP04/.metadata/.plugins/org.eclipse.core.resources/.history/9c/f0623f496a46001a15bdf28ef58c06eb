@@ -1,0 +1,39 @@
+import java.awt.Color;
+
+import afficheur.Afficheur;
+
+/** Afficher les points, segments et textes.
+ * @author ncazes2
+ */
+public class AfficheurTexte implements Afficheur {
+    
+	private Point p1;
+	private Point p2;
+	private Point c;
+	private double rayon;
+	
+	@Override
+	public void dessinerCercle(double x, double y, double rayon, Color c) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void dessinerLigne(double x1, double y1, double x2, double y2, Color c) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void dessinerPoint(double x, double y, Color c) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void dessinerTexte(double x, double y, String texte, Color c) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

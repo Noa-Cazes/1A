@@ -1,0 +1,51 @@
+package Unlock;
+
+/**
+ * Présente une salle et les objects qu'elle recèle.
+ *
+ */
+public class CarteLieu implements Carte {
+
+    /** Numéro de la carte. */
+	private int numCarte;
+
+    /** Les cartes disponibles dans ce lieu */
+    private Carte[] cartes;
+
+	/** Information la découverte de la carte. */
+	private boolean decouvCarte;
+
+    /** Construction de la carte machine.
+     * @param le numéro de la carte
+     * @param le nombre de cartes liées au lieu
+     */
+	CarteLieu(int num, int nb) {
+        assert num >= 1;
+		assert num <= 100;
+		this.numCarte = num;
+        this.cartes = new Carte[nb];
+		this.decouvCarte = false;
+    }
+
+    /** Obtenir le numéro de la carte.
+     * @return  le numéro de la carte
+	 */
+	public int getNumero() {
+		return numCarte;
+			
+	}
+		
+	/** Informer si la carte a été découverte.
+     * @return un boolean informant si la carte a été découverte.
+	 */
+	public boolean estDecouverte() {
+		return decouvCarte;
+	}
+
+    /** Découvrir la carte.
+     * @param le numéro de la carte.
+	 */
+	public void decouvrir() { //add
+		this.decouvCarte = true;
+	}
+}

@@ -1,0 +1,97 @@
+//package Unlock;
+import javax.swing.*;
+import java.awt.*;
+import javax.swing.event.*;
+import javax.imageio.ImageIO; 
+import java.awt.event.*;
+import java.io.IOException;
+import java.util.*;
+import java.awt.color.*;
+import java.io.File;
+
+/** Fenêtre d'acceuil du jeu 
+ * 
+ * @author ncaze
+ *
+ */
+
+public class FenetreAcceuil extends JFrame implements ActionListener {
+	/** La fenêtre avec le jeu */
+	private UnlockSwingTuto fenetrePrincipale;
+	/** Le bouton démarrer */
+	private JButton boutonDemarrer = new JButton("Démarrer une partie");
+	/** Le jeu transmis */
+	private Tuto modele = new Tuto(); 
+	
+	
+	public FenetreAcceuil() {
+		// Ajouter un titre
+		this.setTitle("Unlock");
+		// Dimensionner la fenêtre
+		//this.setSize(400, 500);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// La centrer
+		this.setLocation(0, 0);
+		//this.setLocationRelativeTo(null);
+		// Ajouter une image de fond
+		ImageIcon fond = null;
+		try {
+			fond = new ImageIcon(ImageIO.read(new File("escape_game.jpeg")));
+		} catch(IOException e) {
+			// En cas de problème de chargement de l'image
+			e.printStackTrace();
+		}
+		JLabel contentPane = new JLabel(fond) {
+			@Override
+			public void paintComponent(Graphics g) {
+				super.paintComponent(g);
+				if (getIcon() != null) {
+					g.drawImage(((ImageIcon) getIcon()).getImage(),0, 0, getWidth(), getHeight(), null);
+				}
+			}
+		};
+		// Appliquer ce contenu
+		this.setContentPane(contentPane);
+		// Organiser la fenêtre
+		this.getContentPane().setLayout(new FlowLayout());
+		
+		
+		// this.contenu.add(new JLabel(new ImageIcon("escape7.PNG")));
+		
+		// Définir le bouton
+		// Couleur du texte
+		boutonDemarrer.setForeground(Color.white);
+		// Rendre le bouton transparent
+		boutonDemarrer.setContentAreaFilled(false); // fond du bouton transparent
+		boutonDemarrer.setBorderPainted(false);     // pas d'encadrement supplémentaire  
+		// Ajouter une action : ouvrir la fenêtre principale du jeu
+		boutonDemarrer.addActionListener(this);
+		// Ajouter le bouton au contenu
+		this.getContentPane().add(boutonDemarrer);
+		
+		// Rendre la fenêtre visible
+		this.setVisible(true);
+		// Redimensionner la fenêtre
+		this.pack();
+	}
+	
+	/** Associer une action au bouton démarrer.
+	 * @param demarrer l'action à réaliser
+	 */
+	public void actionPerformed(ActionEvent demarrer) {
+		this.dispose();
+		this.fenetrePrincipale = new UnlockSwingTuto(modele);
+	}
+	
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				new FenetreAcceuil();
+				new FenetreChrono();
+			}
+		});
+	}
+
+
+}

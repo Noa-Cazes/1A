@@ -1,0 +1,31 @@
+//package allumettes2;
+import java.util.Random;
+
+/** Dans ce jeu donné, l'oridinateur choisi aléatoirement le nombre
+ * d'allumettes à jouer.
+ * @author ncazes2
+ */
+public class StrategieNaive implements Strategie {
+     
+	
+	/** Demander à un joueur le nombre d'allumettes 
+	 * qu'il veut retirer pour un jeu donné, ici un nombre aléatoire
+	 * entre 1 et 3.
+	 * @param jeu le jeu donné
+	 * @return nbAllumettes le nombre d'allumettes que le joueur veut prendre
+	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'allumettes
+	 */
+	public int getPrise(Jeu jeu) {
+		Random al = new Random(); // crée un générateur de nombres aléatoires 
+		int nbAllumettesVoulues;
+		int nbAllumettesEnJeu = jeu.getNombreAllumettes();
+		do {
+			nbAllumettesVoulues = al.nextInt(Jeu.PRISE_MAX) + 1; // nbre alétoire compris entre 1 et 3
+		} while (nbAllumettesEnJeu < nbAllumettesVoulues);
+		
+		return nbAllumettesVoulues;
+		
+	}
+
+
+}

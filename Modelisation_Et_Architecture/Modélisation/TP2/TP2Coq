@@ -1,0 +1,27 @@
+Partie 2
+Section CalculPredicats.
+Variable A B : Type.
+1)
+Theorem Thm_8 : forall (P Q : A -> Prop),(forall x1 : A, (P x1) /\ (Q x1))-> (forall x2 : A, (P x2)) /\ (forall x3 : A, (Q x3)).
+intro H.
+intro H1.
+split.
+intro x2. -- car sinon il ne connait pas la variable x2 dans les hyp. 
+destruct(H0 x2). -- on fait destruct sur H2, dans lequel la variable x1 a tét remplacée par x2. 
+exact H2.
+intro x3. -- on refait pareil avec l'autre variable x3. 
+destruct(H0 x3).
+exact H3.
+Qed.
+
+2)
+Theorem Thm_9 : forall (P : A -> B -> Prop),(exists x1 : A, forall y1 : B, (P x1 y1))->  forall y2 : B, exists x2 : A, (P x2 y2).
+intro.
+intro.
+intro.
+destruct H.
+exists x.
+apply (H y2).
+Qed.
+
+3)

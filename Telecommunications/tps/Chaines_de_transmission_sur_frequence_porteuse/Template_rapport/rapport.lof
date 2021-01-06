@@ -1,0 +1,28 @@
+\babel@toc {french}{}
+\contentsline {figure}{\numberline {1}{\ignorespaces R\IeC {\'e}ponse en fr\IeC {\'e}quence de la chaine de transmission}}{3}
+\contentsline {figure}{\numberline {2}{\ignorespaces Signaux g\IeC {\'e}n\IeC {\'e}r\IeC {\'e}s sur la voie en phase. }}{6}
+\contentsline {figure}{\numberline {3}{\ignorespaces Signaux g\IeC {\'e}n\IeC {\'e}r\IeC {\'e}s sur la voies en quadrature. }}{7}
+\contentsline {figure}{\numberline {4}{\ignorespaces Signal transmis sur fr\IeC {\'e}quence porteuse. }}{7}
+\contentsline {figure}{\numberline {5}{\ignorespaces DSP du signal modul\IeC {\'e} sur fr\IeC {\'e}quence porteuse. }}{8}
+\contentsline {figure}{\numberline {6}{\ignorespaces TEB en fonction de $\left (E_b/N_0\right )_{dB}$. }}{9}
+\contentsline {figure}{\numberline {7}{\ignorespaces TEB simul\IeC {\'e} et TEB th\IeC {\'e}orique en fonction de $\left (E_b/N_0\right )_{dB}$. }}{9}
+\contentsline {figure}{\numberline {8}{\ignorespaces Signaux g\IeC {\'e}n\IeC {\'e}r\IeC {\'e}s sur la voie en phase (cha\IeC {\^\i }ne \IeC {\'e}quivalente passe-bas). }}{10}
+\contentsline {figure}{\numberline {9}{\ignorespaces Signaux g\IeC {\'e}n\IeC {\'e}r\IeC {\'e}s sur la voies en quadrature (cha\IeC {\^\i }ne \IeC {\'e}quivalente passe-bas). }}{10}
+\contentsline {figure}{\numberline {10}{\ignorespaces DSP de l'enveloppe complexe associ\IeC {\'e}e au signal modul\IeC {\'e} sur fr\IeC {\'e}quence porteuse. }}{11}
+\contentsline {figure}{\numberline {11}{\ignorespaces TEB en fonction de $\left (E_b/N_0\right )_{dB}$ (cha\IeC {\^\i }ne passe-bas \IeC {\'e}quivalente). }}{12}
+\contentsline {figure}{\numberline {12}{\ignorespaces Constellation en sortie du mapping. }}{12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Constellation en sortie de l'\IeC {\'e}chantillonneur. }}{13}
+\contentsline {figure}{\numberline {14}{\ignorespaces TEB de la cha\IeC {\^\i }ne avec transposition sur fr\IeC {\'e}quence et TEB de la cha\IeC {\^\i }ne \IeC {\'e}quivalente passe-bas. }}{13}
+\contentsline {figure}{\numberline {15}{\ignorespaces Constellation 16-QAM }}{14}
+\contentsline {figure}{\numberline {16}{\ignorespaces Constellation QPSK }}{15}
+\contentsline {figure}{\numberline {17}{\ignorespaces Constellation 4-ASK }}{15}
+\contentsline {figure}{\numberline {18}{\ignorespaces Comparaison des TEB pour les modulations ASK, PSK et QAM}}{17}
+\contentsline {figure}{\numberline {19}{\ignorespaces Constellation en sortie de l'\IeC {\'e}chantillonneur (QPSK).}}{18}
+\contentsline {figure}{\numberline {20}{\ignorespaces Constellation en sortie de l'\IeC {\'e}chantillonneur (16-QAM).}}{18}
+\contentsline {figure}{\numberline {21}{\ignorespaces Constellation en sortie de l'\IeC {\'e}chantillonneur (8-PSK).}}{19}
+\contentsline {figure}{\numberline {22}{\ignorespaces Comparaison des TEB th\IeC {\'e}orique et simul\IeC {\'e} pour la modulation QPSK.}}{20}
+\contentsline {figure}{\numberline {23}{\ignorespaces Comparaison des TEB th\IeC {\'e}orique et simul\IeC {\'e} pour la modulation 8-PSK.}}{21}
+\contentsline {figure}{\numberline {24}{\ignorespaces Comparaison des TEB th\IeC {\'e}orique et simul\IeC {\'e} pour la modulation 4-ASK.}}{21}
+\contentsline {figure}{\numberline {25}{\ignorespaces Comparaison des TEB th\IeC {\'e}orique et simul\IeC {\'e} pour la modulation 16-QAM.}}{22}
+\contentsline {figure}{\numberline {26}{\ignorespaces Peridodogramme pour la modulation 4-ASK.}}{23}
+\contentsline {figure}{\numberline {27}{\ignorespaces Peridodogramme pour la modulation QPSK.}}{24}

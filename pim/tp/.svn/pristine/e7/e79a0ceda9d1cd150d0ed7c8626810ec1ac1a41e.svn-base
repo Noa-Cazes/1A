@@ -1,0 +1,87 @@
+#include <stdlib.h> 
+#include <stdio.h>
+#include <assert.h>
+#include <stdbool.h>
+#define nb_monnaie 5
+
+// Definition du type monnaie
+struct t_monnaie{
+    float  valeur;
+    char devise;
+};
+typedef struct t_monnaie t_monnaie; 
+/**
+ * \brief Initialiser une monnaie 
+ * \param[out] t_monnaie monnaie à initilaiser
+ * \param[in] valeur 
+ * \param[in] devise
+ * \pre valeur > 0
+ */ 
+void initialiser(t_monnaie monnaie, float valeur, char devise) {
+    assert(valeur > 0);
+    monnaie.valeur = valeur;
+    monnaie.devise = devise;
+}
+
+
+/**
+ * \brief Ajouter une monnaie m2 à une monnaie m1 
+ * \param[in] valeur1 la valeur de la monnaie 1
+ * \param[in] valeur2 la valeur de la monnaie 2
+ * \param[in] devise1 la devise de la monnaie 1
+ * \param[in] devise2 la devise de la monnaie 2
+ * \pre devise1 = devise2 
+ */ 
+bool ajouter(float valeur1, float valeur2, char devise1, char devise2) {
+    bool booléen
+    if assert(devise1==devise2){
+	initialiser(m1, valeur1, devise1);
+	initialiser(m2, valeur2, devise2);
+        float resultat;
+	resultat = valeur1 + valeur2;
+	booléen = true;
+    }
+    else {
+	booléen = false;
+    }
+    return booléen;
+}
+
+
+/**
+ * \brief Tester Initialiser 
+ * \param[]
+ * // TODO
+ */ 
+void tester_initialiser() {
+    // TODO
+}
+
+/**
+ * \brief Tester Ajouter 
+ * \param[]
+ * // TODO
+ */ 
+void tester_ajouter() {
+    // TODO
+}
+
+
+
+int main(void) {
+    // Déclarer un tableau de 5 monnaies
+    typedef t_monnaie t_tab_monnaie[nb_monnaie];
+    t_tab_monnaie tab_monnaie;
+    //Initialiser les monnaies
+    char devise1, devise2, devise3, devise4, devise5; 
+    initialiser(*tab_monnaie, 12, devise1);
+    initialiser(*(tab_monnaie + 1), 45, devise2);
+    initialiser(*(tab_monnaie + 2), 17, devise3);
+    initialiser(*(tab_monnaie + 3), 67, devise4);
+    initialiser(*(tab_monnaie + 4), 90, devise5);
+    
+ 
+    // Afficher la somme de toutes les monnaies qui sont dans une devise entrée par l'utilisateur.
+    
+    return EXIT_SUCCESS;
+}

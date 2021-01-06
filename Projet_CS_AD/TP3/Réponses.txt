@@ -1,0 +1,9 @@
+Question 5 : On dispose de 15 composantes principales. Afin d'économiser les calculs, on décide d'utiliser seulement les 8 premières composantes principales, qui sont suffisantes pour avoir un taux d'erreur acceptable. (Observation : on semble obtenir un taux d'erreur nul dès l'usage de 14 composantes principales)
+
+Question 6 : - Utiliser l'algorithme de calcul des couples propres le moins couteux en calculs. (voir TP2, y'en a pas d'universellement meilleur que l'autre, ça dépend du type de matrice)
+             - Utiliser les "petites matrices" (sigma_2)
+
+Question 7 : Il faudrait tester lequel performe le mieux avec les images d'apprentissage afin de déterminer la méthode la plus efficace.
+
+Question 8 : - Matrice en trois dimensions à traiter
+             - Visiblement, le non-usage de couleur est suffisant, les ajouter reviendrait à ajouter des calculs sans raison

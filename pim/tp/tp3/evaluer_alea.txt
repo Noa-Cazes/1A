@@ -1,0 +1,47 @@
+R0 - Vérifier le bon fonctionnement d'un générateur aléatoire
+    Type T_Tab est Tableau (1..Taille) de Entier
+    Type T_Tableau est enregistrement
+        le_tab: T_Tab  -- le tableau
+	nbre_elts: Entier -- nbre d'elts du tableau
+    Fin Enregistrement
+    Procedure Calculer_Satistiques (Borne: in Entier;
+                                    Taille: in Entier:
+				    Min, Max: out Entier;
+				    Moyenne: out Reel
+				    )
+    Pre: voir fichier
+    Post: voir fichier
+    Tests: 
+    ...
+
+R1 - Comment R0?
+	Générer Taille nombres compris entre 1 et Borne.
+	Calculer le nombre d'occurences de chaque élément présent.
+	Déterminer la fréquence maximale et la minimale. 
+	Calculer la moyenne. 
+
+R2 - Comment "Générer Taille nombres compris entre 1 et Borne."? 
+	Nombre: Entier
+	Tab: T_Tableau
+	Pour i de 1 à Taille Faire
+		Get_random_Number(Nombre)
+		Lire(Nombre)
+		Tab.le_tab(i) <-- Nombre
+		nbre_elts <-- nbre_elts + 1
+	Fin_Pour
+
+R2 - Comment "Calculer le nombre d'occurences de chaque élément présent."?
+	Occ: T_Tableau -- Tableau avec les nuombre d'occurences de chaque elelt de Tab
+	Pour j de 1 à Taille faire
+		Si Tab.le_tab(i) = j Alors
+			Occ.le_tab(j) <-- Occ.le_tab(j) + 1
+		Sinon
+			Rien
+		Fin_Si
+	Fin_Pour
+
+R2 - Comment "Déterminer la fréquence maximale et la minimale"?
+fct min et max à faire
+
+R2 - Comment "Calculer la moyenne"? 
+	Moyenne <-- Taille/ Borne

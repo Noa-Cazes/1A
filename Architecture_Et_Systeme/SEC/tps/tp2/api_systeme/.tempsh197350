@@ -1,0 +1,1 @@
+ps l | grep -v grep | grep ./pere_fils > .tempres197350

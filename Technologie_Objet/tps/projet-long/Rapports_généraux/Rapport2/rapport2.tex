@@ -1,0 +1,176 @@
+
+\documentclass[frenchb]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{babel}
+
+\begin{document}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=10cm]{inp_n7.png}
+\end{figure}
+
+\title{\vspace{1cm} \textbf{Technologie Objet - Projet long} \\ \textbf{Développement d'une application Unlock} \\ \textit{\textbf{Fonctionnalités de l'application}}}
+
+\author{Nom des auteurs\\ \textsc{Aupetit} Lucien \\  \textsc{Cazes} Noa \\  \textsc{Duthoit} Thomas \\  \textsc{Georget} Lucas \\  \textsc{James} Christopher \\  \textsc{Paoli} Baptiste \\  \textsc{Winterberger} Ilona }
+\date{\vspace{10cm} Département Sciences du Numérique - Première année \\
+2019-2020 }
+
+\maketitle
+
+\newpage
+\tableofcontents
+\listoffigures
+
+\newpage
+
+\section{Objectif général du projet}
+Le but est de recréer le jeu « Unlock » sans l'aspect physique de la boite et de son contenu. Le ou les joueur(s) pourra/pourront jouer sur une ou plusieurs énigmes proposées par l'interface graphique.\\
+Ce produit est destiné à tout public qui souhaite se distraire avec un jeu ludique et qui nécessite réflexion, et à la différence du jeu traditionnel, il est possible de jouer n'importe où au jeu Unlock. 
+
+\section{Les principales fonctionnalités et leur état d'avancement}
+Les fonctionnalités souhaitées ont été fragmentées volontairement en sous-fonctionnalités simples à réaliser ce qui a permis de mettre en avant des besoins sous-jacents. \\
+
+Dans le jeu Unlock, les utilisateurs jouent une partie et interagissent avec différentes cartes. \\
+Il existe cinq types de cartes, chaque type ayant une particularité différente:
+\begin{enumerate}
+    \item Histoire \\
+    C'est la première carte (le dos d'une pièce), on la lit pour comprendre l'intrigue puis la retourner déclenche le timer,
+     \item Lieu \\
+     Les cartes lieux indiquent plusieurs numéros et invitent les joueurs à fouiller le paquet afin de dévoiler les éléments à étudier,
+     \item Puzzle \\
+     Les cartes puzzles se combinent entre elles pour dévoiler une nouvelle carte (une rouge avec une bleue),
+     \item Machine \\
+     Les cartes machines sont des mini-jeux qui permettent d'obtenir une nouvelle carte,
+     \item Code \\
+     Les cartes codes sont des énigmes et permettent d'avancer dans l'histoire une fois résolues. 
+\end{enumerate}
+
+\setlength{\parindent}{0.5cm}
+Les joueurs utilisent une interface afin de mettre en relation les différents éléments de l'aventure et ainsi progresser dans les enigmes à résoudre. \\
+
+Les différentes fonctionnalités ainsi que leur état d'avancement sont les suivantes:
+\begin{enumerate}
+    \item créer une interface d'accueil : une interface d'acceuil simple a été réalisée (itération 2), elle sera complétée en vue de l'itération 3,
+    \item créer une interface pour sélectionner le type de carte retournée, correspondant au plateau de cartes : interface réalisée avec les principales fonctionnalités (itérations 1 et 2), elle sera complétée en vue de l'itération 3,
+    \item créer un menu pour sélectionner l'histoire souhaitée : non réalisé car il est pour l'instant question de créer un seul set de cartes,
+    \item créer un timer : timer réalisé et l'interface graphique est en cours (itération 2),
+    \item mettre du son pour le timer : non réalisé,
+    \item mettre sur pause le jeu : réalisé car cela correspond à une des focntionnalités du timer (itération 2), 
+    \item saisir des codes (associés aux cartes "codes") : réalisé (itération 2),
+    \item demander un indice : non réalisé, 
+    \item saisir une pénalité reçue par une carte et éventuellement automatiser ce processus de sorte que l'utilisateur n'ait pas à saisir ses propres pénalités : non réalisé, 
+    \item obtenir de l'aide sur un objet caché : non réalisé,
+    \item visualiser les indices reçus : réalisé par le biais de l'interface graphique (itérations 1 et 2), 
+    \item désactiver ou activer la musique d'ambiance : non réalisé,
+    \item changer la langue de l'application : non réalisé,  
+    \item création d'une interface permettant de voir le paquet de cartes face cachées et de visualiser les cartes déjà retournées afin de se situer dans l'avancement de la résolution des énigmes : interface graphique réalisée (itérations 1 et 2), elle sera complétée en vue de l'itération 3,
+    \item créer notre propre histoire : non réalisé. 
+\end{enumerate}
+
+\section{Le découpage de l'application en sous-systèmes}
+L'application a été découpée en sous-sytèmes selon l'architecture suivante :
+\begin{enumerate}
+\item Le jeu en lui-même
+	\begin{itemize}
+	\item Carte.java \\
+	Interface qui permet par la suite de définir tous les types de cartes présentés précèdement,
+		\begin{itemize}
+		\item CarteCodes.java,
+		\item CarteInteraction.java,
+		\item CarteMachine.java,
+		\item CarteLieu.java,
+		\item CarteObjet.java,
+		\item CartePenalite.java.
+		\end{itemize}
+	\item Plateau.java \\
+	Interface qui permet de mettre en place les différentes actions possibles sur le plateau avec les cartes,
+		\begin{itemize}
+		\item Jeu.java \\
+		Une réalisation de Plateau.java qui permet de définir un jeu quelconque,
+		\item Tuto.java \\
+		Une réalisation de Plateau.java qui permet de définir le tutoriel de ce jeu.
+		\end{itemize}
+	\item Les exceptions 
+		\begin{itemize}
+		\item CaseOccupeeException.java \\
+		Est levée lorsqu'une carte essaye d'être posée sur une case du plateau déjà prise,
+		\item CombinaisonInvalideException \\
+		Est levée lorsqu'une combinaison est invalide (Bleu et Bleu, Rouge te Rouge, Rouge et Gris...).
+		\end{itemize}
+	\end{itemize}
+\item L'interface graphique (dépendante des classes précédentes)
+	\begin{itemize}
+	\item Les classes principales
+		\begin{itemize}
+		\item UnlockSwing.java \\
+		La classe qui permet la représentation du plateau de cartes du jeu,
+		\item UnlockSwingTuto.java \\
+		La classe qui permet la représentation du plateau de cartes du jeu du tutoriel,
+		\item FenetreAcceuil.java \\
+		La classe qui permet la représentation de la fenêtre d'acceuil,
+		\item FentreChrono.java \\
+		La classe qui permet la représentation du chronomètre ainsi que des fonctionnalités telles que demander un indice, saisir un code, obtenir des pénalités etc.
+		\end{itemize}
+	\item Les actions associées à des évènements
+		\begin{itemize}
+		\item ActionNouvellePartie.java \\
+		Permet de définir l'action engendrée lors de l'évènement "appuie sur l'item du menu Nouvelle Partie",
+		\item ActionQuitter.java \\
+		Permet de définir l'action engendrée lors de l'évènement "appuie sur l'item du menu Quitter", 
+		\item ActionSaisirCode.java \\
+		Permet de définir l'action engendrée lors de l'évènement "appuie sur l'item du menu Saisir code".
+		\end{itemize}
+	\item Les images de cartes
+	\end{itemize}
+\end{enumerate}
+
+\section{Le diagramme de classe}
+La figure \ref{diag1} représente le diagramme de classe de notre application, réalisé uniquement avec les informations utiles pour comprendre l'architecture globale. 
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=11cm]{Diagramme_de_classe_1.jpg}
+    \caption{Diagramme de classe 1 \label{diag1}}
+ \end{figure}
+ 
+\section{Les principaux choix de conception et de réalisation, les problèmes rencontrés et les solutions apportées}
+Le principaux choix de conception et de réalisation adoptés ont été les suivants :
+\begin{enumerate}
+\item Représenter les cartes grâce à une interface Carte.java,
+\item Les cartes ne sont pas désignées grâce à un élément d'une enumération (par exemple $enum\ Carte \ \{Un, Deux, Vide\}$) mais par des entiers,
+\item Utilisation d'un booléen pour savoir si une carte a déjà été découverte ou non, 
+\item Utilisation de la bibliothèque Swing pour l'interface graphique,
+\item L'ensemble des cartes présentes sur le plateau est stocké dans un tableau à deux entrées,
+\item Dans l'interface graphique, pour saisir le code, cela se fait grâce à une option du menu de la fenêtre.
+\end{enumerate}
+
+\setlength\parindent{0.5cm}
+Les problèmes rencontrés et les solutions apportées sont les suivants : 
+\begin{enumerate}
+\item La taille des images a posé problème lors du placement de ces dernières sur une organisation de la fenêtre de type $GridLayout$ : elles ont alors été redimensionnées,
+\item Le passage de la représentation des cartes sous la forme d'un tableau dont les éléments sont de type énumération ou de type entier a posé problème : ce problème venait de l'utilisation du type $int$ à certains endroits et $Integer$ à d'autres. 
+\end{enumerate}
+
+\section{Organisation de l'équipe et mise en oeuvre des méthodes agiles}
+Tout d'abord, nous avons discuté ensemble des différentes fonctionnalités voulues pour notre application. Ensuite, la rédaction du rapport sur les fonctionnalités a permis de nous fixer des objectifs precis. 
+
+Il a été décidé que 4 personnes se chargeraient de la programmation du jeu en lui-même, 2 personnes de la progarmmation de l'interface graphique et une personne des user stories, des diagrammes UML, et du compte Trello. On a aussi mené des discussions au moment de faire des choix importants quant à la réalisation du code de façon à prendre en compte l'avis de chaque membre de l'équipe. Chaque "équipe" a pris soin de partitionner le travail en tâches élémentaires, de déterminer lesquelles étaient prioritaires tout en permettant de livrer tôt de la valeur métier (en estimant l'effort que représente chaque fonctionnalité du backlog), et enfin de se les répartir. 
+
+C'est ainsi que nous avons pu \textit{livrer tôt de la valeur métier tout en limitant le risque} (en répondant à, d'abord de petites fonctionnalités, puis en implémentant des fonctionnalités plus importantes). On a alors affiné et modifié le backlog de notre produit au cours de l'avancement de notre projet, notammant en réajustant certaines fonctionnalités : nous n'avons pas hésité à remettre en cause notre travail en changeant de direction concernant les choix de conception. 
+
+
+
+\section{Conclusion et Objectifs}
+
+Lors de cette itération nous livrons un jeu qui présente les fonctionnalités de base du jeu Unlock et les fonctionnalités plus longues à mettre en place sont entrain d'être implémementées et seront livrées lors de l'itération 3. 
+
+
+
+
+\end{document} 

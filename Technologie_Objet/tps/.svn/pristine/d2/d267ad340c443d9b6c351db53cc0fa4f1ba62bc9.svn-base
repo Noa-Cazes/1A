@@ -1,0 +1,127 @@
+3,4c4
+< Combien prenez-vous d'allumettes ? 
+< Vous devez donner un entier.
+---
+> Combien prenez-vous d'allumettes ? Xavier prend 2 allumettes.
+5a6,10
+> Nombre d'allumettes restantes : 11
+> Au tour de Ordinateur.
+> Ordinateur prend 3 allumettes.
+> 
+> Nombre d'allumettes restantes : 8
+6a12,17
+> Combien prenez-vous d'allumettes ? Vous devez donner un entier.
+> Combien prenez-vous d'allumettes ? Xavier prend 5 allumettes.
+> Erreur ! Prise invalide : 5 (> 3)
+> Recommencez !
+> 
+> Nombre d'allumettes restantes : 8
+7a19,25
+> Combien prenez-vous d'allumettes ? Xavier prend 3 allumettes.
+> 
+> Nombre d'allumettes restantes : 5
+> Au tour de Ordinateur.
+> Ordinateur prend 3 allumettes.
+> 
+> Nombre d'allumettes restantes : 2
+9,100c27,33
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+< Au tour de Xavier.
+---
+> Combien prenez-vous d'allumettes ? Xavier prend 1 allumette.
+> 
+> Nombre d'allumettes restantes : 1
+> Au tour de Ordinateur.
+> Ordinateur prend 1 allumette.
+> Ordinateur a perdu !
+> Xavier a gagné !

@@ -1,0 +1,16 @@
+1 . egrep -e [0-9] exemple.txt #Afficher les lignes contenant un nombre entier naturel
+
+2. Ça affiche des relatifs, des décimaux, des complexes dont des complexes rationnels.
+
+3. egrep -v [./-] exemple.txt #Afficher les lignes contenant un nombre entier naturel.
+
+4. egrep -v [./] exemple.txt #Afficher les lignes contenant un nombre entier relatif.
+
+5. egrep -v [/] exemple.txt #Afficher les lignes contenant un décimal.
+
+6. grep -e [/] exemple.txt | egrep -v "i$" #Afficher les lignes contenant un nombre rationnel.  
+
+7.egrep -e "i$" exemple.txt #Afficher les lignes contenant un nombre rationnel complexe.
+
+3.
+ commantaire parserProcessus.mly activite : ACTIVITY IDENTIFIER contraintes     requires { (print_endline "activite : ACTIVITY IDENTIFIER contraintes") }

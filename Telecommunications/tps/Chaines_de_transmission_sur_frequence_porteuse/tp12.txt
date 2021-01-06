@@ -1,0 +1,2 @@
+2. Ce sont les mêmes courbes car la différence d'implatation entre les deux modèles est uniquemenyt dûe 
+à la modélisation de la transposition sur fréquence, du canal de transmission AWGN et de l'étape de retour en bande de base par un canal AWGN équivalent de bruit complexe. 

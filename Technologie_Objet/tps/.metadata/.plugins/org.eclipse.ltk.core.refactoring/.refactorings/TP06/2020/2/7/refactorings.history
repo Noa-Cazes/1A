@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ExempleSchemaList.java&apos; to &apos;ExempleSchemaTab.java&apos;&#x0A;- Original project: &apos;TP06&apos;&#x0A;- Destination element: &apos;ExempleSchemaTab.java&apos;&#x0A;- Original element: &apos;ExempleSchemaList.java&apos;" description="Copy compilation unit" destination="/&lt;{ExempleSchemaTab.java" element1="/&lt;{ExempleSchemaList.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1581319058023" units="1" version="1.0"/>
+</session>

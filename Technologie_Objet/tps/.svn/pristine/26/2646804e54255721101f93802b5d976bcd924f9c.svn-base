@@ -1,0 +1,11 @@
+//package Unlock;
+
+/**
+ * résultat d'une intercation avec un objet.
+ * @author ipeltier
+ *
+ */
+
+public class CarteInteraction {
+
+}

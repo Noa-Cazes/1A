@@ -1,0 +1,4 @@
+CercleTest.java:19: error: '(' expected
+	public void setUp{
+	                 ^
+1 error

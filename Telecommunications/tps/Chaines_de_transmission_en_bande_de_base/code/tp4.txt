@@ -1,0 +1,25 @@
+1.a) Le signal tracé après passage dans un filtre de mise en forme est conforme à l'étude théorique, c'est une somme de rectangles, un tous les T_s, pondérés par 3, 1, -1 ou -3.
+
+La dsp est aussi conforme à l'étude théorique (voir page 10 poly 2) car la dsp du signal est transmise autour de la fréquence 0, elle est symétrique par rapport à l'axe des ordonnées, et une première annulation est présente à la fréquence 1/Ts, soit 0.25, une deuxième annulation est présente à la fréquence 2/Ts, soit 0.5.
+
+
+1.b) 
+Les cloches et les annulations sont aux mêmes endroits, en revanche, l'amplitude des pics et leur étalement autour de la valeur du plus haut pic, varie d'une chaîne à l'autre, l'amplitude pour la chaîne étudiée étant beaucoup plus importante que pour la chaîne de réference. 
+Cela est dû au fait que les mêmes filtres sont utilisés, donc la forme globale est la même. Mais le mapping n'est pas le même, donc le poids de chaque fréquence n'est pas le même entre les deux chaînes.
+La chaîne la plus efficace spectralement est celle dont la courbe de la DSP est telle qu'elle montre qu'un maximum de l'information est contenu dans une faible bande de fréquence. 
+Ici, la courbe de la chaîne de référence est celle qui vérifie cela.
+Donc, la chaîne de référence est la plus efficace spectralement. 
+
+1. c) 
+Théoriquement l'instant optimal d'échantillonnage est de Ts. 
+L'amplitude des éléments du diagramme de l'oeil, lorsque le critère de Nyquist est réespecté est de am*g(t0), soit am*Ts, soit -12, -4, 4 et 12 (am est -3, -1, 1, 3, Ts = 4). Le seul endroit où une décision peut être prise est pour t0 = T. On retrouve le résultat théorique. 
+Les seuils sont -2*Ts, 0 et 2*Ts, d'après la théorie. 
+On les retrouve ici. En effet, les symboles tels que am*g(t0) est supérieur à 2*Ts = 8, seront assignés à 3, ceux tels que am*g(t0) est inférieur à -2*Ts = 8 seront assignés à -3, ceux tels que am*g(t0) est compris entre 2*Ts et 0 seront assignés à 1, ceux tels que am*g(t0) est compris entre -2*Ts et 0 seront assignés à -1. 
+
+3. Les courbes de TES simulé et TES théorique ne sont pas pareilles. 
+En effet, jsp.
+
+5. Les courbes de TEB simulé et TEB théorique ne sont pas pareilles. 
+En effet, jsp. 
+
+

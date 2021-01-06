@@ -1,0 +1,230 @@
+\documentclass[frenchb]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{babel}
+
+\begin{document}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=10cm]{inp_n7.png}
+\end{figure}
+
+\title{\vspace{1cm} \textbf{Technologie Objet - Projet long} \\ \textbf{Développement d'une application Unlock} \\ \textit{\textbf{Fonctionnalités de l'application}}}
+
+\author{Nom des auteurs\\ AUPETIT Lucien \\ CAZES Noa \\ DUTHOIT Thomas \\ GEORGET Lucas \\ JAMES Christopher \\ PAOLI Baptiste \\ WINTERBERGER Ilona }
+\date{\vspace{10cm} Département Sciences du Numérique - Première année \\
+2019-2020 }
+
+\maketitle
+
+\newpage
+\tableofcontents
+\listoffigures
+
+\newpage
+\section{Objectif général du projet}
+Le but est de recréer le jeu « Unlock » sans l?aspect physique de la boite et son contenu. Le ou les joueur(s) pourra/pourront jouer sur une ou plusieurs énigmes proposées par l?application.
+
+\section{Description des fonctionnalités souhaitées}
+Les fonctionnalités souhaitées ont été fragmentées volontairement en sous-fonctionnalités simples à réaliser ce qui a permis de mettre en avant des besoins sous-jacents. \\
+
+Les utilisateurs jouent une partie et interagissent avec différentes cartes. \\
+Il existe quatre types de cartes, chaque type ayant une particularité différente.\\
+
+\setlength{\parindent}{0.5cm}
+Les joueurs utilisent une interface afin de mettre en relation les différents éléments de l?aventure et ainsi progresser dans les enigmes à résoudre. \\
+
+Les différentes fonctionnalités envisagées sont les suivantes:
+\begin{enumerate}
+    \item créer une interface d'acceuil,
+    \item créer un menu pour sélectionner l'histoire souhaitée,
+    \item créer un timer, 
+    \item mettre sur pause le jeu, 
+    \item saisir des codes (associés aux cartes "codes"),
+    \item demander un indice, 
+    \item saisir une pénalité reçue par une carte et eventuellement automatiser ce processus de sorte que l'utilisateur n'ait pas à saisir ses propres pénalités, 
+    \item obtenir de l'aide sur un objet caché,
+    \item visualiser les indices reçus, 
+    \item désactiver ou activer la musique d'ambiance,
+    \item changer la langue de l'application, 
+    \item créer une interface pour sélectionner le type de cartes retournée (cartes "codes", "puzzle" ou "machine"), 
+    \item création d'une interface permettant de voir le paquet de cartes face cachées et de visualiser les cartes déjà retournées afin de se situer dans l'avancement de la résolution des énigmes.
+\end{enumerate}
+
+\section{Les interfaces utilisateurs envisagées}
+Les figures \ref{fig : Depart_enigme} présentent une des interfaces envisagées. \\
+
+\setlength{\parindent}{0.5cm}
+La figure \ref{fig : Depart_enigme} comporte une carte sur laquelle est présente l'histoire au coeur de l'enigme et en dessous se trouvent les autres cartes du jeu. Au dos de cette carte se trouve la carte présente sur la figure \ref{fig : Premiere_carte}. A droite de la figure \ref{fig : Depart_enigme} se trouve une interface où se trouve un timer et un menu permettant de sélectionner le type de carte retournée. 
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=14cm]{Depart_enigme.png}
+    \caption{Configuration de départ - L'histoire \label{fig : Depart_enigme}}
+ \end{figure}
+\newpage
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=14cm]{Premiere_carte.png}
+    \caption{Configuration de départ -Première carte \label{fig : Premiere_carte}}
+ \end{figure}
+\newpage
+
+La figure \ref{fig : Premiere_combinaison} représente une étape du jeu après avoir 
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=14cm]{Premiere_combinaison.png}
+    \caption{Première combinaison \label{fig : Premiere_combinaison}}
+ \end{figure}
+
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=14cm]{Premiere_fouille.png}
+    \caption{Première fouille \label{fig : Premiere_fouille}}
+ \end{figure}
+\newpage
+
+
+
+\section{Un scénario pour comprendre les fonctionnalités}
+L'objectif de ce paragraphe est d'illlustrer les fonctionnalités envisagées à travers divers scenarios. \\
+
+La figure \ref{fig : Ensemble_cartes_dos} représentent les cartes (face dos) organisées en paquet et numérotées.
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{Ensemble_cartes_dos.png}
+    \caption{Ensemble des cartes disponibles au début de l'histoire \label{fig : Ensemble_cartes_dos}}
+ \end{figure}
+\newpage
+
+
+\setlength{\parindent}{0.5cm}
+Une première carte (dos) (figure \ref{fig : Carte_histoire})  invite à la retourner et à débuter la partie.
+
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{Carte_histoire.png}
+    \caption{Carte avec l'histoire de l'énigme\label{fig : Carte_histoire}}
+ \end{figure}
+\newpage
+
+\setlength{\parindent}{0.5cm}
+Une carte lieu (figure \ref{fig : Carte_lieu}) nous invite à chercher les cartes aux numéros correspondant dans le paquet.
+
+
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{Carte_lieu.png}
+    \caption{Carte lieu\label{fig : Carte_lieu}}
+ \end{figure}
+\newpage
+
+\setlength{\parindent}{0.5cm}
+Les cartes accumulées peuvent se combiner lorsqu'il s'agit d'une pièce de puzzle rouge (figure \ref{fig : Carte_puzzle_rouge_1}) et d'une bleue (figure \ref{fig : Carte_puzzle_bleue_1}). On cherche une carte dont la valeur est la somme des deux cartes à combiner dans le paquet.
+
+
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{Carte_puzzle_rouge_1.png}
+    \caption{Carte puzzle rouge 1\label{fig : Carte_puzzle_rouge_1}}
+ \end{figure}
+ 
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{Carte_puzzle_bleue_1.png}
+    \caption{Carte puzzle bleue 1\label{fig : Carte_puzzle_bleue_1}}
+ \end{figure}
+\newpage
+
+\vspace{5cm}
+\setlength{\parindent}{0.5cm}
+Une fois trouvée on retourne cette carte et on défausse celles utilisées. On obtient la carte de la figure \ref{fig : Carte_combinaison_1}.
+\newpage
+
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{Carte_combinaison_1.png}
+    \caption{Carte combinaison 1\label{fig : Carte_combinaison_1}}
+ \end{figure}
+\newpage
+
+
+\setlength{\parindent}{0.5cm}
+Les machines sont des énigmes en elles-mêmes qui nécessitent de bien observer les autres cartes. En regardant celle de la figure \ref{fig : Carte_machine} on voit qu'il faut relier les deux points du centre.
+
+
+
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{Carte_machine.png}
+    \caption{Carte machine \label{fig : Carte_machine}}
+ \end{figure}
+\newpage
+
+
+\setlength{\parindent}{0.5cm}
+On obtient ainsi une nouvelle carte que l'on peut combiner à son tour.
+
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{Carte_combinaison_2.png}
+    \caption{Carte combinaison 2 \label{fig : Carte_combinaison_2}}
+ \end{figure}
+
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{Carte_puzzle_rouge_2.png}
+    \caption{Carte puzzle rouge 2\label{fig : Carte_puzzle_rouge_2}}
+ \end{figure}
+\newpage
+
+\setlength{\parindent}{0.5cm}
+Enfin les cartes codes (exemple en figure \ref{fig : Carte_code}) peuvent symboliser des étapes intermédiaires ou la fin du jeu, ici il suffit de rentrer les numéros dans l?ordre des couleurs pour finir la partie.
+
+\newpage
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{Carte_combinaison_3.png}
+    \caption{Carte combinaison 3\label{fig : Carte_combinaison_3}}
+ \end{figure}
+ \newpage
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{Carte_code.png}
+    \caption{Carte code\label{fig : Carte_code}}
+ \end{figure}
+\newpage
+
+
+\section{Conclusion}
+Ayant ainsi défini les services rendus pour l'utilisateur grâce à un découpage des fonctionnalités en fonctionnalités élémentaires, le "comment" de l'implémentation a commencé à être réflechi. \\
+Ainsi pour la suite, nous réaliserons un planning et commencerons à se répartir les tâches à réaliser. \\
+Par la suite, des diagrammes UML de classe nous permettrons de pouvoir tous avancer simultanément sur le projet. 
+
+
+\section{Complément: les points difficiles}
+Ce descriptif de fonctionnalités a permis de soulever les points suivants:
+\begin{itemize}
+	\item organisation de l'interface graphique où doivent être présents un timer, un paquet de cartes non jouées, les cartes retournées et les différents boutons pour accéder par exemple aux machines, à l'inscription d'un code ...
+	\item mettre en place notre propre scénario d'escape game sur le thème de l'enseeiht
+
+\end{itemize}
+
+
+
+\end{document} 

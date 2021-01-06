@@ -1,0 +1,71 @@
+if ((strcmp(seq[0][0], "fg")) == 0) { // la commande entrée est fg
+                        pid = getPid(atoi(seq[0][0]), list); 
+                        while (list->pid != pid && list->suivant != NULL) {
+                            list = list->suivant; 
+                        } if (list != NULL) {
+                            if (list->etat == S) {
+                                reprendre(atoi(seq[0][0]), &list);
+                            } 
+                            cmd->backgrounded = NULL; 
+                               
+                           
+                       }
+                    } else {
+
+
+
+
+if (!estPresent(retour, list)) {
+        ajouter(retour, S, seq[0][0], &list); 
+    } else {
+        changerEtat(retour, S, &list); 
+    }
+
+
+
+/* Pour SIGCHLD */
+    struct sigaction sa_sigchld; 
+    sa_sigchld.sa_handler = handler_sigchld; 
+    sigemptyset(&sa_sigchld.sa_mask); // on ne veut pas masquer de signaux pendant le traitement de ce signal
+    sa_sigchld.sa_flags = 0;
+    sigaction(SIGCHLD, &sa_sigchld, NULL); 
+
+    /* Pour SIGTSTP */
+    struct sigaction sa_sigtstp; 
+    sa_sigtstp.sa_handler = SIG_IGN; 
+    sigemptyset(&sa_sigtstp.sa_mask); 
+    sa_sigtstp.sa_flags = 0;
+    sigaction(SIGTSTP, &sa_sigtstp, NULL);
+    /* Pour SIGINT */
+    struct sigaction sa_sigint; 
+    sa_sigint.sa_handler = SIG_IGN; 
+    sigemptyset(&sa_sigint.sa_mask); 
+    sa_sigint.sa_flags = 0;
+    sigaction(SIGINT, &sa_sigint, NULL);
+
+
+
+
+
+
+ if (cmdl->backgrounded == NULL) {
+        /* Gestion des commandes en avant-plan : le père attend*/
+        /* Bloquer le signal SIGCHLD classique */
+        sigset_t ens_chld; 
+        sigemptyset(&ens_chld); 
+        sigaddset(&ens_chld, SIGCHLD); 
+        sigprocmask(SIG_BLOCK, &ens_chld, NULL); 
+
+        int status;  
+        waitpid(retour,&status,WUNTRACED | WNOHANG | WCONTINUED);	
+	                       
+        if (WIFEXITED(status) | WIFSIGNALED(status)) {
+	        supprimer(retour, &list);
+        } else if WIFCONTINUED(status) {
+             changerEtat(retour, A, &list);
+        } else if WIFSTOPPED(status) {
+             changerEtat(retour, S, &list);
+        }
+        /* Réactiver SIGCHLD */
+        sigprocmask(SIG_UNBLOCK, &ens_chld, NULL); 
+    }

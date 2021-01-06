@@ -1,0 +1,4 @@
+ComplementsCercleTest.java:8: error: '{' expected
+static class ComplementsCercleTest() {
+                                  ^
+1 error

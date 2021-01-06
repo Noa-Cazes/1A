@@ -1,0 +1,65 @@
+Date de l'évaluation : mardi 24 mars 2020, 15:44:54 (UTC+0100)
+
+!!! Il est interdit de changer Jeu.java (voir evaluation1/Jeu.java.diff)
+!!! Il est interdit de changer CoupInvalideException.java (voir evaluation1/CoupInvalideException.java.diff)
+
+Nombre de similitudes (voir evaluation1/sim_java.txt) : 16
+Les similitudes indiquent généralement du code à restructurer.
+
+Erreurs checkstyle (différentes/types) : 27/10	(voir evaluation1//checkstyle.log)
+
+Utilisation de 'Scanner' : ok
+	./allumettes/StrategieHumaine.java:	public Scanner scanner;
+	./allumettes/StrategieHumaine.java:		this.scanner = new Scanner(System.in);
+	./src/allumettes/StrategieHumaine.java:	public Scanner scanner;
+	./src/allumettes/StrategieHumaine.java:		this.scanner = new Scanner(System.in);
+
+Utilisation de 'split' : ok mais un seul split devrait suffir !  Code à restructurer...
+	./allumettes/Partie.java:		result = arg.split("@");
+	./src/allumettes/Partie.java:		result = arg.split("@");
+
+Utilisation de 'Random' : ok
+	./allumettes/StrategieNaive.java:import java.util.Random;
+	./allumettes/StrategieNaive.java:		Random al = new Random(); // crée un générateur de nombres aléatoires 
+	./src/allumettes/StrategieNaive.java:import java.util.Random;
+	./src/allumettes/StrategieNaive.java:		Random al = new Random(); // crée un générateur de nombres aléatoires 
+
+Utilisation de '3' : la constante Jeu.PRISE_MAX doit être utilisée
+	./allumettes/StrategieNaive.java:	 * entre 1 et 3.
+	./allumettes/StrategieNaive.java:			nbAllumettesVoulues = al.nextInt(Jeu.PRISE_MAX) + 1; // nbre alétoire compris entre 1 et 3
+	./allumettes/StrategieHumaine.java://				} else if (nbAllumettesPrises > 3) {
+	./allumettes/StrategieHumaine.java://					throw new CoupInvalideException(nbAllumettesPrises, "> 3");
+	./allumettes/StrategieRapide.java:			} else { // 1 <= nbAllumettesPrises <= 3
+	./src/allumettes/StrategieNaive.java:	 * entre 1 et 3.
+	./src/allumettes/StrategieNaive.java:			nbAllumettesVoulues = al.nextInt(Jeu.PRISE_MAX) + 1; // nbre alétoire compris entre 1 et 3
+	./src/allumettes/StrategieHumaine.java://				} else if (nbAllumettesPrises > 3) {
+	./src/allumettes/StrategieHumaine.java://					throw new CoupInvalideException(nbAllumettesPrises, "> 3");
+	./src/allumettes/StrategieRapide.java:			} else { // 1 <= nbAllumettesPrises <= 3
+
+Utilisation de 'System.exit' : INTERDIT d'utiliser System.exit(), sauf celui fourni dans Partie.java
+	./allumettes/Partie.java:			System.exit(1);
+	./src/allumettes/Partie.java:			System.exit(1);
+
+Compilation de Partie.java : OK.
+Compilation de Arbitre.java : OK.
+Compilation de StrategieRapideTest.java : OK.
+Test exemplePresqueSujet : NON CONFORME (voir evaluation1/exemplePresqueSujet.diff)
+Test exempleTricheurSujet : NON CONFORME (voir evaluation1/exempleTricheurSujet.diff)
+Test exempleConfiantTricheurSujet : NON CONFORME (voir evaluation1/exempleConfiantTricheurSujet.diff)
+Test exempleRobustesse : NON CONFORME (voir evaluation1/exempleRobustesse.diff)
+Test exempleRapideRapide : NON CONFORME (voir evaluation1/exempleRapideRapide.diff)
+Test exempleTricheurExpert : NON CONFORME (voir evaluation1/exempleTricheurExpert.diff)
+
+On recommence avec les classes/interfaces fournies : Jeu ConfigurationException CoupInvalideException
+Compilation de Partie.java : OK.
+Compilation de Arbitre.java : OK.
+
+Vérification du respect du diagramme de classe...
+Test FormeTest : Tests run: 2,  Failures: 1	(voir evaluation1/FormeTest.log)
+    1) testerRespectArchitecture(FormeTest)
+        AssertionError: Constructeur manquant dans la classe allumettes.Arbitre : allumettes.Arbitre(allumettes.Joueur, allumettes.Joueur)
+
+
+Compilation de StrategieRapideTest.java : OK.
+Test allumettes.StrategieRapideTest : OK (5 tests)	(voir evaluation1/allumettes.StrategieRapideTest.log)
+Compilation de StrategieRapideTest.java : ERREUR, pas de src.allumettes.StrategieRapideTest.class

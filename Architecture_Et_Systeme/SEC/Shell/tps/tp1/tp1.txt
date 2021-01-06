@@ -1,0 +1,12 @@
+1) find . -type f -name '*.o' -size +0 -print
+2) find . -type f -name '*.o' | wc -l
+3) find . -name core -size +0 -exec rm {} \;
+4) find . -type f -exec wc -m {} \;   \\ affiche le nombre de caractères par fichiers
+find . -type f -exec cat {} \; | xargs wc -m   \\concaténation de tous les fichiers et comptage du nombre de caractères
+5) find . -type f | grep -c tp    // -c compte le nombre de lignes contenant la chaine
+6) find . -print | sort -M | selectionner le troisième fichier          | wc   \\ wc pour les cara
+7) cat f | tr aeiouy 'cestunevoyelle" | grep cestunevoyelle | wc -l
+8) grep chaine fichier | paste -d\ \; |
+9) find . -type d | 
+10) wc -L fichier
+

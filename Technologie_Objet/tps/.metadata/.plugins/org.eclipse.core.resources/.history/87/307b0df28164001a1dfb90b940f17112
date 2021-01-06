@@ -1,0 +1,77 @@
+package allumettes;
+/** Fait respecter les règles du jeu aux deux joueurs.
+ * 
+ * @author ncazes2
+ *
+ */
+public class Arbitre {
+	
+	private Joueur j1;
+	private Joueur j2;
+	
+	public Arbitre(Joueur j1, Joueur j2) {
+		this.j1 = j1;
+		this.j2 = j2;
+	}
+	
+	/** Obtenir le joueur 1.
+	 * @return j1 le joueur 1
+	 */
+	
+	public Joueur getJ1(){
+		return this.j1;
+	}
+	
+	/** Obtenir le joueur 2.
+	 * @return j2 le joueur 2
+	 */
+	
+	public Joueur getJ2(){
+		return this.j2;
+	}
+	
+	/** Modifier le joueur 1.
+	 * @param j1 le joueur 1
+	 */
+	public void setJ1(Joueur j1){
+		this.j1 = j1;
+	}
+	
+	/** Modifier le joueur 2.
+	 * @param j2 le joueur 2
+	 */
+	public void setJ2(Joueur j2){
+		this.j2 = j2;
+	}
+	
+	/** Faire jouer un joueur.
+	 * @param j le joueur à faire jouer
+	 * @param jeu le jeu dans lequel on est
+	 */
+	public void faireJouer(Joueur j, Jeu jeu){
+		int nbAllumettes = j.getPrise(jeu);
+		try {
+			jeu.retirer(nbAllumettes);
+		} catch(CoupInvalideException e) {
+			nbAllumettes = j.getPrise(jeu);
+        }
+	}
+	
+	/** Arbitrer une partie.
+	 * @param jeu le jeu dans lequel on est
+	 */
+	public void arbitrer(Jeu jeu) {
+		while (jeu.getNombreAllumettes()!= 0) {
+			faireJouer(j1, jeu);
+			if (jeu.getNombreAllumettes()!= 0) {
+				faireJouer(j2, jeu);
+			} else {
+				// j1 a perdu
+				System.out.println(j1.getNom() + " a perdu!");
+				System.out.println(j2.getNom() + " a gagné!");
+			}
+		}
+	}
+	
+
+}

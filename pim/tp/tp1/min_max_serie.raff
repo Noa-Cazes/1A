@@ -1,0 +1,100 @@
+R0 - Afficher le min et le max d'une série
+Tests
+pour 2, 9, 3, 6, 3
+Entier = 2 -> min
+Entier  = 9 -> max
+Entier  = 8 -> pas dans la série
+Entier  = 0 -> pas dans la série
+Entier = 3 -> ni min, ni max
+
+R1 - Comment faire R0?
+Initialiser Entier, min et max. 
+Demander de saisir les valeurs de la série.
+Si Entier = 0 alors
+    Afficher "Pas de valeurs dans la série"
+Sinon 
+    Initialiser min et max à la valeur du premier entier saisi
+    Tant que Entier /= 0 faire
+        Si Entier > max alors
+            max prend la valeur de Entier
+        SinonSi Entier < min alors
+            min prend la valeur de Entier
+        Sinon
+            Rien
+        Fin Si
+    Fin Tant que
+    Afficher le min et le max de la série
+Fin Si
+
+R2 - Comment "Initialiser Entier, min et max"?
+Entier: Entier
+min : Entier
+max: Entier
+
+R2 - Comment "Demander de saisir les valeurs de la série"?
+Ecrire("Saisir les valeurs de la série, la terminer par un 0")
+
+R2 - Comment "Afficher "Pas de valeurs dans la série""?
+Ecrire("Pas de valeurs dans la série")
+
+R2 - Comment "Initialiser min et max à la valeur du premier entier saisi"?
+min <-- Entier
+max <-- Entier
+
+R2 - Comment "max prend la valeur de Entier"?
+max <-- Entier
+
+R2 - Comment "min prend la valeur de Entier"?
+min <-- Entier
+
+R2 - Comment "Afficher le min et le max de la série"?
+EcrireLn("Le min de la série est:")
+Lire(min)
+EcrireLn("Le max de la série est:")
+Lire(max)
+
+R3 - Programme
+-- cazes, groupe de TP C
+-- Afficher le min et le max d'une série
+-- R0 - Afficher le min et le max d'une série
+-- Tests
+-- pour 2, 9, 3, 6, 3
+-- Entier = 2 -> min
+-- Entier  = 9 -> max
+-- Entier  = 8 -> pas dans la série
+-- Entier  = 0 -> pas dans la série
+-- Entier = 3 -> ni min, ni max
+
+programme min_max_serie est
+    Entier: Entier
+    min : Entier
+    max: Entier
+
+debut
+    Ecrire("Saisir les valeurs de la série, la terminer par un 0")
+    Si Entier = 0 alors
+        Ecrire("Pas de valeurs dans la série")
+    Sinon
+        min <-- Entier
+        max <-- Entier
+        Tant que Entier /= 0 faire
+            Si Entier > max alors
+                max <-- Entier
+            SinonSi Entier < min alors
+                min <-- Entier
+            Sinon 
+                Rien
+            Fin Si
+        Fin Tant que
+        EcrireLn("Le min de la série est:")
+        Lire(min)
+        EcrireLn("Le max de la série est:")
+        Lire(max)
+      Fin_ Si
+Fin min_max_serie
+    
+    
+
+
+
+

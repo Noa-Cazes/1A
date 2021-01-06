@@ -1,0 +1,5 @@
+- A la différence de SIGSTOP, SIGTSTP peut être ignoré et géré. Pour faciliter l'étude on va l'assigner à SIGSTOP. 
+- J'ai décidé de mettre la commande fg dans le fils car ainsi lorsqu'elle est réalisée le processus est repris en avant-plan (c'est-à-dire cd->backgrounded != NULL, le père attent), si ce dernier a été interrompu ou était en arrière-plan (le père n'attend pas sa terminaison pour accepter une autre commande). 
+- Le signal ne doit pas procoqiuer la terminaison du Shell -> on bloque les signaux pour le père
+    Ni celle des processus en arrière_plan (père attend pas) -> bloquer les signaux
+    Mais celle du processus en avant-plan (père attend) -> inialise les signaux dans le père dans la condition où il attend avec retour comme pid à détruire.

@@ -1,0 +1,8 @@
+Première implantation
+1. Du à la troncature du signal temporellement, on induit une périodisation fréquentielle de la dsp. On fait le choix d'observer la dsp uniquement entre 0 et Fe.
+Sachant que la dsp représente le poids apporté par chacune des fréquences dans le signal, 
+2.a. Oui on a bien le résultat d'une somme de triangles de largeur 2*Ts. 
+2.b. Les résultats sont conformes à la théorie car on dispose bien d'un t0/
+g(t0+lTs) non nul pour l=0 et nul pour tous les l entiers naturels non nuls
+2.c. Le seuil optimal est celui à 0 (voir cours).
+On peut prendre Ts comme instant optimal d'échantillonnage. 

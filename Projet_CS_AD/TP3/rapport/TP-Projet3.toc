@@ -1,0 +1,11 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {2}Exercice 1 : Analyse en Composantes Principales}{3}
+\contentsline {section}{\numberline {3}Exercice 2 : Projection des images sur les \textit {eigenfaces}}{4}
+\contentsline {section}{\numberline {4}Exercice 3 : Application \`a la reconnaissance des visages}{5}
+\contentsline {paragraph}{Question 4}{5}
+\contentsline {paragraph}{Question 5}{6}
+\contentsline {paragraph}{Question 6}{6}
+\contentsline {paragraph}{Question 7}{6}
+\contentsline {paragraph}{Question 8 Suppl\'ementaire}{6}
+\contentsline {section}{\numberline {5}Conclusion}{7}

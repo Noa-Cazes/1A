@@ -1,0 +1,8 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Objectif g\'en\'eral du projet}{3}
+\contentsline {section}{\numberline {2}Les principales fonctionnalit\'es et leur \'etat d'avancement}{3}
+\contentsline {section}{\numberline {3}Le d\'ecoupage de l'application en sous-syst\`emes}{4}
+\contentsline {section}{\numberline {4}Le diagramme de classe}{5}
+\contentsline {section}{\numberline {5}Les principaux choix de conception et de r\'ealisation, les probl\`emes rencontr\'es et les solutions apport\'ees}{5}
+\contentsline {section}{\numberline {6}Organisation de l'\'equipe et mise en oeuvre des m\'ethodes agiles}{6}
+\contentsline {section}{\numberline {7}Conclusion et Objectifs}{6}

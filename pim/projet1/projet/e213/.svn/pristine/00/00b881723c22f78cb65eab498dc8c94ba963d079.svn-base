@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file />
+    <file_marker column=" 1" line=" 291" >
+      <vfs_project />
+      <vfs_file>/home/hamza/Desktop/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/hamza/Desktop/e213/src/foret.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 85" >
+      <vfs_project />
+      <vfs_file>/home/hamza/Desktop/e213/src/foret.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <vfs_file >/home/hamza/Desktop/e213/src/src.gpr</vfs_file>
+    <file_marker column=" 86" line=" 185">
+      <vfs_project >/home/hamza/Desktop/e213/src/src.gpr</vfs_project>
+      <vfs_file >/home/hamza/Desktop/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 451">
+      <vfs_project >/home/hamza/Desktop/e213/src/src.gpr</vfs_project>
+      <vfs_file >/home/hamza/Desktop/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 18">
+      <vfs_project >/home/hamza/Desktop/e213/src/src.gpr</vfs_project>
+      <vfs_file >/home/hamza/Desktop/e213/src/display_shell.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 87" line=" 51">
+      <vfs_project >/home/hamza/Desktop/e213/src/src.gpr</vfs_project>
+      <vfs_file >/home/hamza/Desktop/e213/src/display_shell.ads</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/display_shell.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 46" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/display_shell.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 92" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 60" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/input.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 104" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/registre.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 244" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/registre.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_binaire.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_binaire.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 104" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/input.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 109" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/input.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 57" line=" 109" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_binaire.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 85" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_binaire.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 38" line=" 113" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 172" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/display_shell.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 270" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 270" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_binaire.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 138" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/display_shell.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/display_shell.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 58" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/display_shell.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/registre.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/registre.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 138" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/display_shell.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/test_registre.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 38" line=" 113" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 90" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 38" line=" 23" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/registre.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 27" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/registre.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/registre.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 25" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 128" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 234" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 5" line=" 48" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 267" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 301" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 30" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 172" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_binaire.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_binaire.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 172" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/test_arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 463" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/registre.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/registre.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 467" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 476" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 69" line=" 201" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/display_shell.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/display_shell.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>/home/hmoudden/Bureau/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/hmoudden/Bureau/e213/src/display_shell.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

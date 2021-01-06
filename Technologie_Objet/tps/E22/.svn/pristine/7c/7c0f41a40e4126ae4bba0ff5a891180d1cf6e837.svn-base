@@ -1,0 +1,244 @@
+//package Unlock;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.FlowLayout;
+import java.awt.Graphics;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.awt.Color; 
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class UnlockSwingTuto {
+
+	// Le plateau du jeu Unlock
+	private Tuto modele;	
+
+    //  Les éléments de la vue (IHM)
+
+	/** Fenêtre principale */
+	private JFrame fenetre;
+
+
+	/** Cases du jeu */
+	private final JLabel[][] cases = new JLabel[Plateau.TAILLE+1][Plateau.TAILLE];
+	
+	/** Petit menu */
+	private final JMenuBar menuBar = new JMenuBar();
+	
+	private Map<Integer, ImageIcon> images;
+	
+// Le constructeur
+// ---------------
+
+	/** Construire le jeu Unlock */
+	public UnlockSwingTuto() {
+		this(new Tuto());
+	}
+
+	/** Construire le jeu de morpion */
+	public UnlockSwingTuto(Tuto modele) {
+		modele.fenetreChrono = new FenetreChrono();
+		Carte carteTuto = new Carte("Bureau","tutoriel_resized.png", "un_resized.png", "Carte_histoire.png");
+		//mettre la carte tutoriel en grand
+		new FenetreCarte(carteTuto);
+		// Initialiser le modèle
+		this.modele = modele;
+
+		// Créer les cases du jeu Unlock
+		for (int i = 0; i < this.cases.length; i++) {
+			for (int j = 0; j < this.cases[i].length; j++) {
+				this.cases[i][j] = new JLabel();
+			}
+		}
+		// les images à utiliser en fonction de l'état du jeu.
+		images = new HashMap<Integer, ImageIcon>();
+		{
+			Carte[] jeuCarte = modele.getJeuCarte();
+			for (int i=0; i<Plateau.NB_CARTE; i++) {
+				images.put( jeuCarte[i].getNumero(), new ImageIcon(jeuCarte[i].getNomImg()));
+			}	
+		}
+		// Initialiser le jeu
+		this.recommencer();
+        
+		// Mettre de la musique
+		Musique musique = new Musique("Professeur.wav");
+		musique.PlayMusic();		
+		
+
+		// Construire la vue (présentation)
+		//	Définir la fenêtre principale
+		this.fenetre = new JFrame();
+		// Ajouter un titre
+		fenetre.setTitle("Unlock tuto");
+		// Emplacement de la fenêtre
+		Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+		this.fenetre.setPreferredSize(dimension);
+		// Taille de la fenêtre
+		//this.fenetre.setSize(700, 100);
+		// Redimensionner la fenêtre
+		this.fenetre.setResizable(true);
+		
+		// Ajouter une image de fond
+		ImageIcon fond = null;
+		try {
+			fond = new ImageIcon(ImageIO.read(new File("fond_mur12.jpg")));
+		} catch(IOException e) {
+			// En cas de problème de chargement de l'image
+			e.printStackTrace();
+		}
+		JLabel contentPane = new JLabel(fond) {
+			@Override
+			public void paintComponent(Graphics g) {
+				super.paintComponent(g);
+				if (getIcon() != null) {
+					g.drawImage(((ImageIcon) getIcon()).getImage(),0, 0, getWidth(), getHeight(), null);
+				}
+			}
+		};
+		
+		// Appliquer ce contenu
+		this.fenetre.setContentPane(contentPane);
+		
+		java.awt.Container contenu = this.fenetre.getContentPane(); // contenu de la fenêtre principale
+		JPanel grille = new JPanel(new GridLayout(3,4));
+		
+		//contenu.add(new GridLayout(3,3), BorderLayout.WEST);
+		
+		// Définir la position des Plateau.TAILLE JLabel des cases
+		int indice = 0; 
+		int nbCartes = this.modele.getNombreCarte(); 
+		for (int i = 0; i < this.cases.length; i++) {
+			for (int j = 0; j < this.cases[i].length; j++) {
+				grille.add(this.cases[i][j]);
+				this.cases[i][j].setForeground(Color.black);
+				if (indice < nbCartes) {
+					this.cases[i][j].addMouseListener(new CliquerCase(this, i, j, indice));
+					indice++;
+			    }
+			}
+		}
+		contenu.setLayout(new FlowLayout());
+		contenu.add(grille);
+		
+		// Crétion du petit menu
+		JMenu menu = new JMenu("Jouer");
+		this.menuBar.add(menu);
+		
+	    
+	    JMenuItem itemQuitter = new JMenuItem("Quitter");
+	    itemQuitter.addActionListener(new ActionQuitter());
+	    menu.add(itemQuitter);
+	    
+	    JMenuItem itemSaisirCode = new JMenuItem("Saisir un code");
+	    itemSaisirCode.addActionListener(new ActionSaisirCode(this));
+	    menu.add(itemSaisirCode);
+		
+	    JMenuItem itemStopperMusique = new JMenuItem("Stopper la musique");
+	    itemStopperMusique.addActionListener(new ActionStopperMusique(this,musique ));
+	    menu.add(itemStopperMusique);
+
+	    JMenuItem itemRedemarrerMusique = new JMenuItem("Redemarrer la musique");
+	    itemRedemarrerMusique.addActionListener(new ActionRedemarrerMusique(this,musique ));
+	    menu.add(itemRedemarrerMusique);
+	    
+	    
+	    fenetre.setJMenuBar(this.menuBar);
+		
+
+		// pour la fermeture
+		this.fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		// afficher la fenêtre
+		this.fenetre.pack();			// redimmensionner la fenêtre
+		this.fenetre.setVisible(true);	// l'afficher
+	}
+	
+	class ActionNouvellePartieTuto implements ActionListener {
+		public void actionPerformed(ActionEvent nouvellePartie) {
+			recommencer();
+		}
+	}
+
+	
+	
+	
+// Les getters utiles
+		
+		
+		/** Obtenir les cases.
+		 * @return cases les cases du jeu
+		 */
+		public JLabel[][] getCases() {
+			return this.cases;
+		}
+		
+		/** Obtenir images.
+		 * @return images 
+		 */
+		public Map<Integer, ImageIcon> getImages() {
+			return images;
+		}
+		
+		/** Obtenir le modéle.
+		 * @return modele le modéle
+		 */
+		public Tuto getModele() {
+			return this.modele; 
+		}
+// Quelques réactions aux interactions de l'utilisateur
+// ----------------------------------------------------
+
+	/** Recommencer une nouvelle partie. */
+	public void recommencer() {
+		this.modele.recommencer();
+
+		// Vider les cases
+		for (int k = 0; k < this.cases.length; k++) {
+			for (int l = 0; l < this.cases[k].length; l++) {
+				this.cases[k][l].setIcon(images.get(this.modele.AfficherCarte(k, l)));
+			}
+		}
+	}
+	
+	public void majImg() {
+		images = new HashMap<Integer, ImageIcon>();
+		 {
+			Carte[] jeuCarte = modele.getJeuCarte();
+			for (int i=0; i<Plateau.NB_CARTE; i++) {
+				images.put( jeuCarte[i].getNumero(), new ImageIcon(jeuCarte[i].getNomImg()));
+			}	
+		}
+	}
+	
+	public void SaisirNumero(int n) {
+		this.modele.SaisirNumero(n);
+		
+	}
+
+
+
+	public void SaisirCode(int n) {
+		this.modele.SaisirCode(n);
+		
+		
+	}
+}

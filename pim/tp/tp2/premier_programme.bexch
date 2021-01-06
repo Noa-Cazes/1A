@@ -1,0 +1,19 @@
+[GENERATED OBJECT FILE]
+b__premier_programme.o
+[PROJECT FILES]
+/home/ncazes2/pim/tpbis/tp2/tp2.gpr
+20190925121433
+[BOUND OBJECT FILES]
+/home/ncazes2/pim/tpbis/tp2/premier_programme.o
+[GENERATED SOURCE FILES]
+b__premier_programme.ads
+b__premier_programme.adb
+b__premier_programme.ali
+[RESULTING OPTIONS]
+-L/home/ncazes2/pim/tpbis/tp2/
+-L/home/ncazes2/pim/tpbis/tp2/
+-L/applications/gnat/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/
+-static
+-static-libgcc
+/applications/gnat/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/libgnat.a
+-ldl

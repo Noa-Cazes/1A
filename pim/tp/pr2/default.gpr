@@ -1,0 +1,12 @@
+project Default is
+
+   for Main use ("ensembles_chainage.adb", "ensembles_chainage.ads", "ensembles_tableau.adb", "ensembles_tableau.ads", "nombre_moyen_tirages_chainage.adb", "nombre_moyen_tirages_tableau.adb", "scenario_chainage.adb", 
+      "scenario_tableau.adb", "test_ensembles_chainage.adb", "test_ensembles_tableau.adb");
+
+   package Compiler is
+      for Switches ("Ada") use ("-g", "-O2");
+      for Switches ("ada") use ("-g", "-gnata", "-gnatwa");
+   end Compiler;
+
+end Default;
+

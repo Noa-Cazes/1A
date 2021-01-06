@@ -1,0 +1,42 @@
+\relax 
+\catcode `:\active 
+\catcode `;\active 
+\catcode `!\active 
+\catcode `?\active 
+\babel@aux{french}{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Objectif g\'en\'eral du projet}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Description des fonctionnalit\'es souhait\'ees}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Les interfaces utilisateurs envisag\'ees}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Configuration de d\'epart - L'histoire }}{4}}
+\newlabel{fig : Depart_enigme}{{1}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Configuration de d\'epart -Premi\`ere carte }}{4}}
+\newlabel{fig : Premiere_carte}{{2}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Premi\`ere combinaison }}{5}}
+\newlabel{fig : Premiere_combinaison}{{3}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Premi\`ere fouille }}{5}}
+\newlabel{fig : Premiere_fouille}{{4}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Un sc\'enario pour comprendre les fonctionnalit\'es}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Ensemble des cartes disponibles au d\'ebut de l'histoire }}{6}}
+\newlabel{fig : Ensemble_cartes_dos}{{5}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Carte avec l'histoire de l'\'enigme}}{7}}
+\newlabel{fig : Carte_histoire}{{6}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Carte lieu}}{8}}
+\newlabel{fig : Carte_lieu}{{7}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Carte puzzle rouge 1}}{9}}
+\newlabel{fig : Carte_puzzle_rouge_1}{{8}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Carte puzzle bleue 1}}{10}}
+\newlabel{fig : Carte_puzzle_bleue_1}{{9}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Carte combinaison 1}}{11}}
+\newlabel{fig : Carte_combinaison_1}{{10}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Carte machine }}{12}}
+\newlabel{fig : Carte_machine}{{11}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Carte combinaison 2 }}{13}}
+\newlabel{fig : Carte_combinaison_2}{{12}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Carte puzzle rouge 2}}{14}}
+\newlabel{fig : Carte_puzzle_rouge_2}{{13}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Carte combinaison 3}}{15}}
+\newlabel{fig : Carte_combinaison_3}{{14}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Carte code}}{16}}
+\newlabel{fig : Carte_code}{{15}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion et Objectifs}{17}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Compl\'ement: les points difficiles}{17}}

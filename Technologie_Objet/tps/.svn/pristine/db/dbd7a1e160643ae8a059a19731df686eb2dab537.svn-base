@@ -1,0 +1,99 @@
+package Unlock;
+
+
+public class Jeu implements Plateau {
+
+	/** La zone de jeu */
+	private Numero[][] cases;
+
+	/** Jeu de cartes possible */ //add
+	private Carte[] jeuCartes; //add
+
+
+	/** Le nombres de cartes sur le plateau */
+	private int nbCarte;
+	
+
+	public Jeu() {
+		// Créer le damier
+		this.cases = new Numero[Plateau.TAILLE][Plateau.TAILLE];
+		this.jeuCartes = new Carte[nbCarte]; //add
+
+		// Commencer une partie
+		initialiser();
+	}
+	
+	/** Est-ce que la case (i,j) est vide ? */
+	private boolean estVide(int i, int j) {
+		return AfficherCarte(i,j) == Numero.vide;
+	}
+
+	public Numero AfficherCarte(int x, int y) {
+		return this.cases[x][y];
+	}
+	
+
+	public void SaisirNumero(int n) { //modif
+		for (Carte c : jeuCartes) {
+			if (c.getNumero() == n) {
+				c.decouvrir();
+			}
+		}
+	}
+	
+
+	public void SaisirCode (int n) {
+		if (n == 9372) {
+			quitter();
+		}
+		else {
+			
+		}
+		
+	}
+
+	/** Initialiser le jeu pour faire une nouvelle partie */
+	private void initialiser() {
+		// Initialiser les cases
+		for (int i = 0; i < this.cases.length; i++) {
+			for (int j = 0; j < this.cases[i].length; j++) {
+				this.cases[i][j] = Numero.vide;
+			}
+		}
+		// initialiser la partie
+		this.cases[0][0] = Numero.Un;
+	}
+
+	
+
+	/** Jouer en (i,j) pour le joueur */
+	//@ requires estVide(i,j);
+	//@ ensures getValeur(i,j) == joueur;
+	private void jouer(int i, int j, Numero n) {
+		this.cases[i][j] = n;
+		
+	}
+
+
+	public void quitter() {
+	}
+
+	public void recommencer() {
+		this.initialiser();
+	}
+
+	public void remplir(int x, int y,Numero n) throws CaseOccupeeException {
+			if (this.estVide(x, y)) {
+				// Jouer la case
+				this.jouer(x, y, n);
+			} else {
+				throw new CaseOccupeeException("Impossible, la case est occupée !");
+			}
+	}
+	
+	public void defausser(int x, int y) {
+		this.cases[x][y] = Numero.vide;
+	}
+
+}
+

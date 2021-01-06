@@ -1,0 +1,6 @@
+Exercice 1
+1. 
+Pour le produit scalaire, il est nécéssaire de multiplier les mêmes composantes des vecteurs entre elles (on multiplie la composante i de V1, avec la i e V2 etc). 
+De même, pour la somme de deux veceturs, on opère à une addition composante par composante. 
+De même, pour l'égalité, il faut comparer la composante i de V1 avec la composante i de V2. 
+Ainsi, si les composantes sont stockées par odre croissant d'indice, la composante i sera à la place i, ce qui permet d'implanter de manière efficace les dernières opérations citées. 

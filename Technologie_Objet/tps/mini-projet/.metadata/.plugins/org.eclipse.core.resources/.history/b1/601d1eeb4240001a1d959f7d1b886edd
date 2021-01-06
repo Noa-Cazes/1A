@@ -1,0 +1,12 @@
+import java.awt.Color;
+
+/** Cercle modélise une courbe plane constituée de points situés à distance égale d'un point nommé centre.
+* Cette distance est appelée rayon du cercle.
+* On peut savoir si un point est à l'intérieur d'un cercle au sens large.
+*
+*@author Noa Cazes <noa.cazes@enseeiht.fr>
+*/
+
+public class Cercle {
+	
+}

@@ -1,0 +1,7 @@
+Exercice 1
+1.1
+Les "@" et les "assert" sont considérés comme des erreurs.
+
+Exercice 2
+L'exécution révèle une erreur. C'est la méthode de test testInitialisationMieux qui comprend l'erreur. 
+Ce sont les lignes 42 et 43 où il y des erreurs, car les expressions dans les assertEquals sont fausses. 

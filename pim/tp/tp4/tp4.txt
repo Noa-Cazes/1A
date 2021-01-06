@@ -1,0 +1,21 @@
+Exercice 1
+1. Le fichier .ads correspond à la spécification du package, à l'interface.
+Le fichier .adb correspond à l'implantation du package, module. 
+2. Il n'y a pas de commentaires car les commentaires sont déjà présents dans le fichier .ads
+3. Le commmentaire du sous-programme est donné dans le fichier .adb car il n'est pas présent dans le fichier .ads, on peut supposer que c'est aprce que l'utilisateur ne doit pas avoir accès à cette procédure. 
+4. Un utilisateur du module Dates peut utiliser:
+- le type T_Mois
+- la procédure Initialiser
+- la procédure Afficher
+- la fonction Le_Mois
+- la fonction Le_Jour
+- la fonction L-Annee
+6. Le type T_Mois ne peut pas être déclaré privé car il est utilisé en tant que retour dans la fonction Le_Mois. 
+7. Le type tès privé implique qu'on ne peut pas faire d'affectation avec des éléments d'un type privé. On y a pas du tout accès.
+
+
+Exercice 2
+2.
+R0: Obtenir le nombre de matériels enregistrés dans le stock.
+T_Stock.Nbre_Elements
+

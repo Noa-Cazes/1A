@@ -1,0 +1,6 @@
+allumettes/Partie.java:66: error: cannot find symbol
+	public Joueur splitArg(String[] arg) {
+	       ^
+  symbol:   class Joueur
+  location: class Partie
+1 error

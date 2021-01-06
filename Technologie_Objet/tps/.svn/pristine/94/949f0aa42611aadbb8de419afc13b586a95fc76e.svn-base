@@ -1,0 +1,57 @@
+package allumettes;
+import java.util.Scanner;
+import org.junit.*;
+import static org.junit.Assert.*;
+
+/** Stratégie qui consiste à demander au joueur ce qu'il veut jouer.
+ * 
+ * @author ncazes2
+ *
+ */
+public class StrategieHumaine implements Strategie {
+	
+	/** Le scanner va peremttre de lire le nombre
+	 * d'allumettes que le joueur veut retirer.
+	 */
+	public Scanner scanner;
+	
+	public StrategieHumaine(){
+		this.scanner = new Scanner(System.in);
+	}
+	
+	/** Demander à un joueur le nombre d'allumettes 
+	 * qu'il veut rétirer pour un jeu donné.
+	 * @param jeu le jeu donné
+	 * @return nbAllumettes le nombre d'allumettes que le joueur veut prendre
+	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'allumettes
+	 */
+	public int getPrise(Jeu jeu) {
+		
+		int nbAllumettesPrises = 0;
+		int nbAllumettesEnJeu = jeu.getNombreAllumettes();
+		
+		do {
+			
+			nbAllumettesPrises = this.scanner.nextInt();
+			System.out.print("Combien prenez-vous d'allumettes ? ");
+			if (this.scanner.hasNextInt()) { // Si le joueur a saisi un entier est un entier
+				System.out.print(nbAllumettesPrises);
+//				if (nbAllumettesPrises <= 0) {
+//					throw new CoupInvalideException(nbAllumettesPrises, "< 0");
+//				} else if (nbAllumettesPrises > 3) {
+//					throw new CoupInvalideException(nbAllumettesPrises, "> 3");
+//				} else if (nbAllumettesPrises > nbAllumettesEnJeu) {
+//					throw new CoupInvalideException(nbAllumettesPrises, ">" + nbAllumettesEnJeu);
+//				}
+
+			} else {
+				System.out.println(this.scanner.nextLine());
+				System.out.println("Vous devez donner un entier.");
+				
+			} 
+			
+		} while (!this.scanner.hasNextInt());
+		return nbAllumettesPrises;
+	}
+
+}

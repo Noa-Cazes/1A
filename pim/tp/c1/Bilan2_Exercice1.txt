@@ -1,0 +1,16 @@
+B1.1 La portée de chaque variable déclarée se limite au bloc où elle est définie.
+La portée de la variable a commence à la ligne 12 et se termine à la ligne 18.
+La portée de la variable r commence à la ligne 29 et se termine à la ligne 33.
+La portée de la variable n commence à la ligne 7  et se termine à la ligne 37.
+
+B1.2 La variable n est égale à 10 de la ligne 8 à 20 et de la ligne 26 à 37.
+La variable n est égale à 7  de la ligne 22 à 24.
+
+B1.3 Non cela n'est pas possible.
+
+B1.4 Il devrait être écrit : int* p =NULL;
+
+B1.5 Oui car on lui associe l'adresse mémoire de a. 
+
+B1.6 Le printf de la ligne 20 afficherait la nouvelle valeur de *p. 
+

@@ -1,0 +1,5 @@
+Eexrcice 1
+Question
+Comme les points des pensées et des oeillets se chevauchent, on peut
+supposer que lorsque les valeurs moyennes d'une image dont on veut déterminer la classe seront telles que le point correspondant se trouvera dans ce nuage de pensées et d'oeillets, la classe renvoyée peut ne pas être exacte (ce qui est du à la proximité des points).
+Donc, la couleur moyenne n'est pas une caractéristique suffisamment déterminante pour ces trois espèces de fleurs. 

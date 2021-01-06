@@ -1,0 +1,11 @@
+import junit.framework.TestCase;
+import Math; 
+
+public class MathTest extends TestCase {
+	public static final double EPSILON = 1e-6;
+
+	public void testSqrt() {
+		assertEquals(sqrt(2),4,EPSILON);
+	}
+
+}

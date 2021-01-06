@@ -1,0 +1,31 @@
+Date de l'évaluation : jeudi 30 janvier 2020, 16:05:42 (UTC+0100)
+
+Compilation de Cercle.java : OK.
+
+Types d'erreurs checkstyle : 0	(voir evaluation1/Cercle.checkstyle)
+
+Résultat de recherche de similitudes sur Cercle.java dans evaluation1/Cercle.sim
+
+JavaDoc automatique de Cercle : ok	(voir evaluation1/Cercle.javadoc)
+
+Un constructeur devrait appeler l'autre.
+
+Test SujetCercleTest : OK (14 tests)	(voir evaluation1/SujetCercleTest.log)
+Test RobustesseCercleTest : OK (20 tests)	(voir evaluation1/RobustesseCercleTest.log)
+Test FormeCercleTest : OK (12 tests)	(voir evaluation1/FormeCercleTest.log)
+Test Forme2CercleTest : Tests run: 9,  Failures: 1	(voir evaluation1/Forme2CercleTest.log)
+    1) testToString(Forme2CercleTest)
+        AssertionError: toString de Cercle doit utiliser toString de Point !
+
+
+ComplementsCercleTest : modifiée... on l'utilise donc...
+Compilation de ComplementsCercleTest.java : ERREUR !	(voir evaluation1/ComplementsCercleTest.java.log)
+
+Compilation de CercleTest.java : OK.
+Test CercleTest : Tests run: 3,  Failures: 2	(voir evaluation1/CercleTest.log)
+    1) testerE12(CercleTest)
+        AssertionError: E12: Rayon de C2 incorrect expected:<2.0> but was:<1.5>
+    2) testerE14(CercleTest)
+        AssertionError: E14: Rayon de C4 incorrect expected:<2.0> but was:<6.0>
+
+CercleTest échoue sur Cercle : pas de test avec les mutants

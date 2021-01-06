@@ -1,0 +1,12 @@
+package allumettes;
+
+public class OperationInterditeException extends Exception {
+	
+	/** Initialiser une ConfigurationException avec le message précisé.
+	  * @param message le message explicatif
+	  */
+	public OperationInterditeException(String message) {
+		super(message);
+	}
+
+}

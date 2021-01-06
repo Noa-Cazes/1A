@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+/home/ncazes2/1A/Technologie_Objet/tps/TP04/.metadata/.plugins/org.eclipse.jdt.core
+613747549.index
+2587383206.index

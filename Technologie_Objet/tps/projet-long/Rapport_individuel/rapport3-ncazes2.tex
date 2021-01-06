@@ -1,0 +1,61 @@
+
+\documentclass[frenchb]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{babel}
+
+\begin{document}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=10cm]{inp_n7.png}
+\end{figure}
+
+\title{\vspace{1cm} \textbf{Technologie Objet - Projet long} \\ \textbf{Développement d'une application Unlock} \\ \textit{\textbf{Rapport individuel - Itération 3}}}
+
+\author{Auteur\\ \textsc{Cazes} Noa  }
+\date{\vspace{13cm} Département Sciences du Numérique - Première année \\
+2019-2020 }
+
+\maketitle
+
+\newpage
+
+\section{Rappel: Objectif général du projet}
+Le but est de recréer le jeu « Unlock » sans l'aspect physique de la boite et de son contenu. Le ou les joueur(s) pourra/pourront jouer sur une ou plusieurs énigmes proposées par l'interface graphique.
+
+Ce produit est destiné à tout public qui souhaite se distraire avec un jeu ludique et qui nécessite réflexion, et à la différence du jeu traditionnel, il est possible de jouer n'importe où au jeu Unlock. 
+
+
+\section{Travail réalisé pour l'itération 3}
+Je suis en charge de l'interface graphique. 
+
+Le but de cette itération pour ma part était de finaliser l'interface graphique avec l'ajout de cartes en grand, de gérer le positionnement et l'organisation premier plan/second plan des fenêtres sur le plateau, de définir l'action résultant de cliquer une deuxième fois sur une carte, de définir des boutons pour le chronomètre. 
+
+L'ajout de deux attributs (un nouveau bouléen et le nom (chaîne de carcatères) du fichier correspondant à l'image de la carte en taille réelle) a entraîné la modification de la classe Carte.java, ce qui a propagé les modifications dans les autres classes où elle intervenait. 
+	
+
+\par\leavevmode\par
+
+J'ai ainsi réalisé, entièrement ou partiellement, les classes suivantes:
+\begin{enumerate}
+		\item FenetreCarte.java \\
+		La classe qui permet d'ouvrir une fenêtre avec la carte voulue en grand, 
+		\item CliquerCase.java \\
+		Permet de définir l'action réalisée lorsque l'on clique sur une carte du plateau (soit on la retourne, soit rien ne se passe si on a pas l'autorisation de la retourner, soit on l'affiche en grand), 
+		\item ActionChrono.java \\
+		Permet de définir l'action réalisée par le chronomètre (incrémentation), 
+		\item ActionChronoStartPause.java \\
+		Permet de définir l'action réalisée lorsque l'on appuie sur les boutons start, pause ou restart du chronomètre.
+\end{enumerate}
+
+Et j'ai aussi rédigé le rapport général de l'itération 3.
+
+
+
+
+\end{document} 

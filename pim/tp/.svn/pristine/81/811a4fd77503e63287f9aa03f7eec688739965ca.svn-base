@@ -1,0 +1,47 @@
+with ensembles_tableau;
+with Alea;
+with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Float_Text_IO; use Ada.Float_Text_IO;
+
+procedure nombre_moyen_tirages_tableau is
+
+    Min : constant Integer := 1;
+    Max : constant Integer := 60;
+    Diff : constant Integer := (Max - Min + 1);
+
+     -- déclaration du paquetage Mon_Alea
+    package Mon_Alea is new Alea (Min,Max);
+    use Mon_Alea;
+
+    -- déclaration du paquetage Mon_Ensemble
+    package Mon_Ensemble is new Ensembles_Tableau(Capacite => Diff, T_Elts => Integer);
+    use Mon_Ensemble;
+
+    -- déclaration des variables de la procédure
+    Nbre : Float;        -- nbre de tirages réalisés
+    Nbre_Moyen : Float;  -- nombre moyen de tirages réalisés
+    Genere : Integer;      -- nombre aléatoire généré
+    Condition_Arret : Boolean;
+    Ens : T_Ensemble;   -- Tableau où est rangé les éléments de Min à Max
+
+begin
+    Nbre := 0.0;
+    for i in 1..100 loop
+        Initialiser(Ens);
+        Condition_Arret := (Taille_Ensemble(Ens) = Diff);
+        loop
+            Get_Random_Number(Genere);
+            if not Present(Ens, Genere) then
+                Ajouter (Ens, Genere);
+            else
+                null;
+            end if;
+            Nbre := Nbre + 1.0;
+            exit when Condition_Arret;
+        end loop;
+    end loop;
+    Nbre_Moyen := Nbre / (100.0);
+    Put_Line ("Le nombre moyen de tirages est : ");
+    Put (Nbre_Moyen);
+end nombre_moyen_tirages_tableau;
+

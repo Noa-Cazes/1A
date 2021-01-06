@@ -1,0 +1,35 @@
+foret.adb:91:23: warning: "Tmp" modified by call, but value might not be referenced
+foret.adb:94:09: assignment to "in" mode parameter not allowed
+foret.adb:94:28: "Ab" is undefined (more references follow)
+foret.adb:95:26: "Data" is undefined (more references follow)
+foret.adb:105:09: "Inserer_R" is not visible
+foret.adb:105:09: non-visible declaration at registre.ads:184
+foret.adb:108:09: "Display_New_ID" is undefined
+foret.adb:114:63: not type conformant with declaration at foret.ads:96
+foret.adb:114:63: too many parameters
+foret.adb:123:09: missing "return" statement in function body
+foret.adb:125:17: "Is_Empty" is not visible
+foret.adb:125:17: non-visible declaration at arbre_binaire.ads:87, instance at arbre_genealogique.ads:215
+foret.adb:131:17: cannot use call to function "Get_Child_ID" as a statement
+foret.adb:131:17: return value of a function call cannot be ignored
+foret.adb:131:31: "Get_Left" is not visible
+foret.adb:131:31: non-visible declaration at arbre_binaire.ads:47, instance at arbre_genealogique.ads:215
+foret.adb:132:17: cannot use call to function "Get_Child_ID" as a statement
+foret.adb:132:17: return value of a function call cannot be ignored
+foret.adb:132:31: "Get_Right" is not visible
+foret.adb:132:31: non-visible declaration at arbre_binaire.ads:55, instance at arbre_genealogique.ads:215
+foret.adb:149:118: "ID" is undefined (more references follow)
+foret.adb:150:21: no candidate interpretations match the actuals:
+foret.adb:150:30: expected private type "Forest" defined at foret.ads:114
+foret.adb:150:30: found private type "T_Ensemble" defined at ensemble.ads:15, instance at foret.ads:109
+foret.adb:150:30:   ==> in call to inherited operation "Ajouter" at foret.ads:114
+foret.adb:150:35: expected private type "T_ABG" defined at arbre_genealogique.ads:17
+foret.adb:150:35: found type "Standard.Integer"
+foret.adb:150:35:   ==> in call to "Ajouter" at ensemble.ads:35, instance at foret.ads:109
+foret.adb:153:21: no candidate interpretations match the actuals:
+foret.adb:153:30: expected private type "Forest" defined at foret.ads:114
+foret.adb:153:30: found private type "T_Ensemble" defined at ensemble.ads:15, instance at foret.ads:109
+foret.adb:153:30:   ==> in call to inherited operation "Ajouter" at foret.ads:114
+foret.adb:153:35: expected private type "T_ABG" defined at arbre_genealogique.ads:17
+foret.adb:153:35: found type "Standard.Integer"
+foret.adb:153:35:   ==> in call to "Ajouter" at ensemble.ads:35, instance at foret.ads:109

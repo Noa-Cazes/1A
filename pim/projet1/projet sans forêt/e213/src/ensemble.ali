@@ -1,0 +1,106 @@
+V "GNAT Lib v2019"
+A -g
+A -gnata
+A -gnatwa
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U ensemble%b		ensemble.adb		a63793be NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+
+U ensemble%s		ensemble.ads		78801a5e BN EE NE OO PK GE
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20190518041255 eff36322 ada.unchecked_deallocation%s
+D ensemble.ads		20191212121534 78801a5e ensemble%s
+D ensemble.adb		20191212121534 9fb03faf ensemble%b
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [ensemble standard 6 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 10|4r6 4r23 5r6 12r17
+X 6 a-textio.ads
+57K13*Text_IO 727e16 10|4w10 4r27
+465U14*Put 10|119s9 123s17
+508U14*Put_Line 10|127s9
+X 8 a-uncdea.ads
+20u15*Unchecked_Deallocation 10|5w10 12r21
+X 9 ensemble.ads
+4+10 T_Element 40r70 43r71 48r73 54r61 65r26 10|68r66 84r67 102r69
+6k9*Ensemble 4z10 59E14 69l5 69e13 10|8b14 131l5 131t13
+9P14*T_Ensemble 17r47 25r37 25r57 30r48 34r42 37r40 40r45 43r46 48r48 55r52
+. 62c14 66r26 10|12r56 17r43 23r33 23r53 24r22 41r43 52r38 58r36 68r41 70r16
+. 84r42 85r34 102r44 103r16 115r48 116r16
+17U19*Initialiser 17<32 10|17b15 20l9 20t20 27s13
+17p32 Ensemble{9P14} 18r35 10|17b28 19m9
+25U19*Copy 25=25 25>49 10|23b15 36l9 36t13
+25p25 E1{9P14} 10|23b21 27m26 29r21
+25p49 E2{9P14} 10|23b45 26r23 30r21
+30U20*Detruire 30=30 10|41b15 44s13 49l9 49t17
+30p30 Ensemble{9P14} 31r32 10|41b25 43r13 44r23 45m19
+34V18*Est_Vide{boolean} 18s25 31s22 34>28 49s28 10|26s13 52b14 55l9 55t17
+34p28 Ensemble{9P14} 10|52b24 54r16
+37V18*Taille{integer} 37>26 10|58b14 63s24 65l9 65t15 122s17
+37p26 Ensemble{9P14} 10|58b22 60r13 63r32
+40V18*Est_Present{boolean} 40>31 40>57 44s28 45s25 49s52 50s29 10|68b14 81l9
+. 81t20
+40p31 Ensemble{9P14} 10|68b27 73r17
+40*57 Element{4+10} 10|68b53 75r36
+43U19*Ajouter 43=28 43>58 10|32s17 84b15 99l9 99t16
+43p28 Ensemble{9P14} 44r41 45r38 10|84b24 88r14 89m13 91r21
+43*58 Element{4+10} 44r51 45r48 10|84b54 87r44
+48U19*Supprimer 48=30 48>60 10|102b15 110s13 112l9 112t18
+48p30 Ensemble{9P14} 49r38 49r65 50r42 10|102b26 105r13 106r21 107m19 108m13
+. 110r24
+48*60 Element{4+10} 49r75 50r52 10|102b56 105r36 110r46
+54U32 Afficher_Elt 54>46 10|121s13
+54*46 Un_Element{4+10}
+55u19*Afficher_Ensemble 55>38 10|115b15 128l9 128t26
+55p38 Ensemble{9P14} 10|115b34 118r17
+59R14 T_Cellule 62r35 64c14 67e19 10|12r45 87r33
+65*17 Element{4+10} 10|32r41 75r26 105r26 121r36
+66p17 Suivant{9P14} 10|33r34 44m36 63r45 78r30 93r29 95r34 97m22 106r34 110m37
+. 125r30
+X 10 ensemble.adb
+11U15 Free[8|20] 45s13 107s13
+24p9 Tmp1{9|9P14} 29m13 32m26 32r26
+24p15 Tmp2{9|9P14} 30m13 31r20 32r32 33m17 33r25
+69b9 present{boolean} 72m9 76m17 80r16
+70p9 Temp{9|9P14} 73m9 74r16 75r17 78m13 78r21
+85p9 Nouvelle_Cellule{9|9P14} 87m9 89r25 97r33
+85p27 Temp{9|9P14} 91m13 93r20 95m17 95r25 97r13
+103p9 Temp{9|9P14} 106m13 108r25
+116p9 Temp{9|9P14} 118m9 120r16 121r27 122r25 125m13 125r21
+

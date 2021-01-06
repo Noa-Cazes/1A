@@ -1,0 +1,71 @@
+
+public class Chrono {
+	
+	private long TempsDepart=0;
+	private long TempsFin=0;
+	private long PauseDepart=0;
+	private long PauseFin=0;
+	private long Duree=0;
+	
+	public void start () {
+		TempsDepart=System.currentTimeMillis();
+		TempsFin=0;
+		PauseDepart=0;
+		PauseFin=0;
+		Duree=0;
+	}
+
+	public void pause () {
+		PauseFin=System.currentTimeMillis();
+		TempsDepart=TempsDepart+PauseFin-PauseDepart;
+		TempsFin=0;
+		Duree=0;
+		PauseDepart=0;
+		PauseFin=0;
+	}
+	
+	public void resume () {
+		PauseFin=TempsDepart+PauseFin-PauseDepart;
+		TempsFin=0;
+		PauseDepart=0;
+		PauseFin=0;
+		Duree=0;
+	}
+	
+	public void stop () {
+		TempsFin=System.currentTimeMillis();
+		Duree=(TempsFin-TempsDepart)-(PauseFin-PauseDepart);
+		TempsDepart=0;
+		TempsFin=0;
+		PauseDepart=0;
+		PauseFin=0;
+	}
+	
+	public static String TimeToHMS(long TempsS) {
+		int h=(int) (TempsS/3600);
+		int m=(int) ((TempsS%3600)/60);
+		int s=(int) (TempsS%60);
+		String r="";
+		if(h>0) {
+			r+=h+" h ";
+		}
+		if(m>0) {
+			r+=m+" min";
+		}
+		if(s>0) {
+			r+=s+" s";
+		}
+		if(h<=0 && m<=0 && s<=0) {
+			r=" 0 s";
+		}
+		return r;
+	}
+	
+	public long GetDureeS() {
+		return Duree/1000;
+	}
+	
+	public String GetDureeTxt() {
+		return TimeToHMS(GetDureeS());
+	}
+}

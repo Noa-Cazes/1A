@@ -1,0 +1,35 @@
+theory Proposition
+    predicate a
+    predicate b
+    predicate c
+
+    predicate i = (not a) /\ (not b) /\ (not c)
+
+    predicate da = b /\ (not c)
+    predicate db = a -> c
+    predicate dc = (not c) /\ (a \/ b)
+
+    predicate liar = (a -> not da) /\ (b -> not db) /\ (c -> not dc)
+
+    goal Thm01 : (a /\ b /\ not c) -> (da /\ db /\ dc)
+    goal Thm02 : ((da /\ db)-> dc)
+    goal Thm03 : ((db /\ dc))-> da)
+    goal Thm04 : ((da /\ dc))-> db)
+
+    goal Mentia: i -> (not da)
+    goal Mentia: i -> (not db)
+    goal Mentia: i -> (not dc)
+
+    goal Coupablea : (da /\ db /\ dc) -> (not a)
+    goal Coupableb : (da /\ db /\ dc) -> b
+    goal Coupablec : (da /\ db /\ dc) -> (not c)
+
+    goal Liara : liar -> a
+    goal Liarna : liar -> not a 
+    goal Liarb : liar -> b
+    goal Liarnb : liar -> not b
+    goal Liarc : liar -> c
+    goal Liarnc : liar -> not c
+
+end 
+

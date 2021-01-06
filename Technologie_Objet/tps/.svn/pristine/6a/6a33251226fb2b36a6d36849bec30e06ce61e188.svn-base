@@ -1,0 +1,133 @@
+File ./allumettes/ConfigurationException.java: 21 tokens, 16 lines
+File ./allumettes/Jeu.java: 23 tokens, 21 lines
+File ./allumettes/Arbitre.java: 614 tokens, 163 lines
+File ./allumettes/Strategie.java: 17 tokens, 19 lines
+File ./allumettes/StrategieTricheur.java: 44 tokens, 21 lines
+File ./allumettes/OperationInterditeException.java: 21 tokens, 12 lines
+File ./allumettes/Partie.java: 450 tokens, 113 lines
+File ./allumettes/CoupInvalideException.java: 51 tokens, 28 lines
+File ./allumettes/Joueur.java: 92 tokens, 53 lines
+File ./allumettes/Procuration.java: 55 tokens, 26 lines
+File ./allumettes/StrategieNaive.java: 60 tokens, 27 lines
+File ./allumettes/StrategieExperte.java: 76 tokens, 25 lines
+File ./allumettes/StrategieHumaine.java: 98 tokens, 41 lines
+File ./allumettes/UnJeu.java: 122 tokens, 37 lines
+File ./allumettes/StrategieRapide.java: 63 tokens, 29 lines
+Total input: 15 files (15 new, 0 old), 1807 tokens
+
+./allumettes/Partie.java: line 80-84 [57]
+./allumettes/Partie.java: line 84-88
+< 		if (result[1].equals("naif")) {
+< 			return new Joueur(result[0], new StrategieNaive());
+< 		} else if (result[1].equals("rapide")) {
+< 			return new Joueur(result[0], new StrategieRapide());
+< 		} else if (result[1].equals("expert")) {
+---
+> 		} else if (result[1].equals("expert")) {
+> 			return new Joueur(result[0], new StrategieExperte());
+> 		} else if (result[1].equals("humain")) {
+> 			return new Joueur(result[0], new StrategieHumaine());
+> 		} else if (result[1].equals("tricheur")) {
+
+./allumettes/Arbitre.java: line 19-45 [57]
+./allumettes/Joueur.java: line 17-41
+< 	public Arbitre(Joueur j1, Joueur j2) {
+< 		this.j1 = j1;
+< 		this.j2 = j2;
+< 	}
+< 
+< 	/** Obtenir le joueur 1.
+< 	 * @return j1 le joueur 1
+< 	 */
+< 
+< 	public Joueur getJ1() {
+< 		return this.j1;
+< 	}
+< 
+< 	/** Obtenir le joueur 2.
+< 	 * @return j2 le joueur 2
+< 	 */
+< 
+< 	public Joueur getJ2() {
+< 		return this.j2;
+< 	}
+< 
+< 	/** Modifier le joueur 1.
+< 	 * @param j1 le joueur 1
+< 	 */
+< 	public void setJ1(Joueur j1) {
+< 		this.j1 = j1;
+< 	}
+---
+> 	public Joueur(String nom, Strategie strategie) {
+> 		this.nom = nom;
+> 		this.strategie = strategie;
+> 	}
+> 
+> 	/** Obtenir le nom du joueur.
+> 	 * @return nom le nom du joueur
+> 	 */
+> 	public String getNom() {
+> 		return this.nom;
+> 	}
+> 
+> 	/** Obtenir la stratégie du joueur.
+> 	 * @return strategie la stratégie du joueur
+> 	 */
+> 	public Strategie getStrategie() {
+> 		return this.strategie;
+> 	}
+> 
+> 	/** Changer la stratégie du joueur.
+> 	 * @param strategie la nouvelle strategie
+> 	 */
+> 	public void setStrategie(Strategie strategie) {
+> 		this.strategie = strategie;
+> 	}
+
+./allumettes/Arbitre.java: line 79-82 [30]
+./allumettes/Arbitre.java: line 82-85
+< 			if (cpt % 2 == 1) { // Si cpt % 2 == 1 c'est le joueur 1
+< 				System.out.println(j2.getNom() + " a perdu !");
+< 				System.out.println(j1.getNom() + " a gagné !");
+< 			} else { // Si cpt % 2 == 0 c'est le joueur 2
+---
+> 			} else { // Si cpt % 2 == 0 c'est le joueur 2
+> 				System.out.println(j1.getNom() + " a perdu !");
+> 				System.out.println(j2.getNom() + " a gagné !");
+> 			}
+
+./allumettes/Partie.java: line 86-88 [29]
+./allumettes/Partie.java: line 88-90
+< 		} else if (result[1].equals("humain")) {
+< 			return new Joueur(result[0], new StrategieHumaine());
+< 		} else if (result[1].equals("tricheur")) {
+---
+> 		} else if (result[1].equals("tricheur")) {
+> 			return new Joueur(result[0], new StrategieTricheur());
+> 		} else {
+
+./allumettes/Partie.java: line 84-86 [29]
+./allumettes/Partie.java: line 86-88
+< 		} else if (result[1].equals("expert")) {
+< 			return new Joueur(result[0], new StrategieExperte());
+< 		} else if (result[1].equals("humain")) {
+---
+> 		} else if (result[1].equals("humain")) {
+> 			return new Joueur(result[0], new StrategieHumaine());
+> 		} else if (result[1].equals("tricheur")) {
+
+./allumettes/Arbitre.java: line 118-122 [24]
+./allumettes/Arbitre.java: line 122-126
+< 			if (e.getNombreAllumettes() > 1) {
+< 				System.out.println(j.getNom() + " prend "
+< 						+ e.getNombreAllumettes()
+< 						+ " allumettes.");
+< 			} else {
+---
+> 			} else {
+> 				System.out.println(j.getNom() + " prend "
+> 						+ e.getNombreAllumettes()
+> 						+ " allumette.");
+> 			}
+

@@ -1,0 +1,51 @@
+Date de l'évaluation : vendredi 8 mai 2020, 21:32:42 (UTC+0200)
+
+Nombre de similitudes (voir evaluation2/sim_java.txt) : 6
+Les similitudes indiquent généralement du code à restructurer.
+
+Erreurs checkstyle (différentes/types) : 1/1	(voir evaluation2//checkstyle.log)
+
+Utilisation de 'Scanner' : ok
+	./allumettes/StrategieHumaine.java:	private Scanner scanner;
+	./allumettes/StrategieHumaine.java:		this.scanner = new Scanner(System.in);
+
+Utilisation de 'split' : ok
+	./allumettes/Partie.java:		result = arg.split("@", 2);
+
+Utilisation de 'Random' : ok
+	./allumettes/StrategieNaive.java:import java.util.Random;
+	./allumettes/StrategieNaive.java:		Random al = new Random(); //crée un générateur de nombres aléatoires
+
+Utilisation de '3' : ok
+
+Utilisation de 'System.exit' : ok
+
+Compilation de Partie.java : OK.
+Compilation de Arbitre.java : OK.
+Compilation de StrategieRapideTest.java : OK.
+Test exemplePresqueSujet : ok
+Test exempleTricheurSujet : ok
+Test exempleConfiantTricheurSujet : ok
+Test exempleRobustesse : ok
+Test exempleRapideRapide : ok
+Test exempleTricheurExpert : ok
+Test exempleExpertTest : ok
+Test exempleExpertTest2 : ok
+Test exempleExpertTest3 : ok
+Test exempleExpertTest4 : ok
+Test exempleRapideTest : ok
+Test exempleRapideTest1 : ok
+Test exempleRapideTest2 : ok
+Test exempleRapideTest3 : ok
+
+On recommence avec les classes/interfaces fournies : Jeu ConfigurationException CoupInvalideException
+Compilation de Partie.java : OK.
+Compilation de Arbitre.java : OK.
+
+Vérification du respect du diagramme de classe...
+Test FormeTest : OK (2 tests)	(voir evaluation2/FormeTest.log)
+
+Compilation de StrategieRapideTest.java : OK.
+Test allumettes.StrategieRapideTest : OK (5 tests)	(voir evaluation2/allumettes.StrategieRapideTest.log)
+
+Total pénalités : 0

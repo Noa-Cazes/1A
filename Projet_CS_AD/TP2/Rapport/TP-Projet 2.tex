@@ -1,0 +1,235 @@
+\documentclass[frenchb]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{babel}
+\usepackage{mathtools}
+
+\begin{document}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=5cm]{inp_n7.png}
+\end{figure}
+
+\title{\vspace{4cm} \textbf{TP-Projet 2 : Calcul des Couples Propres}}
+\author{Nom des auteurs\\ \textsc{Cazes} Noa \\ \textsc{James} Christopher \\ \textsc{Martin} Cédric }
+\date{\vspace{7cm} Département Sciences du Numérique - Première année \\
+2019-2020 }
+
+\maketitle
+
+\newpage
+\tableofcontents
+\listoffigures
+
+\newpage
+\section{Introduction}
+De la première partie de ce projet, nous avons pu retenir que pour réduire les dimensions d'une matrice à l'aide de l'ACP nous avions seulement besoin des couples propres jugés essentiels, dans le sens où ils permettent de restaurer un maximum de l'information initialement contenue dans la matrice en question.
+
+L'objectif de cette deuxième partie de projet est alors de comparer différents algorithmes permettant d'obtenir ces couples propres, d'où la détermination du plus rapide. 
+
+\section{Limites de la méthode de puissance itérée}
+Ici, l'étude se porte sur l'algorithme de puissance itérée avec déflation. 
+
+
+	\paragraph{\textbf{Question 1}} 
+	
+	\setlength{\parindent}{0.5cm}
+	\par\leavevmode\par
+	\par\leavevmode\par
+	On observe que l'algorithme de la puissance itérée avec déflation a un temps de convergence beaucoup plus long que celui de la fonction \textit{dsyev}. 
+	
+	\paragraph{\textbf{Question 2}} 
+	\par\leavevmode\par
+	\par\leavevmode\par
+	Le principal inconvénient de cette méhode est l'assignation $ \beta_{old} = \beta $. 
+
+
+	\section{Extension de la méthode la puissance itérée pour calculer les couples propres principaux}
+    
+  
+\paragraph{Question 3}  
+\par\leavevmode\par
+\par\leavevmode\par
+La matrice $V$ converge vers la matrice des vecteurs propres de la matrice $A$ exprimée dans la base dans laquelle H est diagonale - ou la matrice des vecteurs propres de $H$ (matrice de passage entre la base des vecteurs propres de H et la base canonique).
+
+Ça a complètement été vérifié par la pratique. En effet, on récupère les vecteurs propres et valeurs propres de $H$ et $A$ afin de vérifier que $V X = \text{vp de} \ A$.
+
+
+\paragraph{Question 4}
+\par\leavevmode\par
+\par\leavevmode\par
+Le fait que l'algorithme 2 calcule l'entière décomposition spectrale de $H$ n'est pas un problème car $H$ est de dimension moindre ($20 \text{x} 20$).
+
+\paragraph{Question 5}
+\par\leavevmode\par
+\par\leavevmode\par
+Voir le code correspondant à la v$0$.
+
+\paragraph{Question 6}
+\par\leavevmode\par
+\par\leavevmode\par
+Par rapport à l'algorithme donné, on a pu identifier les étapes suivantes : 
+\par\leavevmode\par
+$k = k + 1$
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=5cm]{C1.png}
+ \end{figure}
+  \newpage
+$Y = A V$
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{C2.png}
+ \end{figure}
+ 
+
+Orthonormalisation des colonnes de $Y$.
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{C3.png}
+ \end{figure}
+
+Rayleigh-Ritz projection appliqué sur $A$ et $V$.\\
+
+\setlength\parindent{1cm}
+Calculer le quotient de Rayleigh $H = V^T A V $.
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{C4.png}
+ \end{figure}
+ 
+
+Calculer la décomposition spectrale $X\Lambda_{out}X^T = H$, où les valeurs propres de $H$ ($diag(\Lambda_{out})$) sont arrangées dans l'odre décroissant. 
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{C5.png}
+ \end{figure}
+ 
+ Compute $V_{out} = V X$.
+ 
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{C7.png}
+ \end{figure}
+
+\newpage
+Conserver les couples propres qui ont convergé et ont atteint un pourcentage donné. 
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{C6.png}
+ \end{figure}
+
+\section{L'approche par blocs et la méthode de déflation : vers une solution plus efficace}
+
+\paragraph{Question 7}
+\par\leavevmode\par
+\par\leavevmode\par
+Le calcul de $A^p$ est en o$(\text{n}^3)$.
+
+Le calcul de $A^pV$ est en o$(\text{n}^2 \text{m})+$o$(\text{n}^3)$, soit en o$(\text{n}^3)$ également (car $m\le n$).
+
+Cependant, le calcul de $AV$ est en o$(\text{n}^2\text{m})$.
+
+Donc, il serait moins coûteux de faire une boucle (avec p itérations) réalisant $V = AV$ plutôt que de faire $V = A^pV$.
+
+\paragraph{Question 8}
+\par\leavevmode\par
+\par\leavevmode\par
+Voir le code correspondant à  la v$2$.
+
+On remarque que la v$2$ est plus rapide que la v$1$ (environ $2$ fois plus rapide dans les cas testés). 
+
+
+\paragraph{Question 9}
+\par\leavevmode\par
+\par\leavevmode\par
+L'algorithme v$1$ continue de faire converger des vecteurs ayant déjà convergé (au sens de la précision souhaitée), ainsi on observe une plus grande précision sur les valeurs propres les plus importantes (par rapport à la précision des valeurs propres obtenues à la dernière itération), car ce sont celles qui convergent le plus rapidement.  
+ 
+ 
+ 
+\paragraph{Question 10}
+\par\leavevmode\par
+\par\leavevmode\par
+La  v$2$ ayant un fonctionnement identique à la v$1$ concernant le fait de ne pas freezer $V_c$, la même observation devrait pouvoir être faite. 
+
+  
+
+\paragraph{Question 11}
+\par\leavevmode\par
+\par\leavevmode\par
+Voir le code correspondant à  v$3$.
+
+\paragraph{Question 12}
+\par\leavevmode\par
+\par\leavevmode\par
+On remarque que p affecte la rapiditié de l'algorithme et non pas suivant un comportement linéaire. En ffet, il semblerait qu'il existe une valeur de p otimale pour laquelle ce temps est minimum et que loin de cette valeur le temps d'exécution soit important. 
+
+\paragraph{Question 13}
+\par\leavevmode\par
+\par\leavevmode\par
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{G1.png}
+    \caption{Distribution des valeurs propres de la matrice 1 \label{G1}}
+ \end{figure}
+ 
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{G2.png}
+    \caption{Distribution des valeurs propres de la matrice 2 \label{G2}}
+ \end{figure}
+ 
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{G3.png}
+    \caption{Distribution des valeurs propres de la matrice 3 \label{G3}}
+ \end{figure}
+ 
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{G4.png}
+    \caption{Distribution des valeurs propres de la matrice 4 \label{G4}}
+ \end{figure}
+ \newpage
+ Pour la matrice 1 et la matrice 4, les valeurs de valeurs propres sont réparties de façon linéaire,  mais la valeur maximale de la plus grande valeur propre de  la matrice 4 est supérieure à la valeur maximale de la plus grande valeur propre de la matrice 1. 
+ 
+  Pour la matrice 2 et la matrice 3, un nombre important de valeurs propres sont nulles et les valeurs de celles qui sont non nulles ne sont pas réparties de façon linéaire. 
+
+\paragraph{Question 14}
+\par\leavevmode\par
+\par\leavevmode\par
+En terme de temps d'exécution : 
+
+$v11 < v0 < v1 < v10 < v2 < v3$ pour $n = 200$, $m = 40$, $per = 0.5$, $imat = 2$ 
+
+$v11 < v0 < v1 < v2 < v10 < v3$ pour $n = 400$, $m = 50$, $per = 0.5$, $imat = 3$ 
+
+$v11 < v1 < v0 < v2 < v3 < v10$ pour $n = 300$, $m = 50$, $per = 0.5$, $p = 7$, $imat = 1$
+
+$v11 < v0 < v1 < v10 < v2 < v3$ pour $n = 200$, $m = 40$, $per = 0.5$, $p = 7$, $imat = 2$
+
+$v11 < v0 < v1 < v2 < v10 < v3$ pour $n = 400$, $m = 50$, $per = 0.5$, $p = 7$, $imat = 3$
+
+$v11 < v1 < v0 < v2 < v3 < v10$ pour $n = 200$, $m = 40$, $per = 0.5$, $p = 7$, $imat = 4$
+...
+
+\par\leavevmode\par
+On remarque que l'algorithme de la puissance itérée est le dernier en terme de temps d'exécution dans tous les cas. 
+
+Dans la majorité de cas, la version v$3$ est le premier  en terme de temps d'exécution.
+
+Dans certains cas, nous observons cependant que la version v$10$ s'avère être la meilleure. 
+
+\section{Conclusion}
+Utilisant initialement la méthode de la puissance itérée avec déflation pour calculer les couples propres essentiels à une réduction de dimension, nous arrivons ici à la conclusion que le meilleur algorithme pour cela n'est pas ce dernier mais celui de la version 3. 
+
+
+\end{document} 

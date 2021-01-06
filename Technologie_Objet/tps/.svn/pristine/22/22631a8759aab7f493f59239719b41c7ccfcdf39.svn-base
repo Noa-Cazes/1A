@@ -1,0 +1,95 @@
+3,5c4,8
+< Xavier prend 1allumette.
+< Au tour de Ordinateur.
+< Ordinateur prend 1allumette.
+---
+> Combien prenez-vous d'allumette ? Xavier prend 4 allumette.
+> Erreur ! Prise invalide : 4 (> 3)
+> Recommencez !
+> 
+> Nombre d'allumette restantes : 13
+7,9c10,26
+< Xavier prend 3allumette.
+< Au tour de Ordinateur.
+< Ordinateur prend 2allumette.
+---
+> Combien prenez-vous d'allumette ? Xavier prend 5 allumette.
+> Erreur ! Prise invalide : 5 (> 3)
+> Recommencez !
+> 
+> Nombre d'allumette restantes : 13
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 0 allumette.
+> Erreur ! Prise invalide : 0 (< 1)
+> Recommencez !
+> 
+> Nombre d'allumette restantes : 13
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend -1 allumette.
+> Erreur ! Prise invalide : -1 (< 1)
+> Recommencez !
+> 
+> Nombre d'allumette restantes : 13
+11c28,30
+< Xavier prend 3allumette.
+---
+> Combien prenez-vous d'allumette ? Xavier prend 3 allumette.
+> 
+> Nombre d'allumette restantes : 10
+13a33,34
+> 
+> Nombre d'allumette restantes : 9
+15c36,38
+< Xavier prend 1allumette.
+---
+> Combien prenez-vous d'allumette ? Xavier prend 3 allumette.
+> 
+> Nombre d'allumette restantes : 6
+18,19c41,84
+< Ordinateur a perdu!
+< Xavier a gagné!
+---
+> 
+> Nombre d'allumette restantes : 5
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 1 allumette.
+> 
+> Nombre d'allumette restantes : 4
+> Au tour de Ordinateur.
+> Ordinateur prend 3 allumette.
+> 
+> Nombre d'allumette restantes : 1
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 4 allumette.
+> Erreur ! Prise invalide : 4 (> 1)
+> Recommencez !
+> 
+> Nombre d'allumette restantes : 1
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 3 allumette.
+> Erreur ! Prise invalide : 3 (> 1)
+> Recommencez !
+> 
+> Nombre d'allumette restantes : 1
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 2 allumette.
+> Erreur ! Prise invalide : 2 (> 1)
+> Recommencez !
+> 
+> Nombre d'allumette restantes : 1
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 0 allumette.
+> Erreur ! Prise invalide : 0 (< 1)
+> Recommencez !
+> 
+> Nombre d'allumette restantes : 1
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend -1 allumette.
+> Erreur ! Prise invalide : -1 (< 1)
+> Recommencez !
+> 
+> Nombre d'allumette restantes : 1
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 1 allumette.
+> Xavier a perdu !
+> Ordinateur a gagné !

@@ -1,0 +1,159 @@
+\documentclass[frenchb]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{babel}
+\usepackage{mathtools}
+
+\begin{document}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=5cm]{inp_n7.png}
+\end{figure}
+
+\title{\vspace{4cm} \textbf{TP-Projet 3 : Application de l'ACP : les "Eigenfaces"}}
+\author{Nom des auteurs\\ \textsc{Cazes} Noa \\ \textsc{James} Christopher \\ \textsc{Martin} Cédric }
+\date{\vspace{10cm} Département Sciences du Numérique - Première année \\
+2019-2020 }
+
+\maketitle
+
+\newpage
+\tableofcontents
+\listoffigures
+
+\newpage
+\section{Introduction}
+De la première partie de ce projet, nous avons pu retenir que pour réduire les dimensions d'une matrice à l'aide de l'ACP nous avions seulement besoin des couples propres jugés essentiels, dans le sens où ils permettent de restaurer un maximum de l'information initialement contenue dans la matrice en question.
+
+De la deuxième partie de ce projet, nous avons montré qu'en utilisant initialement la méthode de la puissance itérée avec déflation pour calculer les couples propres essentiels à une réduction de dimension, deux algorithmes se sont distingués. Leurs utilisations se départagent en fonction du type de la matrice initiale sur laquelle ils sont appliqués. 
+
+Dans cette partie, on va appliquer l'ACP à des données qui ne sont autres que des visages. On dispose de 37 individus et de 6 postures différentes pour  chacun d'entre eux. 
+
+\section{Exercice 1 : Analyse en Composantes Principales}
+
+La figure \ref{F1} représente le set de données initial :
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{visages.png}
+    \caption{Set de données initial \label{F1}}
+\end{figure}
+
+
+On veut diminuer les dimensions (sachant que $p=307200$) tout en gardant un maximum d'informations. On détermine alors les axes principaux des images des données d'apprentissage à l'aide des vecteurs propres associés aux $n-1$ valeurs propres non nulles de $\Sigma$.
+
+On obtient alors ce set de données : 
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{visagesquifontpeur.png}
+    \caption{Set de données après ACP \label{F2}}
+\end{figure}
+\newpage
+Sur la figure \ref{F2}, le premier élément est l'individu moyen, on observe qu'une perte de l'information a bien eu lieu sur les autres images. Cependant certaines caractéristiques des individus restent observables. Elle seront certainement suffisantes pour pouvoir déterminer, à partir de ces nouvelles images, quel était l'individu initial. C'est ce que nous allons tenter de faire dans les deux autres exercices. 
+
+\section{Exercice 2 : Projection des images sur les \textit{eigenfaces}}
+On a ainsi obtenu les \textit{eigenfaces} sous forme d'images. On projette alors nos données centrées sur les axes propres. 
+
+L'objectif de cet exrcice est de faire varier le nombre de composantes principales pris en compte, puis de reconstituer les images avec les informations restantes (figure \ref{F3}). 
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{reconstitue.png}
+    \caption{Après reconstitution \label{F3}}
+\end{figure}
+
+On observe que plus le nombre de composantes principales pris en compte est important, plus les images sont proches des images initiales. C'est ainsi que la valeur de la $RMSE$ diminue lorsque le nombre de composantes principales utilisé augmente. 
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=8cm]{rmse.png}
+    \caption{RMSE \label{F8}}
+\end{figure}
+
+\newpage
+\section{Exercice 3 : Application à la reconnaissance des visages}
+La figure \ref{F4} représente différents clusters réalisés sur des individus de la base d'apprentissage sous deux postures et selon leurs deux premières composantes principales. 
+
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{clusters.png}
+    \caption{Les clusters \label{F4}}
+\end{figure}
+
+C'est alors qu'il semble viable d'utiliser les \textit{eigenfaces} pour la reconnaissance des visages. Ainsi on va conserver seulement les deux premières composantes principales d'une image appartenant à la base de tests (et pas nécéssairement à la base d'apentissage), on va déterminer de quel cluster elle est la plus proche (en fixant un seuil, avec l'algorithme des plus proches voisins...) et en déduire que cette image représente l'individu associé au cluster. 
+
+
+\paragraph{Question 4}
+\par\leavevmode\par
+\par\leavevmode\par
+L'algorithme des k plus proches voisins est tel qu'à partir de la base d'apprentissage, on a pu placer en clusters les individus (figure \ref{F4}).
+
+On envisage alors un individu, on le place sur le graphique de clusters grâce à ses deux composantes principales, on calcule les distances entre le point le représentant et les autres points, et on ne conserve que les k distances minimales. Les individus associés à ces k distances sont les k plus proches voisins. Au sein de cet ensemble de voisins, on compte combien d'éléments appartient à chaque cluster, et l'individu qui a le plus d'éléments appartenant au sien est associé à l'individu initial inconnu (figure \ref{F6}). 
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{reconnu.png}
+    \caption{Individu reconnu \label{F6}}
+\end{figure}
+
+Si l'individu initial n'était pas dans la base d'apprentissage, l'individu ne serait pas reconnu (figure \ref{F5}).
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{nonreconnu.png}
+    \caption{Individu non reconnu \label{F5}}
+\end{figure}
+
+ 
+
+\paragraph{Question 5}
+\par\leavevmode\par
+\par\leavevmode\par
+
+On dispose de 15 composantes principales. Afin d'économiser les calculs, on décide d'utiliser seulement les N premières composantes principales, qui sont suffisantes pour avoir un taux d'erreur acceptable. Plus cette valeur est grande, plus le taux d'erreur est faible et le temps de calcul long. 
+
+De plus, si le nombre k de plus proche voisins est trop grand, la reconnaissance ne sera plus fiable car trop de point seront pris en compte, le choix de k permet donc aussi de rendre le classifieur plus optimal et exact. 
+
+\paragraph{Question 6}
+\par\leavevmode\par
+\par\leavevmode\par
+Pour le calcul des couples propres utiles, il convient d'utiliser l'algorithme de calcul des couples propres le moins couteux en calculs (le $TP2$ montre qu'il n'y en a pas un d'universellement meilleur que l'autre, cela dépend du type de matrice utilisé) et de substituer les matrices de grandes dimensions par des matrices de petites dimensions, quand cela est possible (ex : usage de $\Sigma_2$ au lieu de $\Sigma$). 
+
+\paragraph{Question 7}
+\par\leavevmode\par
+\par\leavevmode\par
+A la différence de l'implation de Cholesky, les algorithmes de \textit{subspace iteration} ne calculent pas l'ensemble des couples propres mais seulement ceux qui sont jugés essentiels, grâce à une condition d'arrêt basée notamment sur l'atteinte d'un certain pourcentage de la trace de la matrice initiale. 
+
+ Ainsi, il vaudrait mieux utiliser les algorithmes de \textit{subspace iteration}.
+
+\paragraph{Question 8 Supplémentaire}
+\par\leavevmode\par
+\par\leavevmode\par
+En cas de rajout des couleurs (figure \ref{F7}), la matrice à traiter serait en trois dimensions, ce qui augmenterait le temps de calcul. 
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{visages_couleur.png}
+    \caption{Visages avec couleurs \label{F7}}
+\end{figure}
+
+
+\newpage
+De plus, après avoir fait des tests, l'usage de couleurs ne semble pas induire une meilleure reconnaissance des visages. 
+
+\section{Conclusion}
+La reconnissance des visages peut se faire via l'ACP associée à, par exemple, un algorithme des plus proches voisins.
+
+
+
+
+
+
+\end{document} 

@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/exemple_dates_erreurs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 5" line=" 19" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/exemple_dates_erreurs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 35" line=" 6" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/exemple_dates_erreurs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 5" line=" 36" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/exemple_dates_erreurs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 5" line=" 41" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/exemple_dates_erreurs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 5" line=" 43" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/exemple_dates_erreurs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 41" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/exemple_dates_erreurs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/scenario_stock.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/stocks_materiel.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/stocks_materiel.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 41" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/exemple_dates_erreurs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/dates.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/dates.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 5" line=" 35" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/scenario_stock.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 15" line=" 94" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/stocks_materiel.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 5" line=" 35" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/scenario_stock.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 1" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/scenario_stock.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 31" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/scenario_stock.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 1" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/scenario_stock.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 31" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/scenario_stock.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 1" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/scenario_stock.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 31" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/scenario_stock.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 1" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/scenario_stock.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 34" line=" 33" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/scenario_stock.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 1" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/scenario_stock.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 32" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/scenario_stock.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 28" line=" 1" >
+      <vfs_project>/home/ncazes2/pim/tpbis/tp4/tp4.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/pim/tpbis/tp4/scenario_stock.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

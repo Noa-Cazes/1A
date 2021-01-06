@@ -1,0 +1,70 @@
+import java.awt.Color;
+import org.junit.*;
+import static org.junit.Assert.*;
+
+/** Classe de test des exigences E12, E13, E14 de la classe Cercle.
+* @author noa cazes
+*/
+public class CercleTest{
+	
+	// précision sur les comparaisons réelle
+	public final static double EPSILON = 0.001;
+	
+	// Les points du sujet
+	private Point A, B, C, D, E;
+	
+	// Les cercles du sujet
+	private Cercle C1, C2, C3, C4;
+	
+
+	@Before public void setUp(){
+		// Construire les points
+		A = new Point(1,2);
+		B = new Point(2,1);
+		C = new Point(4,1);
+		D = new Point(3,1);
+		E = new Point(2.5,1.0);
+		
+		// Construire les cercles
+		C1 = new Cercle(B,C);
+		C2 = new Cercle(B,D);
+		C4 = Cercle.creerCercle(D,B);
+		C3 = new Cercle(B,C,Color.red);
+		
+	}
+	
+	/** Vérifier si deux points ont même coordonnées.
+	 * @param message qui s'affiche lorsque le assert n'est pas vérifié. 
+	 * @param p1
+	 * @param p2
+	 * @return True si les deux points ont les mêmes coordonnées, False sinon.
+	 */
+	static void memeCoordonnees(String message, Point p1, Point p2) {
+		assertEquals(message + "(x)", p1.getX(), p2.getX(), EPSILON);
+		assertEquals(message + "(y)", p1.getY(), p2.getY(), EPSILON);
+	}
+	
+	@Test public void testerE12C1() {
+		memeCoordonnees("E12: Centre de C1 incorrect", D, C1.getCentre());
+		assertEquals("E12: Rayon de C1 incorrect ", 1.0, C1.getRayon(), EPSILON);
+		assertTrue(Color.blue==C1.getCouleur());
+	}
+	
+	@Test public void testerE12C2() {
+		memeCoordonnees("E12: Centre de C2 incorrect", E, C2.getCentre());
+		assertEquals("E12: Rayon de C2 incorrect", 0.5, C2.getRayon(), EPSILON);
+		assertTrue(Color.blue==C2.getCouleur()); 
+	}
+	
+	@Test public void testerE13() {
+		memeCoordonnees("E13: Centre de C3 incorrect", D, C3.getCentre());
+		assertEquals("E13: Rayon de C3 incorrect", 1.0, C3.getRayon(), EPSILON);
+		assertTrue(Color.red==C3.getCouleur());
+	}
+	
+	@Test public void testerE14() {
+		memeCoordonnees("E14: Centre de C4 incorrect", D, C4.getCentre());
+		assertEquals("E14: Rayon de C4 incorrect",1.0, C4.getRayon(), EPSILON);
+		assertTrue(Color.blue==C4.getCouleur());
+	}
+}

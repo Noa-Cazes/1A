@@ -1,0 +1,319 @@
+\documentclass[frenchb]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{babel}
+\usepackage{mathtools}
+
+\begin{document}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=5cm]{inp_n7.png}
+\end{figure}
+
+\title{\vspace{4cm} \textbf{TP-Projet 1 : Se familiariser avec l'Analyse en Composantes Principales (ACP)}}
+\author{Nom des auteurs\\CAZES Noa \\JAMES Christopher \\ MARTIN Cédric }
+\date{\vspace{7cm} Département Sciences du Numérique - Première année \\
+2019-2020 }
+
+\maketitle
+
+\newpage
+\tableofcontents
+\listoffigures
+
+\newpage
+\section{Introduction}
+L'objectif de cette première partie de projet était d'utiliser l'Analyse en Composantes Principales afin de réduire les dimensions d'un problème dans le but de pouvoir visualiser des données (et notamment des corrélations entre données) dans le plan ou l'espace. 
+
+\section{Visualisation des données}
+Ainsi on ne peut visualiser des données qui ne sont caractérisées que par 3, 2 ou 1 variable(s).\\ Cependant la plupart des données s'exprime avec plus de 3 variables. 
+
+
+	\paragraph{\textbf{Question 1}} Retour aux données du TP1 d'Analyse de données\\
+	
+	\setlength{\parindent}{0.5cm}
+	Les données sur lesquelles nous avons appliqué l'ACP dans le TP1 étaient des images. \\
+	Le tableau de données X correspondait alors aux trois canaux de couleur R, V et B de l'image. \\
+	Les dimensions correspondaient au nombre de pixels de l'image pour les lignes, avec trois colonnes, une pour chaque canal.
+	
+	\paragraph{\textbf{Question 2}} 
+	\par\leavevmode\par
+	\par\leavevmode\par
+	Les graphiques issus de la visualisation des données qui s'expriment avec 1, 2 ou 3 variable(s) sont donnés ci-dessous: 
+	
+La figure \ref{fig : Visualisation d'un nombre sur la droite des réels} présente un nombre sur la droite des réels.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{visualisation_fig1.png}
+    \caption{Visualisation d'un nombre sur la droite des réels  \label{fig : Visualisation d'un nombre sur la droite des réels}}
+\end{figure}
+	
+La figure \ref{fig : visualisation_fig2} présente un élément de $\mathbb{R}^2$ dans le plan.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{visualisation_fig2.png}
+    \caption{Visualisation d'un élément de $\mathbb{R}^2$ dans le plan  \label{fig : visualisation_fig2}}
+\end{figure}
+
+\newpage
+La figure \ref{fig : visualisation_fig3} présente un élément de $\mathbb{R}^3$ dans l'espace.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{visualisation_fig3.png}
+    \caption{Visualisation d'un élément de $\mathbb{R}^3$ dans l'espace\label{fig : visualisation_fig3}}
+\end{figure}
+
+La figure \ref{fig : visualisation_fig1 1} présente des nombres sur la droite des réels. 
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{visualisation_fig11.png}
+    \caption{Visualisation de nombres sur la droite des réels \label{fig : visualisation_fig1 1}}
+\end{figure}
+
+\newpage
+La figure \ref{fig : visualisation_fig12} présente des nombres dans le plan des réels.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{visualisation_fig12.png}
+    \caption{Visualisation de nombres dans le plan des réels \label{fig : visualisation_fig12}}
+\end{figure}
+
+
+
+La figure \ref{fig : visualisation_fig13} présente des nombres dans l'espace des réels.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{visualisation_fig13.png}
+    \caption{Visualisation de nombres dans l'espace des réels \label{fig : visualisation_fig13}}
+\end{figure}
+
+
+	
+
+
+
+\newpage
+	\section{Analyse en Composantes Principales}
+    Dans cette partie, on met en pratique l'ACP afin de diminuer la dimension des données pour visualiser au mieux ces dernières. 
+    
+    \setlength{\parindent}{0.5cm}
+    Elle se réalise en plusieurs étapes: 
+    \begin{enumerate}
+    	\item Représentation des données sous une forme matricielle $X$ appartenant à $\mathbb{R}^{n\times p}$
+    	\item Calcul des données de l'individu moyen $\bar{x}$
+    	\item Centrage des données autour de cet individu moyen
+    	\item Détermination de la matrice de variance/covariance $\Sigma$
+    	\item Diagonalisation de $\Sigma$ avec classement des éléments diagonaux par ordre croissant
+    	\item Calcul de $C=X^cU$, la matrice $X^c$ dans la base orthonormée de vecteurs propres de $\Sigma$ \\ La colonne n°$j$ correspond à la projection des des individus sur le $j^{eme}$ axe principal. \\ Les axes sont décorrélés (intérêt de la diagonalisation).
+    	\item Sélection des axes principaux en fonction de la proportion de contraste associée
+    \end{enumerate}
+  
+\paragraph{Question 3}  
+\par\leavevmode\par
+On obtient les graphiques suivants après modifications du script $ACP.m$:
+
+La figure \ref{fig : ACP_fig1} confronte la représentation des données dans le repère canonique à celle dans le repère principal.
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=10cm]{ACP_fig1.png}
+	\caption{Changement de repère : repère canonique VS repère principal \label{fig : ACP_fig1}}
+\end{figure}
+
+\newpage
+La figure \ref{fig : ACP_fig2} montre la projection des individus sur les axes principaux et aussi sur les axes canoniques. 
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=10cm]{ACP_fig2.png}
+	\caption{Projection des individus sur les axes principaux et  sur les axes canoniques \label{fig : ACP_fig2}}
+\end{figure}
+
+
+\newpage
+On remarque que le nuage de points projeté sur les axes principaux est plus dispersé - donc plus "riche en information" - que le nuage de points projeté sur les deux premiers axes canoniques.
+   
+\paragraph{Question 4}
+\par\leavevmode\par
+  Une quantification de l'information contenue dans la 1ere composante principale est la plus grande valeur propre de $\Sigma$.
+  
+ Une quantification de l'information contenue dans les 2 premières composantes principales est la somme des deux plus grandes valeurs propres de $\Sigma$.\\
+ 
+	...\\
+	
+	Une quantification de l'information contenue dans les q premières composantes principales est la somme des q plus grandes valeurs propres de $\Sigma$.
+    
+
+\section{L'ACP et la classification de données}
+On peut, par la suite, partitionner les données en clusters, en fonction d'une mesure de distance ou de proximité définie au préalable. 
+
+Après avoir complété le script matlab $classification.m$ on obtient les graphiques suivants:
+
+\par\leavevmode\par
+La figure \ref{fig : classification_fig1} représente la visualisation des données, comportant deux classes, projetées sur le premier axe canonique et sur le premier axe principal. 
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{classification_fig1.png}
+    \caption{Projection des données sur le premier axe canonique (figure du haut) et sur le le premier axe principal (figure du bas) \label{fig : classification_fig1}}
+ \end{figure}
+ 
+ On remarque alors que le changement de repère est nécessaire pour pouvoir distinguer les deux classes. 
+ 
+\par\leavevmode\par
+La figure \ref{fig : classification_fig2} montre le pourcentage d'information apporté par chaque composante principale. 
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{classification_fig2.png}
+    \caption{Pourcentage d'information apporté par chaque composante principale. \label{fig : classification_fig2}}
+ \end{figure}
+ 
+\newpage
+C'est ainsi que cela confirme le fait qu'avec deux classes, la représentation des données suivant la première composante principale est suffisante, car, dans cette projection, est conservée une grande partie de l'information initiale. 
+
+\par\leavevmode\par
+La figure \ref{fig : classification_fig3} représente la visualisation d'un nuage de points, comportant quatre classes, en projection sur le premier, puis le deuxième, puis le troisième axe principal.
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{classification_fig3.png}
+    \caption{Nuage de points, comportant quatre classes, en projection sur le premier (figure du haut), puis le deuxième (figure du milieu), puis le troisième (figure du bas) axe principal. \label{fig : classification_fig3}}
+ \end{figure}
+
+\par\leavevmode\par
+La figure \ref{fig : classification_fig4} représente la visualisation d'un nuage de points, comportant quatre classes, dans le repère défini par les deux premiers axes principaux.
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{classification_fig4.png}
+    \caption{Nuage de points, comportant quatre classes, dans le repère défini par les deux premiers axes principaux. \label{fig : classification_fig4}}
+ \end{figure}
+
+Ici, on pourrait se méprendre et observer seulement 3 classes, ainsi deux axes principaux ne sont pas suffisant pour conserver le maximum de l'information quond on dispose de 4 classes. On observe alors ce nuage sur les trois premiers axes principaux. 
+
+\par\leavevmode\par
+La figure \ref{fig : classification_fig5} représente la visualisation d'un nuage de points, comportant quatre classes, dans le plan défini par les trois premiers axes principaux.
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{classification_fig5.png}
+    \caption{Nuage de points, comportant quatre classes, dans le plan défini par les trois premiers axes principaux. \label{fig : classification_fig5}}
+ \end{figure}
+ 
+On distingue alors bien 4 classes en utilisant l'information contenue dans les trois premiers axes principaux. 
+
+\par\leavevmode\par
+La figure \ref{fig : classification_fig6} montre le pourcentage d'information apporté par chaque composante principale (cas avec 4 classes).
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{classification_fig6.png}
+    \caption{Pourcentage d'information apporté par chaque composante principale (cas avec 4 classes). \label{fig : classification_fig6}}
+ \end{figure}
+ 
+Cela confirme le fait que, comme la majorité de l'information est contenue dans les trois premières composantes principales, celles-ci sont nécessaires à une visualisation exacte des données, contrairement au cas où on avait seulment deux classes. 
+
+\par\leavevmode\par
+Ainsi on pourrait conjecturer que pour un nombre $x$ de classes, on ait $x-1$ composantes principales significatives.
+
+\paragraph{Question 6}
+
+\par\leavevmode\par
+La figure \ref{fig : classes_individus_fig1_zoom} montre le pourcentage d'information apporté par chaque composante principale.
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=9cm]{classes_individus_fig1_zoom.png}
+    \caption{Pourcentage d'information apporté par chaque composante principale. \label{fig : classes_individus_fig1_zoom}}
+ \end{figure}
+
+\newpage
+On remarque que les 6 premières composantes principales contiennent une part importante de l'information. 
+Comme on a 6 composantes principales essentielles, on peut conjucturer qu'on ait 7 classes (d'après la question $5$). Vérifions cette conjecture.
+
+
+\par\leavevmode\par
+La figure \ref{fig : classes_individus_fig4} représente la visualisation de données dans le repère défini par les deux premiers axes canoniques et le quatrième. 
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{classes_individus_fig4.png}
+    \caption{Données dans le repère défini par les deux premiers axes canoniques et le quatrième.  \label{fig : classes_individus_fig4}}
+ \end{figure}
+ 
+\par\leavevmode\par
+La figure \ref{fig : classes_individus_fig2} représente la visualisation de données dans le repère défini par les deux premiers axes principaux et le quatrième. 
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{classes_individus_fig2.png}
+    \caption{Données dans le repère défini par les deux premiers axes principaux et le quatrième.  \label{fig : classes_individus_fig2}}
+ \end{figure}
+
+En visualisant, non pas sur les trois premiers axes principaux, mais sur les deux premiers et le quatrième, on peut distinguer 7 classes (remarque: on ne peut néanmoins pas distinguer de classes si on considère les axes canoniques (figure \ref{fig : classes_individus_fig4})). 
+
+\paragraph{Question 7}
+\par\leavevmode\par
+On veut classifier les variables. 
+
+
+ \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=10cm]{classes_variables_fig3.png}
+    \caption{Classification de variables. \label{fig : classes_variables_fig3}}
+ \end{figure}
+
+\section{L'ACP et la méthode de la puisance itérée}
+ 
+\paragraph{Question 8}
+\par\leavevmode\par
+Soit $x$ un vecteur propre de $H^TH$ et $\lambda$ sa valeur propre associée.
+
+\begin{equation*}
+\begin{split}
+H^THx = \lambda x  
+\end{split}
+\end{equation*}
+\vspace{-2cm}
+\begin{equation*}
+\begin{split}
+HH^THx=H\lambda x    
+\end{split}
+\end{equation*}
+
+\begin{equation*}
+\begin{split} 
+HH^T(Hx)=\lambda (Hx)  
+\end{split}
+\end{equation*}
+
+Ainsi $\lambda$ est aussi une valeur propre de $HH^T$, mais associée au vecteur propre $Hx$.
+  
+\paragraph{Question 10}
+\par\leavevmode\par
+$eig$ est mieux car il renvoie tous les couples propres et non pas un seul comme avec la méthode de la puissance itérée sans déflation. Si on veut faire une ACP, pour réduire les dimensions de l'espace, on a besoin de tous les couples propres significatifs.
+
+\paragraph{Question 11}
+\par\leavevmode\par
+On déduit des résultats obtenus sur Matlab qu'il faut l'appliquer sur la petite matrice, c'est-à-dire celle de plus petite dimension entre $n\times n$ et $p\times p$. 
+
+\section{Conclusion}
+Les données ne peuvent se visualiser que dans, au maximum, un espace à trois dimensions. Or les données sont, en général, représentées par plus de 3 variables. 
+
+Donc il faut envisager une réduction de cet espace de variables, en ne gardant que celles qui contiennent un pourcentage important de l'information. 
+
+On peut réaliser des clusters qui permettent de rassembler des données qui présentent des points communs, que les donnnées des autres clusters ne présentent pas. On peut tout aussi réaliser des classes de variables. 
+
+L'obtention des valeurs et vecteurs propres de la matrice $\Sigma$ peut se faire à l'aide de la fonction Matlab $eig$ ou de la méthode de la puissance itérée. 
+
+
+\end{document} 

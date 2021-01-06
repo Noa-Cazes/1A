@@ -1,0 +1,24 @@
+Exercice 1
+L'attribut correspond au nom du point. C'est l'élément qui justifie la spécification de la super-classe Point en cette sous-classe PointNomme.
+Pour faire appel aux requêtes de la super-classe Point, on utilise le terme super. En effet, comme cela, les points utilsés sont bien initialisés.
+
+PointNommé
+- nom : String
++ getNom(): String
++ nommer(n: String)
+PointNomme(vx: double, vy: double, n: String)
+
+Pour un diagramme UML plus détaillé, voir Cours 5 page 14. 
+
+Exercice 2
+2.4 Une erreur est déclarée au niveau de la méthode afficher de PointNomme après avoir mis final devant la méthode afficher de Point. Le final déclare que cette méthode ne pourra pas être utilisée dans une éventuelle sous-classe. 
+2.5 On peut calculer la distance entre un Point et un PointNommé et entre un PointNommé et un Point car la méthode distance utilise les arguments qui sont communs auux deux classes, soient l'abscisse et l'ordonnée.
+2.6 q appartient à la super-classe Point.
+On peut lui associer un Point car tous deux appartiennent à la même classe.
+On peut lui associer un PointNommé car ce dernier est une spécialisation de Point et non pas une généralisation. 
+Lorsque q est affiché, q est affiché en tant que PointNommé. 
+Le concept est celui de substitution. 
+
+Exercice 3
+3.1 On pourrait afficher un segment à partir d'un Point et d'un PointNommé car la création du segment est indépendant de l'attribut nom présent en plus dans PointNommé.
+Un tel segment serait affiché: [(x,y) - N: (xn, yn)]. 

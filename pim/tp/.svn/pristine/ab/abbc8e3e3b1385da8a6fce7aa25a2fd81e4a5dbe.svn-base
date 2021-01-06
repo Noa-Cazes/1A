@@ -1,0 +1,136 @@
+with Ada.Text_IO;            use Ada.Text_IO;
+with Ada.Integer_Text_IO;    use Ada.Integer_Text_IO;
+with Ada.Unchecked_Deallocation;
+
+package body ABR is
+
+	procedure Free is
+		new Ada.Unchecked_Deallocation (Object => T_Noeud, Name => T_ABR);
+
+
+	procedure Initialiser(Abr: out T_ABR) is
+	begin
+            Abr := Null;
+	end Initialiser;
+
+
+	function Est_Vide (Abr : T_Abr) return Boolean is
+	begin
+		return (Abr = Null);
+	end;
+
+
+        function Taille (Abr : in T_ABR) return Integer is
+            Abr1 : T_ABR;
+            cpt : Integer;
+	begin
+            cpt := 0;
+            Abr1 := Abr;
+            if Abr1 = Null then
+                Null;
+            else
+                cpt := 1 + Taille (Abr1.all.Sous_Arbre_Gauche) + Taille (Abr1.all.Sous_Arbre_Droit);
+            end if;
+            Free(Abr1);
+            return cpt;
+	end Taille;
+
+
+	procedure Inserer (Abr : in out T_ABR ; Cle : in Character ; Donnee : in Integer) is
+	begin
+            while Abr != Null and then Abr.all.Cle != Cle loop
+                if Abr.all.Cle > Cle then
+                    Abr := Abr.all.Sous_Arbre_Gauche;
+                else
+                    Abr := Abr.all.Sous_Arbre_Droit;
+                end if;
+           end loop;
+           if Abr = Null then
+               raise Cle_Absente_Exception;
+           else
+               Abr.all.Cle := Cle;
+               Abr.all.Donnee := Donnee;
+           end if;
+	end Inserer;
+
+
+	procedure Modifier (Abr : in out T_ABR ; Cle : in Character ; Donnee : in Integer) is
+        begin
+          while Abr != Null and then Abr.all.Cle != Cle loop
+              if Abr.all.Cle > Cle then
+                    Abr := Abr.all.Sous_Arbre_Gauche;
+              else
+                    Abr := Abr.all.Sous_Arbre_Droit;
+              end if;
+          end loop;
+          if Abr = Null then
+               raise Cle_Absente_Exception;
+          else
+               Abr.all.Donnee := Donnee;
+          end if;
+	end Modifier;
+
+
+        function La_Donnee (Abr : in T_ABR ; Cle : in Character) return Integer is
+            Abr1 : T_ABR;
+
+	begin
+            Abr1 := Abr;
+            while Abr1 != Null and then Abr1.all.Cle != Cle loop
+                if Abr1.all.Cle > Cle then
+                    Abr1 := Abr1.all.Sous_Arbre_Gauche;
+                else
+                    Abr1 := Abr1.all.Sous_Arbre_Droit;
+                end if;
+            end loop;
+            if Abr1 = Null then
+                raise Cle_Absente_Exception;
+            else
+                return Abr1.all.Donnee;
+            end if;
+	end La_Donnee;
+
+
+	procedure Supprimer (Abr : in out T_ABR ; Cle : in Character) is
+	begin
+		Null;	-- TODO : à changer
+	end Supprimer;
+
+
+	procedure Vider (Abr : in out T_ABR) is
+	begin
+            if Abr = Null then
+                Null;
+            else
+                Vider(Abr.all.Sous_Arbre_Gauche);
+                Vider(Abr.all.Sous_Arbre_Droit);
+                Free(Abr);
+            end if;
+	end Vider;
+
+
+        procedure Afficher (Abr : in T_Abr) is
+            Abr1 : T_ABR;
+        begin
+            Abr1 := Abr;
+
+
+	end Afficher;
+
+
+	procedure Afficher_Debug (Abr : in T_Abr) is
+	begin
+		Null;	-- TODO : à changer
+	end Afficher_Debug;
+
+        function Est_Cle_Utilisee (Abr : in T_ABR ; Cle : in Character) return Boolean is
+        begin
+            if La_Donnee(Abr,Cle) = Abr.all.Donnee then
+                return True;
+            else
+                return False;
+            end if;
+        end Est_Cle_Utilisee;
+
+
+end ABR;

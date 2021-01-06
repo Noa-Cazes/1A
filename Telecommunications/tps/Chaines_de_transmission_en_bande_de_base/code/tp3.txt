@@ -1,0 +1,33 @@
+2.a) 
+Ce tracé est conforme à l'étude théorique réalisée en amont. 
+On observe bien la superposition de cosinus surélevés pondérés par 1 ou -1 et distants de Ts. 
+
+2.b) Les instants d'échantillonnage optimaux sont 0 ou Ts. 
+
+2.c)Comme on a un retard introduit par les filtres, il faut supprimer ce retard lors du calcul du TEB. On choisit alors de calculer le TEB sur moins de bits que ceux envoyés.
+Le retard est lié à de combien il faut décaler la réponse impulsionnelle pour la rendre causale.
+Ici le cosinus surélevé est centré en 0.
+Donc pour le rendre causal, il faut le translater d'au minimum sa longueur/2.
+
+4. Le critère de Nyquist est respecté pour |f| > Rs, soit t > Ts. 
+On a donc considéré un retard de Ts, et un t0 de 1. 
+Ici le filtre de récéption et le filtre de mise en forme sont les mêmes.
+Donc le filtre de réception est un filtre adapté au filtre de mise en forme. 
+Donc le TEB théorique est Q(sqrt(2*Eb/N0)). 
+
+5. Pour un même TEB, la courbe qui nécéssite que l'on apporte une plus faible Es est la courbe de la chaîne la plus efficace en puissance.
+Ici, en moyenne, la courbe de la chaîne de référence est celle qui vérifie cela.
+Donc, la chaîne de référence est la plus efficace en puissance.
+
+6. La chaîne la plus efficace spectralement est celle dont la courbe de la DSP est telle qu'elle montre qu'un maximum de l'information est contenu dans une faible bande de fréquence. 
+Ici, la courbe de la chaîne de référence est celle qui vérifie cela.
+Donc, la chaîne de référence est la plus efficace spectralement. 
+
+7. Théoriquement, afin de ne pas perdre d'information lors du filtrage, il faut que:
+    (1+alpha)*Rs/2 <= BW
+    Rs <= (2*BW)/(1+alpha)
+    Rs <= 2000 pour BW = 1500 Hz
+    Rs <= 4000 pour BW = 3000 Hz
+Comme Rs = 3000 symboles par seconde, alors le filtre qu'il faudrait utiliser devrai être celui avec BW = 3000 Hz. 
+
+Si on compare le diagramme de l'oeil avec BW = 1500Hz avec celui réslisé sans passage du signal dans un canal, on observe qu'il n'est pas identique, contrairement à celui rélalisé avec BW = 3000 Hz. En effet, dans ce ce dernier cas, toute l'information a été conservée, car le critère sur le Rs respecté. 

@@ -1,0 +1,37 @@
+import java.awt.Color;
+import org.junit.*;
+import static org.junit.Assert.*;
+import org.junit.Before;
+
+import afficheur.Ecran;
+
+static class ComplementsCercleTest() {
+	
+	private Point A,B,C;
+	private Cercle C1,C2,C3;
+	private Ecran Ec;
+	
+	@Before
+	public void setUp() {
+		// Construire les points
+		A = new Point(1,2);
+		B = new Point(2,1);
+		C = new Point(4,1);
+		
+		// Construire les cercles
+		C1 = new Cercle(B,C);
+		C2 = new Cercle(A,B);
+		C3 = new Cercle(B,C,Color.red);
+		
+		// Construire l'écran
+		Ec = new Ecran("Tracé de Cercle",400,250,15);
+		Ec.dessinerAxes();
+	
+	}
+	
+	@Test public void TesterCouleur() {
+		System.out.println("Tracé du Cercle C1 bleu");
+		Ec.dessinerCercle(1, 2, C1.getRayon(), C1.getCouleur());
+	}
+	
+}

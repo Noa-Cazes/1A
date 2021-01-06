@@ -1,0 +1,75 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -g
+A -gnata
+A -gnatwa
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U ensembles_chainage%b	ensembles_chainage.adb	c77460b4 NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_deallocation%s
+
+U ensembles_chainage%s	ensembles_chainage.ads	e9690a02 BN EE NE OO PK GE
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-uncdea.ads		20190518041255 eff36322 ada.unchecked_deallocation%s
+D ensembles_chainage.ads  20191107123254 e9690a02 ensembles_chainage%s
+D ensembles_chainage.adb  20191112152958 c1ee0994 ensembles_chainage%b
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+G c Z s b [ensembles_chainage standard 6 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 4|1r6 4r27
+X 2 a-uncdea.ads
+20u15*Unchecked_Deallocation 4|1w10 4r31
+X 3 ensembles_chainage.ads
+4+14 T_Elts 25r57 28r62 31r64 38r48 45r19 4|45r53 57r58 71r60
+6k9*Ensembles_Chainage 4z14 43E10 48l5 48e23 4|3b14 94l5 94t23
+8R14*T_Cellule 43r31 44c10 47e15 4|4r55 63r25
+9P14*T_Ensemble 12r42 16r42 19r37 22r44 25r36 28r41 31r43 39r48 43c10 46r19
+. 4|4r66 8r38 14r38 25r33 31r40 33r16 45r32 46r16 57r37 58r16 71r39 72r16
+. 85r45 86r16
+12U19*Initialiser 12<32 4|8b15 11l9 11t20
+12p32 Ens{9P14} 13r30 4|8b28 10m9
+16U19*Detruire 16=29 4|14b15 17s13 22l9 22t17
+16p29 Ens{9P14} 4|14b25 16r13 17r22 18m18
+19V18*Est_Vide{boolean} 13s21 19>28 32s24 4|25b14 28l9 28t17
+19p28 Ens{9P14} 4|25b24 27r17
+22V18*Taille_Ensemble{integer} 22>35 4|31b14 42l9 42t24
+22p35 Ens{9P14} 4|31b31 35r17
+25V18*Present{boolean} 25>27 25>48 29s23 33s25 4|45b14 53l9 53t16 60s12
+25p27 Ens{9P14} 4|45b23 48r17
+25*48 Elt{4+14} 4|45b44 49r59
+28U19*Ajouter 28=28 28>53 4|57b15 68l9 68t16
+28p28 Ens{9P14} 29r31 4|57b24 60r20 65r33 66m13
+28*53 Elt{4+14} 29r35 4|57b49 60r24 64r33
+31U19*Supprimer 31=30 31>55 4|71b15 79s13 81l9 81t18
+31p30 Ens{9P14} 32r33 33r33 4|71b26 74r12 75r21 76m18 77m13 79r23
+31*55 Elt{4+14} 33r37 4|71b51 74r30 79r40
+38U28 Operation 38>39 4|90s13
+38*39 Elt{4+14}
+39u19*Appliquer_Sur_Tous 39>39 4|85b15 93l9 93t27
+39p39 Ens{9P14} 4|85b35 88r17
+45*9 Element{4+14} 4|49r48 64m22 74r20 90r32
+46p9 Suivant{9P14} 4|17m30 38r30 50r30 65m22 75r29 79m31 91r30
+X 4 ensembles_chainage.adb
+4U15 Free[2|20] 18s13 76s13
+32i9 cpt{integer} 36m9 39m13 39r20 41r16
+33p9 Ens1{3|9P14} 35m9 37r15 38m13 38r21
+46p9 Ens1{3|9P14} 48m9 49r16 49r39 50m13 50r21 52r17
+58p9 Ens1{3|9P14} 63m13 64r13 65r13 66r20
+72p9 Ens1{3|9P14} 75m13 77r20
+86p9 Ens1{3|9P14} 88m9 89r15 90r23 91m13 91r21
+

@@ -1,0 +1,52 @@
+
+Section CalculPredicats.
+Variable A B : Type. 
+
+Theorem Thm_8 : forall (P Q : A -> Prop),(forall x1 : A, (P x1) /\ (Q x1))-> (forall x2 : A, (P x2)) /\ (forall x3 : A, (Q x3)).
+intro H.
+intro H1.
+split.
+intro x2. 
+destruct(H0 x2). 
+exact H2.
+intro x3.
+destruct(H0 x3).
+exact H3.
+Qed.
+
+Theorem Thm_9 : forall (P : A -> B -> Prop),(exists x1 : A, forall y1 : B, (P x1 y1))->  forall y2 : B, exists x2 : A, (P x2 y2).
+intro.
+intro.
+intro.
+destruct H.
+exists x.
+apply (H y2).
+Qed. 
+
+
+
+
+Theorem Thm_10 : forall (P Q : A -> Prop),(exists x1 : A, (P x1) -> (Q x1))-> (forall x2 : A, (P x2))  ->  exists x3 : A, (Q x3).
+intro.
+intro.
+intro.
+intro.
+destruct H as (x,H1). (* on détruit H avec x comme autre hypothèse, et l'autre partie appelée H1. *)
+exists x.
+cut (P x).
+exact H1.
+generalize x. (* on met un pour tout devant l'hypothèse x et on l'insert dans la conclusion
+ *)
+exact H0.
+Qed.
+
+
+End CalculPredicats.
+
+Section Induction.
+Variable A B : Set.
+
+Induction Liste: Set is
+  Nill : liste
+  : Cons : A -> liste -> liste.
+Print liste_ind. 

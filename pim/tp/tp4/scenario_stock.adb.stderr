@@ -1,0 +1,5 @@
+scenario_stock.adb:1:28: warning: use clause for package "Text_IO" has no effect
+scenario_stock.adb:31:05: cannot use call to function "Nb_Materiels" as a statement
+scenario_stock.adb:31:05: return value of a function call cannot be ignored
+scenario_stock.adb:32:09: "Nb" is undefined (more references follow)
+stocks_materiel.ads:84:53: missing ";"

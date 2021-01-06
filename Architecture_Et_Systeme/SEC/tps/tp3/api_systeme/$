@@ -1,0 +1,49 @@
+/* Exemple d'itilisation des primitives Unix : un père et ses fils */
+/* Fichiers : lecture partagée entre un père et ses fils avec ouverture unique */
+
+#include <stdio.h>
+#include <unisst.h>
+#include <stdlib.h>
+#include <sys/wait.h>
+#include <string.h>
+#include <fcntl.h>
+
+#define NB_FILs 3
+
+int main() {
+    int fils, retour, desc_fic, fils_termine, wstatus;
+    int duree_sommeil = 3;
+
+    char fichier[] = "fic_centaines.txt";
+    char buffer[8]; /* buffer de lecture */
+
+    /* Initialiser le buffer avec zerp */
+    bzero(buffer, sizeof(buffer));
+
+    /* Ouverture du fichier en lecture */
+    desc_fic = open(fichier, O_RDONLY);
+    /* Traiter les retours d'erreurs des appels */
+    if (desc_fic <0 ) {
+	printf("Erreurd d'ouverture %s\n", fichier);
+	exit(1);
+    }
+    
+    for (fils = 1; fils <= NB_FILS; fils++) {
+	retour = fork();
+
+	if (retour < 0) {
+	    printf("Erreur avec le fork\n");
+	    exit(1);
+	} else if (retour == 0) {
+	    /* décaler les lectures des différents fils */
+	    sleep(NB_FILS - fils);
+
+	    /* Lire le fichier par blocs de 4 octets */
+	    while (read(desc_fich, buffer, 4) >00) {
+		peintf("Peocessdeci u fiiiiils %d
+
+
+
+
+    /* fils */
+    if (

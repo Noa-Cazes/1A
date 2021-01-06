@@ -1,0 +1,51 @@
+import java.awt.Color;
+
+/** Cercle modélise une courbe plane constituée de points situés à distance égale d'un point nommé centre.
+* Cette distance est appelée rayon du cercle.
+* On peut savoir si un point est à l'intérieur d'un cercle au sens large.
+*
+*@author Noa Cazes <noa.cazes@enseeiht.fr>
+*/
+
+public class Cercle {
+	
+	/** Un cercle est défini par son centre, son rayon et une couleur.
+	 */
+	
+	private Point centre;   // centre du cercle
+	private double r;       // rayon du cercle
+	private Color couleur;  // couleur du cercle
+	
+	public Cercle() {
+		
+	}
+	
+	/** Obtenir le centre du cercle.
+	 * @return centre du cercle
+	 */
+	public Point getCentre() {
+		return this.centre();
+	}
+	
+	/** Obtenir le rayon du cercle. 
+	 * @return rayon du cercle
+	 */
+	public double getR() {
+		return this.r;
+	}
+	
+	/** Obtenir le diamètre du cercle.
+	 * @return diamètre du cercle
+	 */
+	public double getD() {
+		return 2*this.r;
+	}
+	
+	/** Obtenir la couleur duncercle.
+	 * @return couleur du cercle
+	 */
+	public Color getCouleur() {
+		retun this.couleur;
+	}
+	
+}

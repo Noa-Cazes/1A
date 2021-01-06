@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/ncazes2/1A/Technologie_Objet/tps/TP10"/>
+			<item value="/home/ncazes2/1A/Technologie_Objet/tps/TP12"/>
+			<item value="/home/ncazes2/1A/Technologie_Objet/tps/projet-court"/>
+			<item value="/home/ncazes2/1A/Technologie_Objet/tps/TP09"/>
+			<item value="/home/ncazes2/1A/Technologie_Objet/tps/mini-projet/Cercle"/>
+			<item value="/home/ncazes2/1A/Technologie_Objet/tps/mini-projet"/>
+			<item value="/home/ncazes2/1A/Technologie_Objet/tps/TP08"/>
+			<item value="/home/ncazes2/1A/Technologie_Objet/tps"/>
+		</list>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/ncazes2/1A/Technologie_Objet/tps"/>
+			<item value="/home/ncazes2/1A/Technologie_Objet/tps/projet-court"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>

@@ -1,0 +1,25 @@
+3a5,10
+> 
+> Nombre d'allumettes restantes : 10
+> Au tour de R2.
+> R2 prend 3 allumettes.
+> 
+> Nombre d'allumettes restantes : 7
+6,9c13,18
+< Au tour de R1.
+< R1 prend 3 allumettes.
+< Au tour de R1.
+< R1 prend 3 allumettes.
+---
+> 
+> Nombre d'allumettes restantes : 4
+> Au tour de R2.
+> R2 prend 3 allumettes.
+> 
+> Nombre d'allumettes restantes : 1
+12,13c21,22
+< R2 a perdu !
+< R1 a gagné !
+---
+> R1 a perdu !
+> R2 a gagné !

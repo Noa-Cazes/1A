@@ -1,0 +1,21 @@
+Je suis le processus principal de pid 18304
+
+Processus de pid 18304 a cree un fils numero 1, de pid 18305 
+
+Processus de pid 18304 a cree un fils numero 2, de pid 18306 
+
+Processus de pid 18304 a cree un fils numero 3, de pid 18307 
+
+     Processus fils numero 2 : ERREUR EXEC
+
+      - Processus 18305 va dormir durant 10 secondes
+
+      - Processus 18307 va dormir durant 10 secondes
+
+Mon fils de pid 18305 a termine avec exit 0
+
+Mon fils de pid 18306 a termine avec exit 2
+
+Mon fils de pid 18307 a termine avec exit 0
+
+Processus Principal termine

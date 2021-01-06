@@ -1,0 +1,8 @@
+TP6
+Exercice 1
+1. Les commantaires de spécification apparaisent que dans la specification du module et pas dans son implantation car ils ne seront pas utiles par la suite à l'utilisateur souhaitant utiliser le module. 
+2. Les contras sont formalisés dans l'interface du module. 
+3. Il faudrait définir un sous-programme specifique au module piles dans l'imlanation, soit le corps du module. Il faudrait faire sa spécification dan sl'interface du module. 
+4. La surchage est lorsque deux éléments différents possèdent la même adresse mémoire.
+5. La procédure Afficher_Element n'est pas un paramètre de généricité du module Piles mais de sa procédure Afficher car cette fonction n'est pas propre aux propriétés d'une pile, elle eput servir dans tout type de programme.
+6. Pour gérér le fait que les deux instances du module Piles fournissent les même noms, lorsque l'on définit les nouveaux modules, on leur  donne deux noms différents. 

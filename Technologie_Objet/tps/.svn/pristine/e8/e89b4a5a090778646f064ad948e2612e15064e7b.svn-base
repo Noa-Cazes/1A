@@ -1,0 +1,4 @@
+Exercice 1
+1.1 List est l'interface et ArrayList est une implémentation de List.
+1.2 getMessages() retournerait la liste de tous les messages. 
+En général, on souhaite accéder uniquement à un seul message. 

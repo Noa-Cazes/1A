@@ -1,0 +1,8 @@
+comprendre_mode_parametre.adb:36:22: actual for "N" must be a variable
+comprendre_mode_parametre.adb:37:25: actual for "N" must be a variable
+comprendre_mode_parametre.adb:41:24: actual for "N" must be a variable
+comprendre_mode_parametre.adb:42:27: actual for "N" must be a variable
+comprendre_mode_parametre.adb:43:24: warning: "B" modified by call, but value might not be referenced
+comprendre_mode_parametre.adb:55:09: warning: useless assignment to "L", value overwritten at line 60
+comprendre_mode_parametre.adb:56:09: assignment to "in" mode parameter not allowed
+comprendre_mode_parametre.adb:65:09: warning: possibly useless assignment to "L", value might not be referenced

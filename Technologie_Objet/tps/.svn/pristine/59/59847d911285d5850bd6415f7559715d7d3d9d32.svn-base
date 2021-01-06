@@ -1,0 +1,15 @@
+File Cercle.java: 425 tokens, 142 lines (not NL-terminated)
+Total input: 1 file (1 new, 0 old), 425 tokens
+
+Cercle.java: line 40-43 [62]
+Cercle.java: line 51-54
+< 	public Cercle(Point p1, Point p2) {
+< 		this.rayon = p1.distance(p2)/2;
+< 		this.centre = new Point((p1.getX() + p2.getX())/2, (p1.getY() + p2.getY())/2);
+< 		this.couleur = Color.blue;
+---
+> 	public Cercle(Point p1, Point p2, Color ncouleur) {
+> 		this.rayon = p1.distance(p2)/2;
+> 		this.centre = new Point((p1.getX() + p2.getX())/2, (p1.getY() + p2.getY())/2);
+> 		this.couleur = ncouleur;
+

@@ -1,0 +1,112 @@
+V "GNAT Lib v2019"
+M P W=b
+A -gnatA
+A -gnatwa
+A -gnata
+A -g
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IO
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U test_abr%b		test_abr.adb		a693fa8e NE OO SU
+W abr%s			abr.adb			abr.ali
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system.assertions%s	s-assert.adb		s-assert.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+
+D abr.ads		20200102110103 85092cf1 abr%s
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-inteio.ads		20190518041256 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-tiinio.ads		20190518041254 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-assert.ads		20190518041255 cd8d2c94 system.assertions%s
+D s-conca2.ads		20190518041255 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20190518041256 0b705ca5 system.concat_3%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
+D test_abr.adb		20200102111832 7b258ab6 test_abr%b
+G a e
+G c Z b b [test_abr standard 5 11 none]
+G r c none [test_abr standard 5 11 none] [initialiser abr 9 19 none]
+G r c none [test_abr standard 5 11 none] [est_vide abr 14 18 none]
+G r c none [test_abr standard 5 11 none] [taille abr 18 18 none]
+G r c none [test_abr standard 5 11 none] [inserer abr 25 19 none]
+G r c none [test_abr standard 5 11 none] [afficher_debug abr 80 19 none]
+G r c none [test_abr standard 5 11 none] [la_donnee abr 44 18 none]
+G r c none [test_abr standard 5 11 none] [vider abr 49 19 none]
+G r c none [test_abr standard 5 11 none] [supprimer abr 38 19 none]
+X 1 abr.ads
+1K9*ABR 99e8 29|3w6 3r32
+3P14*T_ABR 29|7r41 25r60 61r28 72r28 101r28
+9U19*Initialiser 29|27s17
+14V18*Est_Vide{boolean} 29|28s32 37s44 65s32
+18V18*Taille{integer} 29|29s32 38s40 66s32
+25U19*Inserer 29|32s25
+38U19*Supprimer 29|80s25 110s25
+44V18*La_Donnee{integer} 29|10s19 41s48 87s48 120s48
+49U19*Vider 29|64s17 95s17 124s17
+80U19*Afficher_Debug 29|35s25 83s25 112s25
+X 2 ada.ads
+16K9*Ada 20e8 29|1r6 1r32 2r6 2r32
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[9|46] 29|2w10 2r36
+X 8 a-textio.ads
+57K13*Text_IO 727e16 29|1w10 1r36
+264U14*New_Line 29|35s52 83s52 112s52
+465U14*Put 29|74s17 103s17
+508U14*Put_Line 29|34s25 82s25 108s25
+X 29 test_abr.adb
+5U11*Test_ABR 5b11 131l5 131t13
+7V14 Est_Cle_Utilisee{boolean} 7b14 7>32 7>49 12l9 12t25 86s48 119s48
+7p32 Abr{1|3P14} 10r30
+7e49 Cle{character} 10r35
+8i9 Donnee{integer} 10m9
+15i9 Nb_Donnees{integer} 16r35 18r38 31r29 78r37 107r29 118r39
+16a9 Cles(character) 32r44 34r68 41r69 80r46 82r62 86r76 87r69 108r55 110r46
+. 119r76 120r69
+18a9 Donnees(integer) 32r54 41r81 87r81 120r81
+25U19 Construire_Exemple_Arbre 25b19 25<45 57l13 57t37 63s17 76s17 105s17
+25p45 Annuaire{1|3P14} 27m30 28r42 29r40 32m34 35r41 37r54 38r48 41r59
+31i21 I{integer} 32r50 32r63 34r74 38r60 40r37
+40i29 J{integer} 41r75 41r90
+60U19 Tester_Exemple_Arbre 60b19 67l13 67t33 128s9
+61p17 Annuaire{1|3P14} 63m43 63r43 64m24 64r24 65r42 66r40
+71U19 Tester_Supprimer_Inverse 71b19 96l13 96t37 129s9
+72p17 Annuaire{1|3P14} 76m43 76r43 80m36 80r36 83r41 86r66 87r59 95m24 95r24
+78i21 I{integer} 80r52 82r68 85r37
+85i29 J{integer} 86r82 87r75 87r90
+100U19 Tester_Supprimer 100b19 125l13 125t29 130s9
+101p17 Annuaire{1|3P14} 105m43 105r43 110m36 110r36 112r41 119r66 120r59
+. 124m24 124r24
+107i21 I{integer} 108r61 110r52 118r34
+118i29 J{integer} 119r82 120r75 120r90
+

@@ -1,0 +1,4 @@
+7c7
+< public class CoupInvalideException extends Exception {
+---
+> public class CoupInvalideException extends RuntimeException {

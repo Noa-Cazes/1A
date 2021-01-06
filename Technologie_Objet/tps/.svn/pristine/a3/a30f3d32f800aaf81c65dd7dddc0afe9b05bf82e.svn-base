@@ -1,0 +1,94 @@
+2c2,6
+< Erreur : L'argument doit être de la forme nom@strategie avec strategie = naif | rapide | expert | humain | tricheur
+---
+> Nombre d'allumette restantes : 13
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 4 allumette.
+> Erreur ! Prise invalide : 4 (> 3)
+> Recommencez !
+4,7c8,12
+< Usage :
+< 	java allumette.Partie joueur1 joueur2
+< 		joueur est de la forme nom@stratégie
+< 		strategie = naif | rapide | expert | humain | tricheur
+---
+> Nombre d'allumette restantes : 13
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 5 allumette.
+> Erreur ! Prise invalide : 5 (> 3)
+> Recommencez !
+9,10c14,18
+< 	Exemple :
+< 		java allumette.Partie Xavier@humain Ordinateur@naif
+---
+> Nombre d'allumette restantes : 13
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 0 allumette.
+> Erreur ! Prise invalide : 0 (< 1)
+> Recommencez !
+11a20,84
+> Nombre d'allumette restantes : 13
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend -1 allumette.
+> Erreur ! Prise invalide : -1 (< 1)
+> Recommencez !
+> 
+> Nombre d'allumette restantes : 13
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 3 allumette.
+> 
+> Nombre d'allumette restantes : 10
+> Au tour de Ordinateur.
+> Ordinateur prend 1 allumette.
+> 
+> Nombre d'allumette restantes : 9
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 3 allumette.
+> 
+> Nombre d'allumette restantes : 6
+> Au tour de Ordinateur.
+> Ordinateur prend 1 allumette.
+> 
+> Nombre d'allumette restantes : 5
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 1 allumette.
+> 
+> Nombre d'allumette restantes : 4
+> Au tour de Ordinateur.
+> Ordinateur prend 3 allumette.
+> 
+> Nombre d'allumette restantes : 1
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 4 allumette.
+> Erreur ! Prise invalide : 4 (> 1)
+> Recommencez !
+> 
+> Nombre d'allumette restantes : 1
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 3 allumette.
+> Erreur ! Prise invalide : 3 (> 1)
+> Recommencez !
+> 
+> Nombre d'allumette restantes : 1
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 2 allumette.
+> Erreur ! Prise invalide : 2 (> 1)
+> Recommencez !
+> 
+> Nombre d'allumette restantes : 1
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 0 allumette.
+> Erreur ! Prise invalide : 0 (< 1)
+> Recommencez !
+> 
+> Nombre d'allumette restantes : 1
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend -1 allumette.
+> Erreur ! Prise invalide : -1 (< 1)
+> Recommencez !
+> 
+> Nombre d'allumette restantes : 1
+> Au tour de Xavier.
+> Combien prenez-vous d'allumette ? Xavier prend 1 allumette.
+> Xavier a perdu !
+> Ordinateur a gagné !

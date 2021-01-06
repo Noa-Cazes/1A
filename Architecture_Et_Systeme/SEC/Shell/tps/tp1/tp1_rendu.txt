@@ -1,0 +1,5 @@
+1) find . -type f -name '*.o' -size +0 -print
+2) find . -type f -name '*.o' | wc -l
+3) find . -name core -size +0 -exec rm {} \;
+8) cat fichier | tr \ "\n" | grep -c 'ba'
+10) wc -L fichier

@@ -1,0 +1,73 @@
+Nom       : Cazes
+Prénom    : Noa
+Groupe TP : C
+
+Les « ... » indiquent les endroits à compléter.
+
+=====[ Temps passé ]============================================================
+
+Ces informations de temps sont demandées à titre indicatif et ne sont pas
+prises en compte dans la notation du projet.
+
+Toutes les durées sont à saisir en heures.  Par exemple, si vous avez passé
+1h45, il faudra indiquer 1.75.  Si vous avez passé 2h30, il faudra indiquer
+2.5.
+
+* Temps passé sur la V1 (en h) : 15.0.
+* Temps passé sur la V2 (en h) : ...
+
+
+=====[ Questions ]==============================================================
+
+--------------------------------------------------------------------------------
+Pourquoi l'exception OperationInterditeException ne peut pas être définie
+comme vérifiée par le compilateur ?
+--------------------------------------------------------------------------------
+L'exception OperationInterditeException ne peut pas être définie comme vérifiée par le compilateur car on ne traite pas l'exception tout de suite avec un try/catch/finally.
+Et les exceptions définies comme vérifiées doivent être traitées. 
+Cette exception est levée à l'aide de "throw", puis traitée plus tard dans la méthode appelante. 
+...
+
+
+--------------------------------------------------------------------------------
+Expliquer ce qu'il faut faire pour ajouter un nouveau niveau de jeu, par
+exemple la stratégie lente (C13).  Pour plus de précision, on numérotera
+les étapes à faire.
+--------------------------------------------------------------------------------
+Pour définir une stratégie lente, il faudrait:
+
+1. créer une nouvelle classe telle que: 
+    public class StrategieLente implements Strategie
+avec Strategie une interface contenant la méthode
+public int getPrise(Jeu jeu)
+
+2. implémenter la méthode de telle sorte que le résultat retourné soit toujours 1
+
+3. traiter les cas où le nombre d'allumettes en jeu est de 0 avec une exception de type RuntimeException, ici CoupInvalideException
+
+4. ajouter cette stratégie dans la classe Partie
+...
+
+
+--------------------------------------------------------------------------------
+Expliquer ce qui permet, dans votre conception, de changer dynamiquement
+(en cours d'exécution du programme) la stratégie d'un joueur (C14).
+--------------------------------------------------------------------------------
+On pourrait changer dynamiquement la stratégie d'un joueur grâce aux methodes 
+    public void setJ1(Joueur j1);
+    public void setJ2(Joueur j2);
+qui permettent de modifier les attributs d'un joueur (nom et stratégie). 
+
+...
+
+
+=====[ Explications ]===========================================================
+
+--------------------------------------------------------------------------------
+Donner ici les explications supplémentaires utiles à la compréhension du
+travail rendu.
+--------------------------------------------------------------------------------
+
+...
+
+--------------------------------------------------------------------------------

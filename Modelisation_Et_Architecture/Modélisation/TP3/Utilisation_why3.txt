@@ -1,0 +1,7 @@
+Depuis le terminal, on lance la commande why3 ide nom_du_fichier.mlw
+Dans why3, on clique sur un théorème et on on va Tools -> Provers -> on selectionne celui qu'on veut.
+Tools -> Replay pour refaire une preuve.
+Tools -> Edit pour éditer si cela ne se déclanche pas automatiquement (pour coq par exemple).
+Lorsque la fenêtre de coq s'ouvre, on marque firstorder juste après les intros (intros H1 H2.).
+
+

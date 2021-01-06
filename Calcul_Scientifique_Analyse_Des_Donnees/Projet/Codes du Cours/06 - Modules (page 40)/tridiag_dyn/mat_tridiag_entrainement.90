@@ -1,0 +1,83 @@
+module mat_tridiag
+
+      type tridiag
+          integer:: n
+          real, allocatable, dimension(:) :: diag, diagsup, diaginf
+      end type tridiag
+
+contains
+      
+      subroutine create(a, n)
+
+          implicit none
+          type(tridiag), intent(out):: a
+          integer, intent(in):: n
+
+          a%n = n
+          allocate(a%diag)
+          allocate(a%diagsup)
+          allocate(a%diaginf)
+      end subroutine create
+
+      subroutine somme(a, b, c, code)
+
+          implicit none
+          type(tridiag), intent(in):: a, b
+          type(tridiag), intent(out):: c
+          logical, intent(out):: code
+
+          if(a%n /= b%n) then
+              code = .false.
+              return
+          else
+              code = .true.
+              call create(c, a%n)
+              c%diag = a%diag + b%diag
+              c%diagsup = a%diagsup + b%diagsup
+              c%diaginf = a%diaginf + b%diaginf
+          end if
+       end subroutine somme
+
+
+       subroutine affiche(a)
+           implicit none
+           type(tridiag), intent(in):: a
+
+           integer:: i, j
+
+           do i = 1, a%n    ! i indice de la colonne
+              print *, 'colonne', i
+              do j = 1, i-2  ! j indice ligne. De i-1, i, i+1 ce sont
+                             ! les valeurs des trois diagonales
+                             ! donc en dehors on met des 0
+                 print *, 0.0
+              end do
+              if(i /= 1) then         ! si ce n'est pas la première
+                                      ! colonne
+                                      ! soit la colonne où il n'y a pas
+                                      ! d'éléments de la diagonale sup.
+                                      ! ici, dans cet odre, pour une
+                                      ! colonne, autre que la première
+                                      ! ou la dernière, on a
+                                      ! elt diag sup
+                                      ! elt diag
+                                      ! elt diag inf
+                  print *, a%diagsup(i)
+              end if
+              print *, a%diag(i)      ! l'elt de la diag est toujours
+                                      ! affiché
+              if(i /= n) then         !  si ce n'est pas la première
+                                      ! colonne
+                                      ! soit la colonne où il n'y a pas
+                                      ! d'éléments de la diagonale sup.
+
+                  print *, a%diaginf(i)
+              end if
+              do j = i+2, 10          ! là on passe après les trois
+                                      ! diagonales au niveau des colonnes, donc des 0.
+                print *, 0.0
+              end do
+              print *, "------------"
+           end do
+       end subroutine affiche
+end module mat_tridiag

@@ -1,0 +1,19 @@
+1.a) On remarque que l'amplitude du signal est bien comrpise entre Ts/2 et -Ts/2. 
+Lorsque l'on a deux signaux dont le symbole est le même, la longeur sur laquelle le signal est égal à Ts/2 est de 1,5*Ts = 6, ce qui est bien le cas aussi dans l'étude théorique.
+Lorsque deux signaux dont le symbole n'est pas le même se suivent, la plus petite distance entre les deux "plats" est de 2,5*Ts = 2.
+Ce raisonnement se poursuit pour une continuité plus imporante de signaux ayant le même symbole.
+
+1.b) A l'aide du diagramme de l'oeil tracé, on peut en déduire les instants optimaux d'échantillonnages.
+Sur matlab, on trouve qu'ils sont compris entre Ts/2 = 2 et Ts = 4.
+C'est aussi ce que l'on trouve en étude théorique. 
+1.c) On prend ici un instant d'échantillonnage de Ts = Ns*Te = 4.
+On trouve bien une TEB nulle.
+
+4.Ces deux TEB simulés obtenus, un pour la chaîne réalisée et l'autre pour la chaîne de référence, paraissent ici similaires.
+Cependant, théoriquement, on avait établit que pour un même TEB, dans la chaîne de référence, il y avait besoin d'une plus faible valeur de Es. 
+Donc, théoriquement, c'est la chaîne de référence qui est plus efficace en puissance. 
+
+5. Les DSPs des deux chaînes sont telles que pour la chaîne de référence le poids des fréquences entre 0 et 0.1 Hz sont très importants (car amplitude très importante en comparaison aux pics de la DSP de cette même chaîne). 
+Ainsi la bande passante pourrait être de 0.1 Hz, de sorte à ce qu'un minimum d'information soit perdu.
+En revanche, pour la chaîne étudiée, les différences d'amplitudes entre les pics ne sont pas si marquées, ainsi la bande passante qui devra être prise devra être plus grande que celle pour la chaîne de référence, de façon à ne pas perdre trop d'informations.
+Ainsi, c'est la chaîne de référence qui a la meilleure efficacité spectrale.

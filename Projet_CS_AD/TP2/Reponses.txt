@@ -1,0 +1,76 @@
+Q1 :    On observe que la méthode des puissance est plus longue à calculer que l'autre.
+        Quelle surprise, quel résultat inattendu.
+        On a tous beaucoup apprit de cette expérience.
+        Vraiment.
+
+Q2 :    Peut-être le nombre d'itérations d'une même boucle ?
+
+Q3 :    V Converge vers la matrice des vecteurs propres de A exprimée dans la base dans laquelle H est diagonale - ou la matrice des vecteurs propres de H. (Base des vecteurs propres de H)
+        Ça a complètement été vérifié par la pratique.
+        On récupère les vecteurs propres et valeurs propres de H et A afin de vérifier que V * X = vp de A.
+
+Q4 :    C'est pas un problème car H est de dimension moindre (20x20)
+
+Q5 :    Fait.
+
+Q6 :    k = k + 1
+   130: k = k + 1
+
+        Compute Y such that Y = A V
+   133: call dgemm('n', 'n', n, m, n, done, a, n, v, n, dzero, y, n)
+
+        V <- orthonormalisation of the columns of Y
+   136: call gram_schmidt(y, n, m, v)
+
+        Rayleigh-Ritz projection applied on matrix A and orthonormal vectors V
+            Compute the Rayleigh quotient H = V^T A V .
+   141: call dgemm('n','n', n, m, n, done, a, n, v, n, dzero, y, n)
+   143: call dgemm('t', 'n', m, m, n, done, v, n, y, n, dzero, h, m)
+            Compute the spectral decomposition X /\out XT = H, where the eigenvalues of H (diag(/\out)) are
+arranged in descending order of magnitude.
+   145: call dsyev('v', 'u', m, h, m, w_aux, work, lwork, ierr) 
+        if( ierr .ne.0 )then
+            write(*,'("Error in dsyev")')
+            ierr = -4
+            goto 999
+   150: end if
+   154: do i = 1, m
+            t(i) = w_aux(m-i+1)
+            x(:, i)  = h(:, m-i+1)
+   157: end do
+            Compute Vout = V X.
+   160: y = v
+   161: call dgemm('n', 'n', n, m, m, done, y, n, x, m, dzero, v, n)
+        
+        Convergence analysis step: save eigenpairs that have converged and update PercentReached
+   164 -> 197
+
+Q7 :    Nb_Opérations(A^p)   = o(n^3)
+        Nb_Opérations(A^p V) = o(n^3)
+        En calculant V = AV p fois plutôt que A^p V (ce qui obtient le même résultat
+        on a un calcul en o(n^2*m) (car Nb_Opérations(AV) = o(n^2*m))
+
+Q8 :    Ligne 136 est devenue 137->140
+        La v2 est plus rapide que la v1 (~2 fois plus rapide dans les cas testés)
+       
+Rem:    La partie Vc de V étant déjà suffisemment convergeante (par rapport à la précision voulue)
+        continuer de la faire plus converger n'est alors plus source que de calculs inutiles et
+        couteux, qui pourraient alors être aisément évités.
+
+Q9 :    L'algorithme v1 continue de faire converger des vecteurs ayant déjà assez convergé (précision), 
+        ainsi, on observe une plus grande précision sur les valeurs propres les plus importantes, car c'est celles
+        qui convergent le plus rapidement.
+        Les faire plus converger (les vecteurs) les rend donc plus précises (les valeurs) que celles qui 
+        sont obtenues à la dernière itération.
+
+Q10:    La méthode v2 ayant un fonctionnement identique à la v1 sur ce point là (le fait de pas freezer Vc),
+        la même observation devrait pouvoir être faite
+
+Q11:    Fait.
+
+Q12:    p affecte la rapiditié de l'algorithme. L'augmenter permet d'arriver plus vite à la 
+        précision voulue, mais trop l'augmenter ajoute du temps de calcul qui déssert son intérêt
+
+Q13:    jolis dessins
+
+Q14:    v11 < v0 < v1 < v10 < v2 < v3 pour n = 200, m = 40, per = 0.5, imat = 2

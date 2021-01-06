@@ -1,0 +1,66 @@
+//package Unlock
+import javax.imageio.ImageIO;
+import javax.swing.*;
+
+import java.awt.*;
+import javax.swing.event.*;
+import java.awt.event.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
+import java.awt.color.*;
+/** Fenetre avec la carte de taille normale
+ * 
+ * @author ncaze
+ *
+ */
+public class FenetreCarte extends JFrame {
+	
+	/* la carte que l'on veut afficher */
+	private Carte carte; 
+	
+	public FenetreCarte(Carte carte) {
+		this.carte = carte; 
+		// le numéro de la carte
+		int numero = carte.getNumero();
+		// Donner un titre
+		this.setTitle("Carte " + numero);
+		// La localiser
+		Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+		int height = dimension.height;
+		int width = dimension.width; 
+		this.setLocation(0, height/4);
+		// Mettre au premier plan
+		this.setAlwaysOnTop(true); 
+	    
+	    // Afficher la carte
+	    ImageIcon fond = null;
+	    String nomFichier = carte.getNomImgReelle();
+		try {
+			fond = new ImageIcon(ImageIO.read(new File(nomFichier)));
+		} catch(IOException e) {
+			// En cas de problème de chargement de l'image
+			e.printStackTrace();
+		}
+		
+		JLabel contentPane = new JLabel(fond) {
+			@Override
+			public void paintComponent(Graphics g) {
+				super.paintComponent(g);
+				if (getIcon() != null) {
+					g.drawImage(((ImageIcon) getIcon()).getImage(),0, 0, getWidth(), getHeight(), null);
+				}
+			}
+		};
+		
+		// Appliquer le contenu
+	   this.setContentPane(contentPane);
+	   
+	   // Afficher la fenêtre
+	   this.setVisible(true);
+	   this.pack();
+	}
+	
+
+	
+}

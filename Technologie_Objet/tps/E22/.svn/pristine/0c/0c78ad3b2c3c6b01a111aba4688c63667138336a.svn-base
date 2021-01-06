@@ -1,0 +1,47 @@
+package Unlock;
+
+/** pénalité que subissent les joueurs qui ont fait une erreur.
+ * 
+ * @author ipeltier
+ *
+ */
+public class CartePenalite implements Carte {
+
+    /** Numéro de la carte. */
+	private int numCarte;
+	/** Information la découverte de la carte. */
+	private boolean decouvCarte;
+
+    /** Construction de la carte machine.
+     * @param le numéro de la carte
+     */
+	CartePenalite(int n) {
+        assert n >= 1;
+		assert n <= 100;
+		this.numCarte = n;
+		this.decouvCarte = false;
+    }
+
+    /** Obtenir le numéro de la carte.
+     * @return  le numéro de la carte
+	 */
+	public int getNumero() {
+		return numCarte;
+			
+	}
+		
+	/** Informer si la carte a été découverte.
+     * @return un boolean informant si la carte a été découverte.
+	 */
+	public boolean estDecouverte() {
+		return decouvCarte;
+	}
+
+    /** Découvrir la carte.
+     * @param le numéro de la carte.
+	 */
+	public void decouvrir() { //add
+		this.decouvCarte = true;
+	}
+
+}

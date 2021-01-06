@@ -1,0 +1,158 @@
+V "GNAT Lib v2019"
+M P W=b
+A -g
+A -gnata
+A -gnatwa
+P ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U main%b		main.adb		7aecb5e0 NE OO SU IL
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W arbre_genealogique%s	arbre_genealogique.adb	arbre_genealogique.ali
+W display_shell%s	display_shell.adb	display_shell.ali
+W input%s		input.adb		input.ali
+W registre%s		registre.adb		registre.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-charac.ads		20190518041255 2d3ec45b ada.characters%s
+D a-chlat1.ads		20190518041255 66457d31 ada.characters.latin_1%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041255 bf4f806b ada.finalization%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-string.ads		20190518041255 90ac6797 ada.strings%s
+D a-strmap.ads		20190518041255 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20190518041255 1656705b ada.strings.unbounded%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D arbre_binaire.ads	20191212121534 f4912ac5 arbre_binaire%s
+D arbre_genealogique.ads  20191212121534 a2481b28 arbre_genealogique%s
+D display_shell.ads	20191212121534 51421bd3 display_shell%s
+D ensemble.ads		20191212121534 78801a5e ensemble%s
+D input.ads		20191212121534 0b46d2c7 input%s
+D main.adb		20191212121534 bf75fa12 main%b
+D registre.ads		20191212121534 3dd59dce registre%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-atocou.ads		20190518041256 b45c2d8d system.atomic_counters%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-finmas.ads		20190518041255 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041256 4ff27390 system.finalization_root%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-pooglo.ads		20190518041254 ede33ef8 system.pool_global%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20190518041255 b16154c2 system.storage_pools%s
+D s-stposu.ads		20190518041254 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+G a e
+G c Z b b [main standard 15 11 none]
+G r c none [main standard 15 11 none] [init_bar display_shell 18 15 none]
+G r c none [main standard 15 11 none] [display_menu display_shell 23 15 none]
+G r c none [main standard 15 11 none] [input_choice input 26 15 none]
+G r c none [main standard 15 11 none] [generate_id arbre_genealogique 38 14 none]
+G r c none [main standard 15 11 none] [creer_arbre_minimal arbre_genealogique 46 15 none]
+G r c none [main standard 15 11 none] [display_new_id display_shell 30 15 none]
+G r c none [main standard 15 11 none] [demander_donnee input 36 14 none]
+G r c none [main standard 15 11 none] [inserer_r registre 184 15 none]
+G r k t_donnee [main standard 15 11 none] [t_donneeDF registre 229 10 none]
+G r c none [main standard 15 11 none] [display_success_minimal_tree_ceation display_shell 42 15 none]
+G r c none [main standard 15 11 none] [afficher_arbre_noeud arbre_genealogique 86 15 none]
+G r c none [main standard 15 11 none] [display_arbre_non_vide_exception display_shell 47 15 none]
+G r c none [main standard 15 11 none] [input_id input 43 15 none]
+G r c none [main standard 15 11 none] [input_flag input 50 15 none]
+G r c none [main standard 15 11 none] [ajouter_parent arbre_genealogique 57 15 none]
+G r c none [main standard 15 11 none] [display_success_add_parent display_shell 52 15 none]
+G r c none [main standard 15 11 none] [display_arbre_vide_exception display_shell 60 15 none]
+G r c none [main standard 15 11 none] [display_id_absent_exception display_shell 73 15 none]
+G r c none [main standard 15 11 none] [display_deux_parents_presents_exception display_shell 65 15 none]
+G r c none [main standard 15 11 none] [display_number_ancestors display_shell 81 15 none]
+G r c none [main standard 15 11 none] [input_generation input 56 15 none]
+G r c none [main standard 15 11 none] [ancetres_n_generation arbre_genealogique 78 15 none]
+G r c none [main standard 15 11 none] [supprimer arbre_genealogique 95 15 none]
+G r c none [main standard 15 11 none] [display_success display_shell 37 15 none]
+G r c none [main standard 15 11 none] [individus_1_parent_connu arbre_genealogique 103 15 none]
+G r c none [main standard 15 11 none] [individus_2_parent_connu arbre_genealogique 111 15 none]
+G r c none [main standard 15 11 none] [ensemble_feuilles arbre_genealogique 119 15 none]
+G r c none [main standard 15 11 none] [ancetres_sur_n_generation arbre_genealogique 130 15 none]
+G r c none [main standard 15 11 none] [ancetres_homonymes arbre_genealogique 140 14 none]
+G r c none [main standard 15 11 none] [display_is_homonym display_shell 96 15 none]
+G r c none [main standard 15 11 none] [end_bar display_shell 109 15 none]
+X 12 arbre_binaire.ads
+16P10*T_BT
+X 13 arbre_genealogique.ads
+14K9*Arbre_Genealogique 154e23 17|9w6 9r37
+17P10*T_ABG<12|16P10[146]> 17|18r10
+20X5*ARBRE_VIDE_EXCEPTION 17|72r26 92r26 111r26 128r26 146r26 159r26 168r26
+. 177r26 193r26 209r26
+21X5*ARBRE_NON_VIDE_EXCEPTION 17|47r26
+23X5*ID_ABSENT_EXCEPTION 17|75r26 95r26 114r26 131r26 149r26 212r26
+24X5*DEUX_PARENTS_PRESENTS_EXCEPTION 17|78r26
+38V14*Generate_ID{integer} 17|37s27 62s31
+46U15*Creer_Arbre_Minimal 17|40s21
+57U15*Ajouter_Parent 17|65s21
+78U15*Ancetres_N_Generation 17|109s21
+86U15*Afficher_Arbre_Noeud 17|44s21 69s21 125s21
+95U15*Supprimer 17|142s21
+103U15*Individus_1_Parent_Connu 17|156s21
+111U15*Individus_2_Parent_Connu 17|165s21
+119U15*Ensemble_Feuilles 17|174s21
+130U15*Ancetres_Sur_N_Generation 17|190s21
+140V14*Ancetres_Homonymes{boolean} 17|206s37
+X 14 display_shell.ads
+13K9*Display_Shell 112e18 17|12w6 12r37
+18U15*Init_Bar 17|25s5
+23U15*Display_Menu 17|29s9
+30U15*Display_New_ID 17|41s21 66s21
+37U15*Display_Success 17|143s21
+42U15*Display_Success_Minimal_Tree_Ceation 17|43s21
+47U15*Display_ARBRE_NON_VIDE_EXCEPTION 17|48s25
+52U15*Display_Success_Add_Parent 17|68s21
+60U15*Display_ARBRE_VIDE_EXCEPTION 17|73s25 93s25 112s25 129s25 147s25 160s25
+. 169s25 178s25 194s25 210s25
+65U15*Display_DEUX_PARENTS_PRESENTS_EXCEPTION 17|79s25
+73U15*Display_ID_ABSENT_EXCEPTION 17|76s25 96s25 115s25 132s25 150s25 213s25
+81U15*Display_Number_Ancestors 17|89s21
+96U15*Display_Is_Homonym 17|206s17
+109U15*End_Bar 17|226s5
+X 16 input.ads
+12K9*Input 59e10 17|11w6 11r37
+26U15*Input_Choice 17|30s9
+36V14*Demander_Donnee{18|13R10} 17|42s46 67s50
+43U15*Input_ID 17|56s21 86s21 103s21 122s21 139s21 184s21 202s17 203s17
+50U15*Input_Flag 17|59s21
+56U15*Input_Generation 17|106s21 187s21
+X 17 main.adb
+15U11*main 15b11 228l5 228t9
+18p5 Ab{13|17P10} 37r40 40m42 40r42 44r43 62r44 65m37 65r37 69r43 89r47 109r44
+. 125r43 142m32 142r32 156r47 165r47 174r40 190r48 206r57
+19p5 Registre{18|11P10} 42m32 42r32 67m32 67r32 206r61
+20i5 ID{integer} 37m21 40r46 41r37 42r42 44r47 56m32 65r41 69r47 86m32 89r51
+. 103m32 109r48 122m32 125r47 139m32 142r36 184m32 190r52
+20i9 ID1{integer} 202m28 206r71
+20i14 ID2{integer} 203m28 206r76
+20i19 New_ID{integer} 62m21 65r45 66r37 67r42
+20i27 Choice{integer} 30m23 32r14 222r20
+20i35 Flag{integer} 59m33 65r53
+20i41 Generation{integer} 106m39 109r52 187m39 190r56
+27L7 RESTART 49r30 74r30 94r30 97r30 113r30 116r30 130r30 133r30 148r30 151r30
+. 161r30 170r30 179r30 195r30 211r30 214r30
+53L19 TRY 77r30 80r30
+X 18 registre.ads
+8K9*registre 17|10w6 10r37 18|255e13
+11P10*T_Registre 17|19r16
+184U15*Inserer_R 17|42s21 67s21
+

@@ -1,0 +1,13 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {2}Utilisation de la chaine passe-bas \IeC {\'e}quivalente pour le calcul et l'estimation du taux d'erreur binaire}{3}
+\contentsline {subsection}{\numberline {2.1}Etude th\IeC {\'e}orique}{3}
+\contentsline {subsection}{\numberline {2.2}Implantation sous Matlab}{6}
+\contentsline {subsubsection}{\numberline {2.2.1}Implantation de la chaine sur fr\IeC {\'e}quence porteuse}{6}
+\contentsline {subsubsection}{\numberline {2.2.2}Implantation de la chaine passe-bas \IeC {\'e}quivalente}{10}
+\contentsline {section}{\numberline {3}Comparaison de modulations sur fr\IeC {\'e}quence porteuse}{14}
+\contentsline {subsection}{\numberline {3.1}Etude th\IeC {\'e}orique}{14}
+\contentsline {subsection}{\numberline {3.2}Implantation sous Matlab}{17}
+\contentsline {subsubsection}{\numberline {3.2.1}Etude de chaque chaine de transmission}{17}
+\contentsline {subsubsection}{\numberline {3.2.2}Comparaison des chaines de transmission}{23}
+\contentsline {section}{\numberline {4}Conclusion}{24}

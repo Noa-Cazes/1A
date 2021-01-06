@@ -1,0 +1,71 @@
+import java.awt.event.*;
+import java.util.HashMap;
+import java.util.Map;
+import javax.swing.*;
+
+import javax.swing.ImageIcon;
+
+/** Permet de définir l'action engendrée lors de l'évènement
+ *  cliquer sur une case
+ */
+public class CliquerCase implements MouseListener {
+	
+	private UnlockSwingTuto vue;
+	private int i;
+	private int j;
+	private int indice;
+    
+	public CliquerCase(UnlockSwingTuto vue, int i, int j, int indice) {
+		this.vue = vue; 
+		this.i = i;
+		this.j = j;
+		this.indice = indice; 
+	}
+	
+
+	@Override
+	public void mouseClicked(MouseEvent clicked) {
+		Carte[] jeuCarte = (this.vue.getModele()).getJeuCarte();
+		if (jeuCarte[indice].estRetournee()) { // si elle est retournée
+			// ouvrir une fenêtre avec la carte de taille normale en cliquant dessus
+			new FenetreCarte(jeuCarte[indice]);
+		} else { // si elle n'est pas retournée
+			// Si on a le droit on la retourne
+			this.vue.getModele().decouvrir(i,j);
+			this.vue.majImg();
+			((this.vue.getCases())[this.i][this.j]).setIcon(this.vue.getImages().get(this.vue.getModele().AfficherCarte(this.i, this.j)));
+			// On met à jour le booléen
+			if (jeuCarte[indice].estDecouverte()) {
+				jeuCarte[indice].retourner();
+			}
+		} 
+	}
+	
+	@Override
+	public void mouseEntered(MouseEvent arg0) {
+
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent arg0) {
+		
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent arg0) {
+		
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent arg0) {
+		
+		
+	}
+	
+	
+
+}
+

@@ -1,0 +1,61 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -g
+A -gnata
+A -gnatwa
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U ensembles_tableau%b	ensembles_tableau.adb	e53f72d6 NE OO PK GE IL
+
+U ensembles_tableau%s	ensembles_tableau.ads	e26656fc BN EE NE OO PK GE
+
+D ensembles_tableau.ads	20191107133320 e26656fc ensembles_tableau%s
+D ensembles_tableau.adb	20191112160052 0759242a ensembles_tableau%b
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+G c Z s b [ensembles_tableau standard 7 9 none]
+X 1 ensembles_tableau.ads
+4i5 Capacite{integer} 24r82 31r43 47r32 2|53r25 57r21
+5+10 T_Elts 27r57 30r62 35r64 42r48 47r45 2|29r53 42r58 49r60
+7k9*Ensembles_Tableau 4z5 5z10 47E13 53l5 53e22 2|1b14 74l5 74t22
+9A14*T_Tab(5+10) 47c13 50r23
+10R14*T_Ensemble 13r42 17r42 20r37 23r44 27r36 30r41 35r43 43r48 49c13 52e18
+. 2|5r38 11r38 17r33 23r40 29r32 42r37 49r39 67r45
+13U19*Initialiser 13<32 2|5b15 8l9 8t20
+13r32 Ens{10R14} 14r30 2|5b28 7m9
+17U19*Detruire 17=29 2|11b15 14l9 14t17
+17r29 Ens{10R14} 2|11b25
+20V18*Est_Vide{boolean} 14s21 20>28 36s24 2|17b14 20t8
+20r28 Ens{10R14} 2|17b24 19r17
+23V18*Taille_Ensemble{integer} 23>35 24r22 24r56 31s20 32s43 32s66 37s22
+. 37s45 2|23b14 26l9 26t24
+23r35 Ens{10R14} 2|23b31 25r16
+27V18*Present{boolean} 27>27 27>48 32s21 2|29b14 38l9 38t16
+27r27 Ens{10R14} 2|29b23 33r26 33r48 37r26
+27*48 Elt{5+10} 2|29b44 33r72
+30U19*Ajouter 30=28 30>53 2|42b15 46l9 46t16
+30r28 Ens{10R14} 31r36 32r29 32r59 32r82 2|42b24 44m9 44r23 45m9 45r22
+30*53 Elt{5+10} 32r33 2|42b49 45r37
+35U19*Supprimer 35=30 35>55 2|49b15 63l9 63t18
+35r30 Ens{10R14} 36r33 37r38 37r61 2|49b26 53r43 60m13 60r37 60r50 61m13
+. 61r27
+35*55 Elt{5+10} 2|49b51 53r67
+42U28 Operation 42>39 2|70s13
+42*39 Elt{5+10}
+43u19*Appliquer_Sur_Tous 43>39 2|67b15 72l9 72t27
+43r39 Ens{10R14} 2|67b35 69r26 70r23
+50a12 Elements{9A14} 2|33r52 45m13 53r47 60m17 60r41 70r27
+51i12 Taille{integer} 2|7m13 19r21 25r20 33r30 37r30 44m13 44r27 45r26 60r54
+. 61m17 61r31 69r30
+X 2 ensembles_tableau.adb
+30i9 indice{integer} 32m9 33r16 33r61 34m13 34r23 37r16
+50i9 indice{integer} 52m9 53r15 53r56 54m13 54r23 57r12 60r26
+69i13 indice{integer} 70r36
+

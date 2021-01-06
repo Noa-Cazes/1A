@@ -1,0 +1,9 @@
+function [ds = perio(x)
+    dsp = (1/length(x)).*abs(fft(x).*fft(x));
+
+    figure();
+    plot(linspace(0,Fe,length(dsp)), dsp);
+    title("Périodogramme");
+    xlabel("fréquence en Hertz");
+    ylabel("Périodogramme");
+end

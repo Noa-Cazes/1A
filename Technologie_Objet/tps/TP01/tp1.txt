@@ -1,0 +1,36 @@
+Exercice 1
+1.1
+Les attributs sont présents dans la section nommée requêtes.
+Les méthodes à implanter sont dans la section commandes.
+Le constructeur à implanter est dans la section constructeurs. 
+1.2
+Les attributs doivent être au début, ensuite on met les constructeurs et les méthodes.  
+
+Exercice 2
+2.6 Le compilateur ne veut pas créer le point p1 car le constructeur Point est défini comme ayant e=deux arguments double, et ici le constructeur Point n'a pas d'arguments.
+L'intérêt de ce comportement est qu'il est alors nécéssaire pour l'utilisateur d'initialiser les pointeurs.
+2.7 Avec 1000 itérations, que des constructeurs.
+POur 5000 itérations, une série de constructeurs, puis une série de DESTRUCTION, et encore des CONSTRUCTEURS. 
+
+Exercice 3
+3.2 
+Le dx correspond à une variation selon l'axe des x.
+Le dy correspond à une variation selon l'axe des y.
+Le but de la méthode afficher() est d'afficher le segment sous la forme [extremite1 - extremite 2]. 
+
+Exercice 4
+4.1
+Segment
+Requêtes
+extremite1: Point
+extremite2: Point
+couleur: Color
+Commandes
+translater(dx: double, dy: double)
+longueur(): double
+afficher()
+getCouleur(): Color
+setCouleur(nouvelleCouleur: Color)
+Constructeurs
+Segment(ext1: Point, ext2: Point)
+

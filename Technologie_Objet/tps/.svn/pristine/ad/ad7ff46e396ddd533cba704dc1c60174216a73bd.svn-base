@@ -1,0 +1,23 @@
+import java.awt.color;
+
+/** Classe de test des exigences E12, E13, E14.
+* @author noa cazes
+*/
+
+public class CercleTest{
+	
+	// précision sur ls comparaisons réelle
+	public final static double EPSILON = 0.001;
+	
+	// Les points du sujet
+	private Point A, B, C, D, E;
+	
+	// Les cercles du sujet
+	private Cercle C1, C2;
+	
+	@Before
+	public void setUp{
+		// Construire les points
+		
+	}
+}

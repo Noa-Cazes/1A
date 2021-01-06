@@ -1,0 +1,22 @@
+Les Q# font référence aux questions posées dans le fichier LISEZ-MOI.txt.
+Les pénalités '+' sont évaluées manuellement (enseignant de TP).
+Les pénalités '+' peuvent donner lieu à des pénalités définitives en V1 (si le travail est jugé insuffisant).
+
++ C3 : Qualité du source de l'application : 1 pt
+
+    - commentaires (en particulier pour traitement des arguments de la ligne de commande)
+
+
++ C14 : Impossible de changer dynamiquement de stratégie (et Q3) : 2 pt
+- C15 : Absence du suffixe Test
+- C16 : Tests unitaires incomplets de la stratégie rapide
+    + non faits : .5 pt
+	+ mal écrits (pas de JUnit, @Test, etc) : .5 pt
+	- non complets
++ C17 : Autres programmes de tests (non demandés) 
+
+
+
++ L3 : Non complété 
+
+

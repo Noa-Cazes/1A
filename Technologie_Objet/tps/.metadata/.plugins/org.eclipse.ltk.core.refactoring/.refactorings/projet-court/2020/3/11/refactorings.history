@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;allumettes.JeuNaif.java&apos; to &apos;StrategieNaive.java&apos;&#x0A;- Original project: &apos;projet-court&apos;&#x0A;- Original element: &apos;allumettes.JeuNaif.java&apos;&#x0A;- Renamed element: &apos;allumettes.StrategieNaive.java&apos;" description="Rename compilation unit &apos;JeuNaif.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/&lt;allumettes{JeuNaif.java" name="StrategieNaive.java" references="false" stamp="1583938691136" version="1.0"/>
+</session>

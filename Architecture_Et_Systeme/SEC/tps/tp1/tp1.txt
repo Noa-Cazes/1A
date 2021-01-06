@@ -1,0 +1,52 @@
+2.1
+1) 6 processus sont engendrés par ce programme.
+1 occurence de fork 1
+2 occurences de fork 2
+3 occurences de fork 3
+fork 1
+fork 2
+fork 3
+fork 2
+fork 3
+
+2.2
+1) L'état du fils est en Z, mode zombie. Car ici le père est en sommeil alors que le fils est "réveillé".
+2) L'état du fils est en S, mode sleep.
+Le père se termine avant le fils.
+Donc le processus père du fils devient le processus initial, de pid 1, par conventon. 
+
+2.3
+Le processus père n'a pas accès aux données du processus fils.
+Lors de sa création, le processus fils hérite de toutes les données du processus père. 
+Cependant, si le fils modifie une donnée, le père n'en aura pas connaissance.
+
+3.1
+1) Il s'affiche:
+processus 13463 (père), de père 25054
+processus 13464 (fils), de père 13463
+fin du fils
+[0] fin fils 13464 par exit 0
+fin du père
+Tout s'est bien déroulé, le code de sortie est 0.
+2) Si le processus fils est tué pendant l'execution, par kill -9 pidfils on a:
+processus 15010 (père), de père 25054
+processus 15011 (fils), de père 15010
+[9] fin fils 15011 par signal 9
+fin du père
+Le code 9 est celui de kill. 
+
+S'il est tué par kill -SIGINT pidfils:
+processus 15814 (père), de père 25054
+processus 15815 (fils), de père 15814
+[2] fin fils 15815 par signal 2
+fin du père
+Le numéro est 2.
+
+S'il est tué par kill -SIGIO pidfils: 
+processus 16532 (père), de père 25054
+processus 16533 (fils), de père 16532
+[29] fin fils 16533 par signal 29
+fin du père
+Le numéro est 29.
+
+

@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/./</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 29" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 35" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 10" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 10" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 2" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 10" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 11" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 2" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 29" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 35" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 44" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 63" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 63" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 69" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 57" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 61" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 58" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 69" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 42" line=" 63" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 70" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 52" line=" 69" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 77" line=" 28" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 35" line=" 36" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 95" line=" 63" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 59" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 73" line=" 63" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 59" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 86" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 60" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 41" line=" 62" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 50" line=" 61" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 42" line=" 62" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 80" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 85" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 98" line=" 76" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 85" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 8" line=" 82" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 80" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 112" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 32" line=" 90" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 102" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 113" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 111" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 5" line=" 142" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 42" line=" 173" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 164" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 5" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 2" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 104" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 2" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 49" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 46" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 48" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 48" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 49" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 48" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 50" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 50" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 50" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 52" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 2" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 52" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 47" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 2" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 92" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 2" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 116" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 2" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 43" line=" 82" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 9" line=" 2" >
+      <vfs_project>/home/ncazes2/1A/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/tp/tp8/test_abr.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <vfs_file >/home/ncazes2/pim/tp/tp8/tp8.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/ncazes2/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file >/home/ncazes2/pim/tp/tp8/abr.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project  />
+      <vfs_file >/home/ncazes2/pim/tp/tp8/./</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/ncazes2/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file >/home/ncazes2/pim/tp/tp8/abr.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 45" line=" 69">
+      <vfs_project >/home/ncazes2/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file >/home/ncazes2/pim/tp/tp8/abr.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1">
+      <vfs_project >/home/ncazes2/pim/tp/tp8/tp8.gpr</vfs_project>
+      <vfs_file >/home/ncazes2/pim/tp/tp8/abr.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

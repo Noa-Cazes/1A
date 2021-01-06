@@ -1,0 +1,443 @@
+Nom    : CAZES
+Prénom : Noa
+Groupe : CM1 - C
+--------------------------------------------------------------------------------
+
+
+Consigne : Dans ce fichier, il faut répondre à la place des "..." et sur les
+lignes qui les suivent.  Le texte déjà écrit doit être conservé !
+
+=====[ Temps passé ]============================================================
+
+Ces informations de temps sont demandées à titre indicatif et ne sont pas
+prises en compte dans la notation du projet.
+
+Toutes les durées sont à saisir en heures.  Par exemple, si vous avez passé
+1h45, il faudra indiquer 1.75.  Si vous avez passé 2h30, il faudra indiquer
+2.5.
+
+Temps total passé sur ce mini-projet (en h) : 11.0 
+Temps passé sur les raffinages (en h) : 5.0
+
+=====[ Raffinages ]=============================================================
+
+-- Ne donner que les niveaux de raffinages qui sont informatifs.   Il est
+-- généralement inutile de donner le dernier niveau de raffinage s'il ne
+-- contient pas d'étapes non élémentaires.
+
+
+R0: Réviser les tables de multiplications en affichant pour une table donnée les opérations à affectuer, et en affichant des messages en fonction du nombre d'erreurs commmises par table.
+Tests:
+- 7 * 2 -> 14 
+- 7 * 3 -> 21
+- 7 * 4 -> 26
+- 7 * 6 -> 42
+- 7 * 7 -> 49
+- 7 * 1 -> 7
+- 7 * 8 -> 56
+- 7 * 5 -> 35
+- 7 * 9 -> 63
+- 7 * 10 -> 70
+=> affiche "Une seule erreur. Très bien."
+
+
+Exemples : On ne donnera pas d'exemples d'utilisation
+
+
+R1: Comment R0? 
+Demander le numéro N de la table que l'on souhaite réviser entre 1 et 10.
+Redemander si N n'est pas entre 1 et 10.
+Afficher le numéro de la table à réviser. 
+Pour i de 1 à 10 faire -- 10 multiplications dont le nombre de gauche est la table à réviser et le nombre de droite un nombre choisi au hasard entre 1 et 10
+    Demander la réponse.
+    Afficher "Bravo!" si la réponse est bonne ou "Mauvaise réponse" si elle est fausse. 
+    Compter le nombre d'erreur. 
+    Récupérer chaque temps de réponse de l'utilisateur pour chaque multiplication. 
+    Conserver le temps de réponse le plus grand. 
+Calculer le temps moyen.
+Afficher le nombre d'erreurs.                       
+Afficher un message en fonction du nombre d'erreur. 
+Si Duree_max >= Temps_Moyen + 1 Alors
+    Afficher Duree_max et le Temps_moyen.
+    Conseiller de réviser la table de multiplication correspondant au membre de droite de la multiplication en question. 
+Demander à l'utilisateur s'il veut continuer à s'entraîner ou s'il veut s'arrêter. 
+
+
+
+R2: Comment "Demander la table que l'on souhaite réviser entre 1 et 10
+             Redemander si le chiffre saisi  N n'est pas compris entre 1 et 10"?
+    Répéter
+        Ecrire ("Saisir le numéro N de la table, entre 1 et 10, que vous souhaitiez réviser:")
+        Lire (N)
+    Jusqu'à N > 1 et N < 10
+    Fin_Jusqu'à
+-- N compris entre 1 et 10, bornes incluses. 
+
+
+R2: Comment "Afficher le numéro de la table à réviser"?
+    Ecrire ("Table à réviser:", N)
+
+
+R2: Comment "Pour i de 1 à 10 faire -- 10 multiplications dont le nombre de gauche est la table à réviser et le nombre de droite un nombre choisi au hasard entre 1 et 10
+             Demander la réponse." ?
+    Pour i de 1 à 10 faire
+        Générer un nombre aléatoire N_Aléatoire entre 1 et 10 à l'aide de exemple_alea.adb
+        Ecrire ("(M", i, ")", N, "*", N_Aléatoire, "?")
+        Associer le résultat à la variable resultat. 
+    Fin_Pour
+
+R2: Comment "Afficher "Bravo!" si la réponse est bonne ou "Mauvaise réponse" si elle est fausse" ?
+    Si la réponse est bonne Alors
+        Ecrire ("Bravo!")
+    Sinon
+        Ecrire ("Mauvaise réponse")
+    Fin_Si
+
+
+R2: Comment "Compter le nombre d'erreur" ?
+    nbre_erreur = 0
+    Si la réponse est fausse Alors
+        nbre_erreur <-- nbre_erreur + 1
+    Sinon
+        Rien
+    Fin_Si
+
+
+R2: Comment "Récupérer chaque temps de réponse de l'utilisateur pour chaque multiplication" ?
+    Récupérer le temps de réponse.
+
+
+R2: Comment "Conserver le temps de réponse le plus grand" ? 
+    Initialiser des variables Duree_max (temps de réponse maximal) et N_Duree_max (variable où on a placé le nombre alétoire correspondant au temps de réponse maximal). 
+    Si Duree < Duree_max Alors
+        Duree_max <-- Duree
+        N_Duree_max <-- N_Aléatoire
+    Sinon
+        Rien
+    Fin_Si
+
+
+R2: Comment "Calculer le temps moyen"?
+    Faire une moyenne des valeurs de Duree récupérées.
+
+
+R2: Comment "Afficher le nombre d'erreurs" ?
+    Ecrire (nbre_erreur)
+
+
+R2: Comment "Afficher un message en fonction du nombre d'erreur" ?
+    Si toutes les réponses sont justes Alors
+        Ecrire ("Aucune erreur. Excellent!")
+    Sinon si il n'y a qu'une seule erreur Alors
+        Ecrire ("Une seule erreur. Très bien.")
+    Sinon si tout est faux Alors
+        Ecrire ("Tout est faux ! Volontaire ?")
+    Sinon si il y a moins de la moitié de bonnes réponses Alors
+        Ecrire ("Seulement", nbre_erreur, "bonnes réponses. Il faut apprendre la table de", N, "!")
+    Sinon
+        Ecrire (nbre_erreur, "erreurs. Il faut encore travailler la table de", N, ".")
+    Fin_Si
+
+
+R2: Comment "Si Temps >= Temps_Moyen + 1 alors
+                Afficher temps et le temps_moyen" ?
+    Si Duree_max >= Temps_Moyen + 1 Alors
+        Ecrire ("Des hésitations sur la table de", N_Duree_max, ":", Duree_max, "secondes contre", Temps_Moyen. Il faut certainement la réviser")
+    Sinon
+        Rien
+    Fin_Si
+
+
+R2: Comment "Demander à l'utilisateur s'il veut continuer à s'entraîner ou s'il veut s'arrêter" ?
+    Afficher un message convivial pour demander à l'utilisateur s'il souhaite  continuer pour une nouvelle session de révision de table ou arrêter de réviser.
+    Exécute l'option correspondante au choix. 
+    Redemander si l'élément saisi est différent des choix présentés. 
+
+
+
+R3: Comment "Générer un nombre aléatoire N_Aléatoire entre 1 et 10 à l'aide de exemple_alea.adb" ? 
+    N_Aléatoire <-- f(1,10)  -- On associe à N_Aléatoire le résultat d'une fonction qui prend en paramètres les bornes entre lesquelles on veut générer un nombre aléatoire
+
+
+R3: Comment "Associer le résultat à la variable resultat" ?
+    Lire (resultat)
+
+
+R3: Comment "la réponse est bonne" ?
+    resultat = N * N_Aléatoire
+
+
+R3: Comment "Initialiser des variables Duree_max (temps de réponse maximal) et N_Duree_max (variable où on a placé le nombre alétoire correspondant au temps de réponse maximal)"?
+    N_Duree_max <-- 0 -- initialisée à 0, chiffre non tiré aléatoirement, pour enlever toute ambiguîté.
+    Duree_max <-- 0 -- initialisée à 0, car ne sera pas gardé en tant que tant de réponse maximal, car absurde. 
+
+
+R3: Comment "Récupérer le temps de réponse" ?
+    Temps_debut <-- heure actuelle
+    Temps_fin <-- heure actuelle
+    Duree <-- Temps_fin - Temps_debut
+
+
+R3: Comment "Faire une moyenne des valeurs de Duree récupérée"?
+    S <-- S + Duree -- dans la boucle pour le temps moyen
+    S/10 -- hors de la boucle, pour calculer la moyenne des temps de réponse
+
+
+
+R3: Comment "toutes les réponses sont justes"?
+    nbre_erreur=0
+
+
+R3: Comment "il n'y a qu'une seule erreur"?
+    nbre_erreur=1
+
+
+R3: Comment "tout est faux"?
+    nbre_erreur=10  
+
+
+R3: Comment "il y a moins de la moitié de bonnes réponses"? 
+    nbre_erreurs <= 5
+
+
+
+R3: Comment "Afficher un message convivial pour demander à l'utilisateur s'il souhaite  continuer pour une nouvelle session de révision de table ou arrêter de réviser
+	     Exécute l'option correspondante au choix. 
+	     Redemander si l'élément saisi est différent de ceux du menu."?
+    Répéter 
+        EcrireLn("On continue ? -")
+        EcrireLn("Si vous souhaitez continuer de réviser, veuillez saisir oui")
+        Ecrire("Sinon veuillez saisir non")
+        Get(reponse)
+        Selon reponse Dans
+            oui => exécuter le programme à nouveau
+	        non => Rien
+	        Autres => Rien
+        Fin_Selon
+    Jusqu'à resultat=oui ou resultat=non
+
+
+
+R4: Comment "exécuter le programme à nouveau"?
+    Répéter
+        Inscrire tout le programme
+    Jusqu'à reponse=non
+
+
+R5: 
+-- R0: Réviser les tables de multiplications en affichant pour une table donnée les opérations à affectuer, et en affichant des messages en fonction du 
+-- nombre d'erreurs commmises.
+-- Tests:
+-- 7 * 2 -> 14 
+-- 7 * 3 -> 21
+-- 7 * 4 -> 26
+-- 7 * 6 -> 42
+-- 7 * 7 -> 49
+-- 7 * 1 -> 7
+-- 7 * 8 -> 56
+-- 7 * 5 -> 35
+-- 7 * 9 -> 63
+-- 7 * 10 -> 70
+-- => affiche "Une seule erreur. Très bien."
+
+Programme table_de_multiplication est
+    N: Entier -- lu au clavier
+    N_Aleatoire: Entier -- nombre généré aléatoirement entre 1 et 10 inclus
+    N_Duree_max: Reel -- variable où on a placé le nombre alétoire correspondant au temps de réponse maximal 
+    Duree_max: Reel -- temps de réponse maximal
+    Temps_debut: Reel -- heure à laquelle la question est posée
+    Temps_fin: Reel -- heure à laquelle la personne a répondu
+    Duree: Reel -- durée de la réponse
+    resultat: Reel -- résultat de la réponse
+    nbre_erreur: Entier -- nombre d'erreur au cours de la révision d'une table
+    Somme: Reel -- pour calculer le temps moyen de réponse
+    Reponse: Caractère -- réponse à la question "On continue?"
+    Debut
+        Répéter	  
+            Répéter
+                Ecrire ("Saisir le numéro N de la table, entre 1 et 10, que vous souhaitiez réviser:")
+                Lire (N)
+            Jusqu'à N >= 1 et N <= 10
+            Fin_Jusqu'à -- N compris entre 1 et 10, bornes incluses
+            Ecrire ("Table à réviser:", N)
+            N_Aleatoire <-- 1 -- initialisée de façon quelconque
+            N_Duree_max <-- 0 -- initialisée à 0, chiffre non tiré aléatoirement, pour enlever toute ambiguîté.
+            Duree_max <-- 0 -- initialisée à 0, car ne sera pas gardé en tant que tant de réponse maximal, car absurde. 
+            Somme <-- 0 -- pour calculer la moyenne des temps de réponse.
+            nbre_erreur <--  0  -- initialisation du nombre d'erreur. 
+            Pour i de 1 à 10 faire
+                N_Aleatoire <-- f(1,10) -- On associe à N_Aléatoire le résultat d'une fonction qui prend en paramètres les bornes entre lesquelles on veut générer
+                                        -- un nombre aléatoire
+                Temps_debut <-- heure actuelle -- plaçé avant l'écriture de la question, mais cela n'a pas d'importance, dans la mesure où on compare les valeurs entre elles. 
+                Ecrire ("(M", i, ")", N, "*", N_Aléatoire, "?")
+                Lire(resultat) -- résultat de la multiplication entré par l'utilisateur
+                Temps_fin <-- heure actuelle
+                Duree <-- Temps_fin - Temps_debut
+                S <-- S + Duree
+                Si Duree < Duree_max Alors
+                    Duree_max <-- Duree
+                    N_Duree_max <-- N_Aléatoire
+                Sinon
+                    Rien
+                Fin_Si
+                Si resultat = N * N_Aleatoire Alors
+                    Ecrire ("Bravo!")
+                Sinon
+                    Ecrire ("Mauvaise réponse")
+                    nbre_erreur <-- nbre_erreur + 1
+                Fin_Si
+	        Fin_Pour
+            Si nbre_erreur=0 Alors
+                Ecrire ("Aucune erreur. Excellent!")
+            Sinon si nbre_erreur=1 Alors
+                Ecrire ("Une seule erreur. Très bien.")
+            Sinon si nbre_erreur=10 Alors
+                Ecrire ("Tout est faux ! Volontaire ?")
+            Sinon si nbre_erreur=< 5 Alors
+                Ecrire ("Seulement", nbre_erreur, "bonnes réponses. Il faut apprendre la table de", N, "!")
+            Sinon
+                Ecrire (nbre_erreur, "erreur. Il faut encore travailler la table de", N, ".")
+            Fin_Si
+            Si Duree_max >= (S/10) + 1 Alors -- temps de réponse moyen + 1 seconde
+                Ecrire ("Des hésitations sur la table de", N_Duree_max, ":", Duree_max, "secondes contre", Temps_Moyen. Il faut certainement la réviser.")
+            Sinon
+                Rien
+            Fin_Si
+        EcrireLn("On continue ? -")
+        EcrireLn("Si vous souhaitez continuer de réviser, veuillez saisir oui")
+        Ecrire("Sinon veuillez saisir non")
+        Get(Reponse)
+        Fin_Jusqu'à Reponse=non
+	 -- Reponse=non, l'utilisateur veut arrêter de réviser
+    Fin table_de_multipication
+
+
+=====[ Test ]===================================================================
+
+* Expliquer rapidement comment vous avez testé votre programme.
+
+Après avoir écrit le programme en langage Ada, sur GPS, j'ai lancé le programme et répondu aux questions de plusieurs façon différentes, de manière à couvrir tous les cas possibles de réponse. 
+
+
+=====[ Difficultés ]============================================================
+
+* Indiquer les difficultés rencontrées
+
+Difficultés rencontrées lors de l'affichage des messages, notammant en ce qui concerne les espaces, et les passages à la ligne.
+
+=====[ Questions ]==============================================================
+
+Pour les questions suivantes, il ne s'agit pas de modifier le programme écrit
+mais d'expliquer comment il faudrait le modifier pour prendre en compte les
+évolutions envisagées.
+
+
+* Au lieu de poser 10 questions, on veut en poser 15. Comment faire ?
+
+La boucle "For i in 1..10 loop" devient "For i in 1..15 loop".
+
+* On veut afficher "Bien" si l'utilisateur n'a commis que 2 ou 3 erreurs.
+  Comment modifier le programme ?
+
+Dans le cas  Nbre_Erreur <= 5, il faut rajouter des sous cas à l'aide de boucle "If Then...Elsif Then...Else...end if;".
+elsif Nbre_Erreur <= 5 then
+     Put("Seulement");
+     Put(1,Nbre_Erreur);
+     if Nbre_Erreur = 1 then
+          Put(" bonne réponse. Il faut apprendre la table de ");
+     else
+         if Nbre_errreur=2 or Nbre_erreur=3 then
+             Put(" bonnes réponses. Il faut apprendre la table de ");
+	     Put(N,1);
+             Put_Line("!");
+             Put("Bien");
+	 else
+             Put(" bonnes réponses. Il faut apprendre la table de ");
+             Put(N,1);
+             Put_Line("!");
+	 end if;
+     end if;	
+end if;
+
+
+
+
+* On veut donner la possibilité à l'utilisateur d'abandonner le programmes en
+  tapant 0 quand on lui demande le résultat d'une multiplication. Quelles
+  modifications faut-il alors faire au programme ? 
+
+On ajoute une boucle for au sein de la boucle "for i in 1..10 loop" juste après "Get(Resultat)":
+for i in 1..10 loop
+    Get_Random_Number (N_Aleatoire); -- N_Aleatoire est un entier généré entre 1 et 10.
+    New_Line;
+    Temps_debut := Clock; -- plaçé avant l'écriture de la question, mais cela n'a pas d'importance, dans la mesure où on compare les valeurs entre elles.
+    Put("(M"); 
+    Put(i,1);
+    Put(") ");
+    Put(N,1);
+    Put(" * " );
+    Put(N_Aleatoire,1);
+    Put(" ?");
+    Get(Resultat); -- résultat de la multiplication entré par l'utilisateur
+    if Resultat = 0 then
+        goto Checkpoint;
+    else
+        null;
+    end if;
+        Temps_Fin := Clock;
+        Duree :=  Temps_Fin - Temps_Debut;
+        Somme :=  Somme + Duree;
+        if Duree > Duree_Max then
+            Duree_Max := Duree;
+            N_Duree_Max := N_Aleatoire;
+        else
+            null;
+        end if;
+        if Resultat = N * N_Aleatoire then
+            Put_Line ("Bravo !");
+        else
+            Put_Line ("Mauvaise réponse.");
+            Nbre_Erreur :=  Nbre_Erreur + 1;
+        end if;
+end loop;
+
+Puis on ajoute, juste avant" end Multiplications;", indenté de la même façon que ce dernier: 
+<<Checkpoint>>
+end Multiplications;
+
+* À la fin d'une série de questions, on veut proposer à l'utilisateur de
+  réviser la table pour laquelle l'utilisateur a commis le plus d'erreurs.
+  Par exemple, s'il se trompe pour 3 * 5, on compte une erreur pour 3 et
+  une erreur pour 5.  Comment faire ?
+
+Tout d'abord, le nombre d'erreurs de N, l'entier saisi au clavier, est déjà inscrit dans la variable Nbre_Erreur.
+On cherche alors le nombre d'erreurs pour les 9 autres valeurs. 
+Ainsi, on crée 9 variables afin de stocker ce nombre d'erreurs. Il serait plus judicieux d'utiliser un tableau, mais cela ne répondrait  pas au cahier des charges.
+On a alors:
+    Nbre_Erreur1: Integer;
+    Nbre_Erreur2: Integer;
+    Nbre_Erreur3: Integer;
+    Nbre_Erreur4: Integer;
+    Nbre_Erreur5: Integer;
+    Nbre_Erreur6: Integer;
+    Nbre_Erreur7: Integer;
+    Nbre_Erreur8: Integer;
+    Nbre_Erreur9: Integer;
+    Nbre_Erreur10: Integer;
+if Resultat = N * N_Aleatoire then
+    Put_Line ("Bravo !");
+else
+    Put_Line ("Mauvaise réponse.");
+    Nbre_Erreur :=  Nbre_Erreur + 1;
+    Nbre_
+end if;
+
+
+
+
+
+Cette rubrique est libre (et ne sera pas prise en compte dans la notation).
+
+...
+
+- ------------------------------------------------------------------------------

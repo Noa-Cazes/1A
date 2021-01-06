@@ -1,0 +1,18 @@
+package Unlock;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.*;
+
+public class ActionSaisirCode implements ActionListener {
+	
+	private UnlockSwing vue;
+	
+	public ActionSaisirCode(UnlockSwing vue) {
+		this.vue = vue;
+	}
+	
+	public void actionPerformed(ActionEvent saisirCode) {
+		
+	}
+
+}

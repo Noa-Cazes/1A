@@ -1,0 +1,6 @@
+17a18
+> 	 * @throws OperationInterditeException 
+19c20
+< 	void retirer(int nbPrises) throws CoupInvalideException;
+---
+> 	void retirer(int nbPrises) throws CoupInvalideException, OperationInterditeException;

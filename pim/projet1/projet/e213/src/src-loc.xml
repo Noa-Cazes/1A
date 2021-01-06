@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/./</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 91" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/foret.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/display_shell.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/input.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 91" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/foret.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/arbre_binaire.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 91" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/foret.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/arbre_genealogique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/./</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/foret.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 91" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/foret.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 170" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/foret.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 23" line=" 91" >
+      <vfs_project>/home/ncazes2/1A/pim/projet1/projet/e213/src/src.gpr</vfs_project>
+      <vfs_file>/home/ncazes2/1A/pim/projet1/projet/e213/src/foret.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

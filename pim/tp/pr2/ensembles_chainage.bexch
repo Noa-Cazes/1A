@@ -1,0 +1,22 @@
+[MAPPING FILE]
+/tmp/GNAT-TEMP-000003.TMP
+[TOOLCHAIN VERSION]
+ada
+GNAT 2019
+[MAIN BASE NAME]
+ensembles_chainage
+[COMPILER PATH]
+/applications/gnat/bin/gcc
+[COMPILER LEADING SWITCHES]
+-c
+-x
+ada
+-gnatA
+[MAIN DEPENDENCY FILE]
+/home/ncazes2/pim/tp/pr2/ensembles_chainage.ali
+[DEPENDENCY FILES]
+[BINDING OPTIONS]
+gnatbind_prefix=
+[PROJECT FILES]
+/home/ncazes2/pim/tp/pr2/default.gpr
+20191107123850

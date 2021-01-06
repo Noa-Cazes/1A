@@ -1,0 +1,102 @@
+% Mini-projet  : Ensemble
+% NOM & Prénom : CAZES & Noa
+% Groupe       : CM1-C
+
+
+**Consigne :** Dans ce fichier, il faut répondre à la place des "..." et sur
+les lignes qui les suivent.  Le texte déjà écrit doit être conservé !
+
+**Remarque :** Ce fichier utiliser la syntaxe Markdown.  On peut en engendrer
+une version pdf en faisant :
+
+	pandoc LISEZ-MOI.txt -o LISEZ-MOI.pdf
+
+
+# Temps passé sur le projet
+
+Ces informations de temps sont demandées à titre indicatif et ne sont pas
+prises en compte dans la notation du projet.
+
+Toutes les durées sont à saisir en heures.  Par exemple, si vous avez passé
+1h45, il faudra indiquer 1.75.  Si vous avez passé 2h30, il faudra indiquer
+2.5.
+
+* Temps passé sur la version Tableau    (en h) : 5.0
+* Temps passé sur la version Chainage   (en h) : 3.0 
+* Temps passé à compléter LISEZ-MOI.txt (en h) : 0.4
+
+
+# Questions
+
+**Question 1 :**
+Quels sous-programmes avez-vous définis dans les corps des modules sans les
+spécifier dans la spécification ?  Expliquez pourquoi.
+
+**Réponse :**
+La procédure Free est utilsée dans le corps du module mais non spécifiée dans la spécification, car elle provient d'un autre module, dans lequel elle a été spécifiée dans la spécification. 
+
+
+**Question 2 :**
+Y a-t-il des sous-programmes dont les contrats (préconditions ou
+postconditions) changent entre Ensembles_Tableau et Ensembles_Chaine ?
+Lesquels ?
+
+**Réponse :*
+Il existe des sous-programmes dont les contrats changent entre Ensembles_Tableau et Ensembles_Chanage, ce sont les suivants:
+- la fonction qui détermine la taille de l'ensemble,
+- la procédure qui permet d'ajouter un élément dans un ensemble,
+- la procédure qui permet de supprimer un élément dans un ensemble,
+ 
+
+
+
+**Question 3 :**
+Le type Ensemble doit être déclaré comme très privé dans Ensembles_Chaine.
+Expliquez pourquoi il est important ici de définir le type Ensemble comme
+très privé (et pas seulement privé).  On commecera par rappeler la
+différence entre "private" (privé) et "limited private" (très privé).
+
+**Réponse :**
+La différence entre private et limited private est que quand le type est limited private, on ne peut plus, en plus de tout ce qui est interdit par le type private, faire des affectations ou utiliser le signe '='. 
+Il est important de définir le type Ensemble comme très privé dans Ensembles_Chainage pour empêcher l'utilisateur de manier à sa guise ce type qui est compliqué  et l'obliger à utiliser les fonctions prédéfinies, on peut alors contrôler pleinement les tests et les affectations. 
+
+**Question 4 :**
+Même pour Ensemble_Tableau, le type doit être très privé.  Pourquoi ?
+
+**Réponse :**
+De même, c'est pour pouvoir contrôler les tests et les affectations faits entre tableaux. 
+
+
+**Question 5 :**
+Dans Ensemble_Tableau, est-il possible d'implanter le sous-programme qui
+supprime un élément en temps constant concernant le nombre d'affectations
+des éléments de l'ensemble (et linéaire sur le nombre de comparaison) ? Si
+oui, comment ?
+
+**Réponse :**
+Il faut utiliser la récursivité pour supprimer un élément en temps constant concernant le nombre d'affectations des éléments de l'ensemble (et linéaire sur le nombre de comparaison).  
+
+
+**Question 6 :**
+Est-ce que les deux implantations envisagées des ensembles (Tableau ou
+Chainage) sont efficaces ?
+
+**Réponse :**
+Dans Ensembles_Tableau, la procédure Detruire n'est pas vraiment utile. 
+Pour les procédures ajouter et supprimer, la récursivité aurait été plus efficace. 
+
+
+
+# Difficultés
+
+Voici les difficultés rencontrées et les solutions apportées.
+- au début diffultés à comprendre le type private, mais finalement il a été compris.
+- difficultés lors de la vérification des fichiers avec valkyrie, mais une meilleure compréhension de l'allocation dynamique a permi de résoudre le problème. 
+
+
+
+
+
+# Remarques diverses
+
+...

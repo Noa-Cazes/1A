@@ -1,0 +1,110 @@
+V "GNAT Lib v2019"
+M P W=b
+A -gnatA
+A -g
+A -gnata
+A -gnatwa
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U test_ensembles_chainage%b  test_ensembles_chainage.adb  69e8180e NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.unchecked_deallocation%s
+W ensembles_chainage%s	ensembles_chainage.adb	ensembles_chainage.ali
+Z system.assertions%s	s-assert.adb		s-assert.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-inteio.ads		20190518041256 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-tiinio.ads		20190518041254 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20190518041255 eff36322 ada.unchecked_deallocation%s
+D ensembles_chainage.ads  20191107123254 e9690a02 ensembles_chainage%s
+D ensembles_chainage.adb  20191112152958 c1ee0994 ensembles_chainage%b
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-assert.ads		20190518041255 cd8d2c94 system.assertions%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
+D test_ensembles_chainage.adb  20191112154325 d83e4ec5 test_ensembles_chainage%b
+G a e
+G c Z b b [test_ensembles_chainage standard 5 11 none]
+G r i none [test_ensembles_chainage standard 5 11 none] [ensembles_chainage standard 6 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 29|2r6 2r23 3r6 3r31
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 29|3w10 3r35
+X 7 a-textio.ads
+57K13*Text_IO 727e16 29|2w10 2r27
+465U14*Put 29|13s9
+X 8 a-tiinio.ads
+80U14*Put 29|14s9[3|18]
+X 11 ensembles_chainage.ads
+4+14 T_Elts 29|7r52
+6k9*Ensembles_Chainage 48e23 29|1w6 7r33
+9P14 T_Ensemble 29|23r49[7] 32r22[7] 50r15[7] 60r15[7] 73r15[7] 83r15[7]
+. 94r15[7]
+12U19 Initialiser 29|25s9[7] 34s9[7]
+16U19 Detruire 29|39s9[7] 43s9[7] 55s9[7] 67s9[7] 78s9[7] 89s9[7] 100s9[7]
+19V18 Est_Vide{boolean} 29|38s28[7] 42s28[7] 66s24[7]
+22V18 Taille_Ensemble{integer} 29|35s24[7] 86s23[7] 88s23[7]
+25V18 Present{boolean} 29|54s24[7] 64s24[7] 76s23[7] 77s23[7]
+28U19 Ajouter 29|26s9[7] 27s9[7] 37s9[7] 53s9[7] 87s9[7] 97s9[7] 98s9[7]
+31U19 Supprimer 29|63s9[7] 65s9[7]
+38U28 Operation 29|18r50[7]
+39u19 Appliquer_Sur_Tous 29|18r31[7]
+X 29 test_ensembles_chainage.adb
+5U11*Test_Ensembles_Chainage 5b11 111l5 111t28
+7K13 Mon_Ensemble[11|6] 8r9
+11U15 Afficher_Entier 11b15 11>32 15l9 15t24 18r63
+11i32 Entier{integer} 14r13
+18U15 Afficher[11|39] 99s9
+23U15 Initialiser_Avec_78 23b15 23=36 28l9 28t28 41s9 52s9 62s9 75s9 85s9
+. 96s9
+23p36 Ens{11|9P14[7]} 25m21 26m17 27m17
+31U15 Tester_Est_Vide 31b15 45l9 45t24 104s5
+32p9 Ens1{11|9P14[7]} 34m22 34r22 35r40 37m18 37r18 38r37 39m18 39r18
+32p15 Ens2{11|9P14[7]} 41m30 41r30 42r37 43m18 43r18
+49U15 Tester_Ajouter 49b15 56l9 56t23 105s5
+50p9 Ens{11|9P14[7]} 52m29 52r29 53m17 53r17 54r32 55m18 55r18
+59U15 Tester_Supprimer 59b15 68l9 68t25 106s5
+60p9 Ens{11|9P14[7]} 62m29 62r29 63m19 63r19 64r32 65m19 65r19 66r33 67m18
+. 67r18
+72U15 Tester_Present 72b15 79l9 79t23 107s5
+73p9 Ens{11|9P14[7]} 75m29 75r29 76r31 77r31 78m18 78r18
+82U15 Tester_Taille_Ensemble 82b15 90l9 90t31 108s5
+83p9 Ens{11|9P14[7]} 85m29 85r29 86r39 87m17 87r17 88r39 89m18 89r18
+93U15 Tester_Appliquer_Sur_Tous 93b15 101l9 101t34 109s5
+94p9 Ens{11|9P14[7]} 96m29 96r29 97m17 97r17 98m17 98r17 99r18 100m18 100r18
+

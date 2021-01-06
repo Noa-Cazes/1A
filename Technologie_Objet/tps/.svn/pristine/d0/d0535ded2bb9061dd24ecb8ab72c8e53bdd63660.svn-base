@@ -1,0 +1,124 @@
+package allumettes;
+
+/** Lance une partie des 13 allumettes en fonction des arguments fournis
+ * sur la ligne de commande.
+ * @author	Xavier Crégut
+ * @version	$Revision: 1.5 $
+ */
+public class Partie {
+
+	/** Lancer une partie. En argument sont donnés les deux joueurs sous
+	 * la forme nom@stratégie.
+	 * @param args la description des deux joueurs
+	 */
+	public static void main(String[] args) {
+		try {
+			verifierNombreArguments(args);
+            Joueur j1, j2;
+            boolean confiant;
+            
+            // Un jeu de 13 allumettes
+            Jeu jeu = new UnJeu(13);
+            
+            // Est-ce que l'arbitre est confiant?
+            if (args[0].equals("-confiant")) {
+            	
+            	// On récupère les noms et stratégies des deux joueurs
+                j1 = splitAr(args[1]);
+                j2 = splitAr(args[2]);
+            	confiant = true;
+            } else {
+            	// On récupère les noms et stratégies des deux joueurs
+                j1 = splitAr(args[0]);
+                j2 = splitAr(args[1]);
+            	confiant = false;
+            }
+            Arbitre arbitre = new Arbitre(j1, j2, confiant);
+            arbitre.arbitrer(jeu);
+
+		} catch (ConfigurationException e) {
+			System.out.println();
+			System.out.println("Erreur : " + e.getMessage());
+			afficherUsage();
+			System.exit(1);
+		}
+	}
+    /** Vérifier le nombre d'argume,ts de la ligne de commande.
+     * @param args chaine de caractère représentant la les arguments saisis
+     */
+	private static void verifierNombreArguments(String[] args) {
+		final int nbJoueurs = 2;
+		if (args.length < nbJoueurs) {
+			throw new ConfigurationException("Trop peu d'arguments : "
+					+ args.length);
+		}
+		if (args.length > nbJoueurs + 1) {
+			throw new ConfigurationException("Trop d'arguments : "
+					+ args.length);
+		}
+	}
+	
+	/** Séparer un argument de la forme nom@stratégie
+	 * en un nom de joueur et une stratégie associée.
+	 * @param arg un argument 
+	 * @return joueur le joueur avec son nom et sa stratégie
+	 */
+	public static Joueur splitAr(String arg) {
+		String[] result;
+		result = arg.split("@");
+	    Strategie strategie = new StrategieNaive();
+		Joueur joueur = new Joueur(result[0], strategie);
+		// On associe au joueur la stratégie correspondant à celle saisie
+		switch (result[1]) {
+		case "naif":
+			strategie = new StrategieNaive();
+			break;
+		case "rapide":
+			strategie = new StrategieRapide();
+			break;
+		case "expert":
+			strategie = new StrategieExperte();
+			break;
+		case "humain":
+			strategie = new StrategieHumaine();
+			break;
+		case "tricheur":
+			strategie = new StrategieTricheur();
+			break;
+		default:
+			throw new ConfigurationException("L'argument doit être de la forme nom@strategie avec "
+					+ "strategie = naif | rapide | expert | humain | tricheur");
+		}
+		
+//		if (result[1] == "naif") {
+//			strategie = new StrategieNaive();
+//		} else if (result[1] == "rapide") {
+//			strategie = new StrategieRapide();
+//		} else if (result[1] == "expert") {
+//			strategie = new StrategieExperte();
+//		} else if (result[1] == "humain") {
+//			strategie = new StrategieHumaine();
+//		} else if (result[1] == "tricheur") {
+//			strategie = new StrategieTricheur();
+//		} else {
+//			throw new ConfigurationException("L'argument doit être de la forme nom@strategie avec "
+//					+ "strategie = naif | rapide | expert | humain | tricheur");
+//		}
+		return joueur;
+	}
+
+	/** Afficher des indications sur la manière d'exécuter cette classe. */
+	public static void afficherUsage() {
+		System.out.println("\n" + "Usage :"
+				+ "\n\t" + "java allumettes.Partie joueur1 joueur2"
+				+ "\n\t\t" + "joueur est de la forme nom@stratégie"
+				+ "\n\t\t" + "strategie = naif | rapide | expert | humain | tricheur"
+				+ "\n"
+				+ "\n\t" + "Exemple :"
+				+ "\n\t" + "	java allumettes.Partie Xavier@humain "
+					   + "Ordinateur@naif"
+				+ "\n"
+				);
+	}
+
+}

@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__scenario_tableau.o
+[PROJECT FILES]
+/home/ncazes2/pim/tp/pr2/default.gpr
+20191024160904
+[BOUND OBJECT FILES]
+/home/ncazes2/pim/tp/pr2/ensembles_tableau.o
+/home/ncazes2/pim/tp/pr2/scenario_tableau.o
+[GENERATED SOURCE FILES]
+b__scenario_tableau.ads
+b__scenario_tableau.adb
+b__scenario_tableau.ali
+[RESULTING OPTIONS]
+-L/home/ncazes2/pim/tp/pr2/
+-L/home/ncazes2/pim/tp/pr2/
+-L/applications/gnat/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/
+-static
+-static-libgcc
+/applications/gnat/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/libgnat.a
+-ldl

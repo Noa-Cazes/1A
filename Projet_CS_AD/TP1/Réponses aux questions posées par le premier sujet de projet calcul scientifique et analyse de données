@@ -1,0 +1,39 @@
+Réponses aux questions posées par le premier sujet de projet calcul scientifique / analyse de données :
+Question numéro un :
+	Les données sur lesquelles nous avons appliqué l'ACP dans le TP numéro un étaient des images.
+	Le tableau de données X correspondait alors aux trois canaux de couleur R, V et B de l'image.
+	Les dimensions correspondaient au nombre de pixels de l'image pour les lignes fois trois colonnes pour chaque canaux.
+
+Question numéro trois :
+	On remarque que le nuage de points projeté sur les axes principaux est plus dispersé - donc plus "riche en information" - que le nuage de points projeté sur les deux premiers axes canoniques.
+	
+Question numéro quatre :
+	Une quantification de l'information contenue dans la 1ere composante principale est la plus grande valeur propre de Sigma
+	Une quantification de l'information contenue dans les 2 premières composantes principales est la somme des deux plus grandes valeurs propres de Sigma
+	Une quantification de l'information contenue dans les q premières composantes principales est la somme des q plus grandes valeurs propres de Sigma
+	
+Question numéro cinq :
+	Dans le plan  : On détecte 3 classes
+	Dans l'espace : On détecte 4 classes
+	On observe que les trois premières composantes principales sont essentielles contrairement au cas où nous avions une classification en deux groupes.
+	(Note : 1 -> 25.77; 2 -> 24.29; 3 -> 23.96)
+	Remarque : il semble logique pour x classes d'avoir x-1 composantes principales significatives.
+
+Question numéro six :
+	Y'a 7 classes.
+
+Question numéro sept :
+	JE SAIS PAS 
+
+Question numéro huit : 
+	Voir cours.
+
+Question numéro neuf :
+	Y'avait pas de questions dans le code.
+
+Question numéro dix :
+	eig est mieux car il renvoie tous les couples propres et non pas un seul comme la puissance itérée.
+	(Si on veut faire une ACP pour réduire les dimensions de l'espace, on a besoin de tous les couples propres significatifs)
+
+Question numéro onze :
+	On déduit des résultats obtenus sur Matlab qu'il faut l'appliquer sur la petite matrice. 

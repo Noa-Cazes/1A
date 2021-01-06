@@ -1,0 +1,22 @@
+Date de l'évaluation : samedi 21 mars 2020, 21:55:43 (UTC+0100)
+
+!!! Il est interdit de changer Jeu.java (voir evaluation1/Jeu.java.diff)
+!!! Il est interdit de changer CoupInvalideException.java (voir evaluation1/CoupInvalideException.java.diff)
+
+Nombre de similitudes (voir evaluation1/sim_java.txt) : 0
+
+Erreurs checkstyle (différentes/types) : 7/4	(voir evaluation1//checkstyle.log)
+
+Utilisation de 'Scanner' : NON
+
+Utilisation de 'split' : ok
+	./allumettes/Partie.java:		result = arg.split("@");
+
+Utilisation de 'Random' : NON
+
+Utilisation de '3' : ok
+
+Utilisation de 'System.exit' : ok
+
+Compilation de Partie.java : ERREUR !	(voir evaluation1/Partie.java.log)
+J'arrête les tests...

@@ -1,0 +1,11 @@
+project Default is
+
+   package Compiler is
+      for Switches ("Ada") use ("-g", "-O2");
+      for Switches ("ada") use ("-g", "-O2", "-gnatwa");
+   end Compiler;
+
+   for Main use ("multiplications.adb");
+
+end Default;
+

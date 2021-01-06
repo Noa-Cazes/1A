@@ -1,0 +1,98 @@
+Tri par insertion
+
+Capacite: Constante Entier <-- 10
+Type Tableau_Entier est Tableau(1..Capacite) de Entier
+Type Tableau est Enregistrement
+	Elements: Tableau_Entier 
+	Taille: Entier -- 0 <= Taille <= Capacite
+Fin Enregistrement
+
+R0 - Afficher les éléments d'un vecteur par orde croissant
+	Procedure Afficher (Tab: Tableau)
+	Pré: Néant
+	Post: Le tableau est affiché
+
+	Procedure Tri_Selection 
+	Pré: Néant
+	Post: (Pour tout i dans [1..Tab.Taille-1] Tab.Elements(i)<=Tab.Elements(i+1) ET (Tab.Elements = Permutation(Tab'Avant.Elements))
+
+	Tests:
+	...
+
+R1 - Comment R0? 
+	Pour i de 2 à Tab.Taille faire
+		Mémoriser Tab.Elements(i) dans X.
+		Trouver la position de Tab.Elements(i) dans [1..i-1]
+		Décaler les éléments se trouvant de pos+1 à i.
+		Insérer X à pos.
+	Fin_Pour
+
+R2 - Comment "Mémoriser Tab.Elements(i) dans X."?
+	X <-- Tab.Elements(i)
+
+R2 - Comment "Trouver la position de Tab.Elements(i) dans [1..i-1]"?
+	Pos <--i
+	Pour j de i-1 à 2 pas -1 Faire
+		TantQue Tab.Elements(i) <= Tab.Elements(j) Faire
+			pos <--j
+		Fin_TantQue
+	Fin_Pour
+
+R2 - Comment "Décaler les éléments se trouvant de pos+1 à i."?
+	Pour j de pos+1 à i Faire
+		A <-- Tab.Elements(j)
+		Tab.Elements(j) <-- Tab.Elements(j-1)
+		Tab.Elements(j+1) <-- A
+	Fin_Pour
+
+R2 - Comment "Insérer X à pos"?
+	Tab.Elements(pos) <-- X
+
+Tri par selection
+
+Capacite: Constante Entier <-- 10
+Type Tableau_Entier est Tableau(1..Capacite) de Entier
+Type Tableau est Enregistrement
+         Elements: Tableau_Entier
+	 Taille: Entier -- 0 <= Taille <= Capacite
+Fin Enregistrement
+
+R0 - Afficher les éléments d'un vecteur par orde croissant
+	Procedure Afficher (Tab: Tableau)
+        Pré: Néant
+        Post: Le tableau est affiché
+
+        Procedure Tri_Selection
+        Pré: Néant
+        Post: (Pour tout i dans [1..Tab.Taille-1] Tab.Elements(i)<=Tab.Eleme    nts(i+1) ET (Tab.Elements = Permutation(Tab'Avant.Elements))
+
+        Tests:
+        ...
+R1 - Comment R0?
+	Pour i de 1 à Tab.Taille Faire
+		Pour j de i à Tab.Taille Faire
+			Recherche du plus petit élément dans i à Tab.Taille
+			Enregistrer sa valeur dans X.
+			Permuter l'élément choisi avec Tab.Elements(i).
+		Fin_Pour
+	Fin_Pour
+
+R2 - Comment "Recherche du plus petit élément dans i à Tab.Taille"?
+	Min <-- Tab.Elements(i)
+	Pos <-- i
+	Pour k de i à Tab.Taille Faire
+		Si Tab.Elements(k) < Tab.Elements(i) Alors
+		 	Min <-- Tab.Elements(k)
+		 	Pos <-- k
+		Fin_Si
+	Fin_Pour
+
+R2 - Comment "Enregistrer sa valeur dans X."?
+	X <-- Min
+	Utile?
+
+R2 - Comment "Permuter l'élément choisi avec Tab.Elements(i)."?
+	Tab.Elements(Pos) <-- Tab.Elements(i)
+	Tab.Elements(i) <-- Min
+
+

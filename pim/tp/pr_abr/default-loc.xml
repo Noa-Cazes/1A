@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/ncazes2/pim/tp/pr_abr/./</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 19" >
+      <vfs_project />
+      <vfs_file>/home/ncazes2/pim/tp/pr_abr/Registre.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/ncazes2/pim/tp/pr2/ensembles_chainage.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 49" >
+      <vfs_project />
+      <vfs_file>/home/ncazes2/pim/tp/pr2/ensembles_chainage.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 19" >
+      <vfs_project />
+      <vfs_file>/home/ncazes2/pim/tp/pr_abr/Registre.ads</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

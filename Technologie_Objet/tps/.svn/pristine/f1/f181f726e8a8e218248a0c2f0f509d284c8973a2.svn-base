@@ -1,0 +1,24 @@
+2c2,4
+< Erreur : L'argument doit être de la forme nom@strategie avec strategie = naif | rapide | expert | humain | tricheur
+---
+> Nombre d'allumettes restantes : 13
+> Au tour de Ordinateur.
+> Ordinateur prend 3 allumettes.
+4,10c6,8
+< Usage :
+< 	java allumettes.Partie joueur1 joueur2
+< 		joueur est de la forme nom@stratégie
+< 		strategie = naif | rapide | expert | humain | tricheur
+< 
+< 	Exemple :
+< 		java allumettes.Partie Xavier@humain Ordinateur@naif
+---
+> Nombre d'allumettes restantes : 10
+> Au tour de Tricheur.
+> Tricheur prend 1 allumette.
+11a10,14
+> Nombre d'allumettes restantes : 1
+> Au tour de Ordinateur.
+> Ordinateur prend 1 allumette.
+> Ordinateur a perdu !
+> Tricheur a gagné !

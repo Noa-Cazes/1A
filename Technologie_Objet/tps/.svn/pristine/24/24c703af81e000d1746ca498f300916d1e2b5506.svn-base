@@ -1,0 +1,4 @@
+17c17
+< 	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'alumettes
+---
+> 	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'allumettes

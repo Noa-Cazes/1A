@@ -1,0 +1,63 @@
+package body Ensembles_Tableau is
+
+
+    -- Sous-programme permet d'initialiser un ensemble.
+    procedure Initialiser (Ens : out T_Ensemble) is
+    begin
+        Ens := Null;
+    end Initialiser;
+
+    -- Savoir si l'ensemble est vide ou non.
+    function Est_Vide (Ens : in T_Ensemble) return Boolean is
+    begin
+        return Ens = Null;
+    end;
+
+    -- Obtenir la taille d'un ensemble.
+    function Taille_Ensemble (Ens : in T_Ensemble) return Integer is
+    begin
+        return Ens.Taille
+    end
+
+    -- savoir si un élément est présent dans un ensemble.
+    function Present (Ens : in T_Ensemble, Elt : in T_Tab) return Boolean is
+    begin
+        indice: Integer := 1;
+        resultat: T_Elts;
+        while indice < Ens.Taille and then Ens.Elements(indice) /= Elt loop
+            indice := indice +1;
+            resultat := Ens.Elements(indice);
+        end loop;
+        if resultat = Elt then
+            return True;
+        else
+            return False
+        end if;
+    end;
+
+
+	-- Ajouter un élément dans un ensemble à l'emplacement e.
+	procedure Ajouter (Ens : in out T_Ensemble, Elt : in T_Tab, i : in Integer) with
+	    Pre => Ens'Avant.Taille < Capacite and i < Capacite;
+	    Post => Ens'Apres = Ens'Avant + Elt à l'emplacement i;
+
+
+	-- Supprimer un élément dans un ensemble.
+	procedure Supprimer (Ens : in out T_Ensemble, Elt : in T_Tab) with
+	    Pre => Ens'Avant.Taille /= 0;
+	    Post => Ens'Apres = Ens'Avant sans Elt;
+
+        -- Sous-programme qui permet de détruire un ensemble.
+        procedure Detruire (Ens : in out T_Ensemble);
+
+
+
+       type T_Tab is array (1..Capcite) of T_Elts;
+
+       type T_Ensemble is record
+	   Elements : T_Tab;  -- les éléments de l'ensemble.
+	   Taille : Integer;           -- le nombre d'éléments de l'ensemble.
+       end record;
+end Ensembles_Tableau;
+
+end Ensembles_Tableau;

@@ -1,0 +1,1195 @@
+File ./allumettes/ConfigurationException.java: 21 tokens, 16 lines
+File ./allumettes/Jeu.java: 25 tokens, 22 lines
+File ./allumettes/Arbitre.java: 376 tokens, 105 lines
+File ./allumettes/Strategie.java: 14 tokens, 17 lines
+File ./allumettes/StrategieTricheur.java: 56 tokens, 28 lines
+File ./allumettes/OperationInterditeException.java: 21 tokens, 12 lines
+File ./allumettes/Partie.java: 370 tokens, 124 lines
+File ./allumettes/CoupInvalideException.java: 51 tokens, 28 lines
+File ./allumettes/Joueur.java: 74 tokens, 45 lines
+File ./allumettes/Procuration.java: 55 tokens, 26 lines
+File ./allumettes/StrategieNaive.java: 58 tokens, 31 lines
+File ./allumettes/StrategieExperte.java: 67 tokens, 26 lines
+File ./allumettes/StrategieHumaine.java: 128 tokens, 57 lines
+File ./allumettes/UnJeu.java: 118 tokens, 36 lines
+File ./allumettes/StrategieRapide.java: 61 tokens, 28 lines
+File ./src/allumettes/ConfigurationException.java: 21 tokens, 16 lines
+File ./src/allumettes/Jeu.java: 25 tokens, 22 lines
+File ./src/allumettes/Arbitre.java: 376 tokens, 105 lines
+File ./src/allumettes/Strategie.java: 14 tokens, 17 lines
+File ./src/allumettes/StrategieTricheur.java: 56 tokens, 28 lines
+File ./src/allumettes/OperationInterditeException.java: 21 tokens, 12 lines
+File ./src/allumettes/Partie.java: 406 tokens, 124 lines
+File ./src/allumettes/CoupInvalideException.java: 59 tokens, 29 lines
+File ./src/allumettes/Joueur.java: 74 tokens, 45 lines
+File ./src/allumettes/Procuration.java: 55 tokens, 26 lines
+File ./src/allumettes/StrategieNaive.java: 58 tokens, 31 lines
+File ./src/allumettes/StrategieExperte.java: 67 tokens, 26 lines
+File ./src/allumettes/StrategieHumaine.java: 128 tokens, 57 lines
+File ./src/allumettes/UnJeu.java: 118 tokens, 36 lines
+File ./src/allumettes/StrategieRapide.java: 61 tokens, 28 lines
+Total input: 30 files (30 new, 0 old), 3034 tokens
+
+./allumettes/Arbitre.java: line 1-105 [376]
+./src/allumettes/Arbitre.java: line 1-105
+< package allumettes;
+< import java.util.Scanner;
+< 
+< /** Fait respecter les règles du jeu aux deux joueurs.
+<  * 
+<  * @author ncazes2
+<  *
+<  */
+< public class Arbitre {
+< 	
+< 	private Joueur j1;
+< 	private Joueur j2;
+< 	private boolean confiant; // si confiant, l'arbitre transmet tout le jeu au joueur
+< 	                          // sinon, il passe par la procuration
+< 	
+< 	public Arbitre(Joueur j1, Joueur j2, boolean confiant) {
+< 		this.j1 = j1;
+< 		this.j2 = j2;
+< 		this.confiant = confiant;
+< 		
+< 	}
+< 	
+< 	/** Obtenir le joueur 1.
+< 	 * @return j1 le joueur 1
+< 	 */
+< 	
+< 	public Joueur getJ1(){
+< 		return this.j1;
+< 	}
+< 	
+< 	/** Obtenir le joueur 2.
+< 	 * @return j2 le joueur 2
+< 	 */
+< 	
+< 	public Joueur getJ2(){
+< 		return this.j2;
+< 	}
+< 	
+< 	/** Modifier le joueur 1.
+< 	 * @param j1 le joueur 1
+< 	 */
+< 	public void setJ1(Joueur j1){
+< 		this.j1 = j1;
+< 	}
+< 	
+< 	/** Modifier le joueur 2.
+< 	 * @param j2 le joueur 2
+< 	 */
+< 	public void setJ2(Joueur j2){
+< 		this.j2 = j2;
+< 	}
+< 	
+< 	/** Faire jouer un joueur.
+< 	 * @param j le joueur à faire jouer
+< 	 * @param jeu le jeu dans lequel on est
+< 	 */
+< 	public void faireJouer(Joueur j, Jeu jeu){
+< 		System.out.println("Au tour de " + j.getNom() +".");
+< 		int nbAllumettes = 0;
+< 		try {
+< 			if (confiant) { // Transmet le jeu 
+< 				nbAllumettes = j.getPrise(jeu);
+< 			} else { // Passe par la procuration
+< 			    nbAllumettes = j.getPrise(new Procuration(jeu));
+< 			}
+< 			String result = ""; 
+< 			System.out.println(j.getNom() + " prend " + nbAllumettes + (result = (nbAllumettes == 1) ? "allumette." : "allumettes."));
+< 			jeu.retirer(nbAllumettes);
+< 		} catch(CoupInvalideException e) {
+< 			
+< //			  if (j.getStrategie() instanceof StrategieHumaine) {
+< //			  System.out.println(j.getStrategie().scanner.nextLine()); 
+< //			}
+< 		 
+< 			System.out.println(e.getMessage());
+< 			System.out.println("Recommencez !");
+< 			faireJouer(j, jeu);
+<         } catch(OperationInterditeException e1) {
+<         	System.out.println("Partie abandonnée car " + j.getNom() + " a triché !");
+<         }
+< 	}
+< 	
+< 	/** Arbitrer une partie.
+< 	 * @param jeu le jeu dans lequel on est
+< 	 */
+< 	public void arbitrer(Jeu jeu) {
+< 		System.out.println("Nombre d'allumettes restantes : " + jeu.getNombreAllumettes());
+< 		while (jeu.getNombreAllumettes()!= 0) {
+< 			faireJouer(j1, jeu);
+< 			if (jeu.getNombreAllumettes()!= 0) {
+< 				faireJouer(j2, jeu);
+< 			} else {
+< 				// j1 a perdu
+< 				System.out.println(j1.getNom() + " a perdu!");
+< 				System.out.println(j2.getNom() + " a gagné!");
+< 
+< 			}
+< 		}
+< 		// j2 a gagné
+< 		System.out.println(j2.getNom() + " a perdu!");
+< 		System.out.println(j1.getNom() + " a gagné!");
+< 	}
+< 	
+< 
+< }
+---
+> package allumettes;
+> import java.util.Scanner;
+> 
+> /** Fait respecter les règles du jeu aux deux joueurs.
+>  * 
+>  * @author ncazes2
+>  *
+>  */
+> public class Arbitre {
+> 	
+> 	private Joueur j1;
+> 	private Joueur j2;
+> 	private boolean confiant; // si confiant, l'arbitre transmet tout le jeu au joueur
+> 	                          // sinon, il passe par la procuration
+> 	
+> 	public Arbitre(Joueur j1, Joueur j2, boolean confiant) {
+> 		this.j1 = j1;
+> 		this.j2 = j2;
+> 		this.confiant = confiant;
+> 		
+> 	}
+> 	
+> 	/** Obtenir le joueur 1.
+> 	 * @return j1 le joueur 1
+> 	 */
+> 	
+> 	public Joueur getJ1(){
+> 		return this.j1;
+> 	}
+> 	
+> 	/** Obtenir le joueur 2.
+> 	 * @return j2 le joueur 2
+> 	 */
+> 	
+> 	public Joueur getJ2(){
+> 		return this.j2;
+> 	}
+> 	
+> 	/** Modifier le joueur 1.
+> 	 * @param j1 le joueur 1
+> 	 */
+> 	public void setJ1(Joueur j1){
+> 		this.j1 = j1;
+> 	}
+> 	
+> 	/** Modifier le joueur 2.
+> 	 * @param j2 le joueur 2
+> 	 */
+> 	public void setJ2(Joueur j2){
+> 		this.j2 = j2;
+> 	}
+> 	
+> 	/** Faire jouer un joueur.
+> 	 * @param j le joueur à faire jouer
+> 	 * @param jeu le jeu dans lequel on est
+> 	 */
+> 	public void faireJouer(Joueur j, Jeu jeu){
+> 		System.out.println("Au tour de " + j.getNom() +".");
+> 		int nbAllumettes = 0;
+> 		try {
+> 			if (confiant) { // Transmet le jeu 
+> 				nbAllumettes = j.getPrise(jeu);
+> 			} else { // Passe par la procuration
+> 			    nbAllumettes = j.getPrise(new Procuration(jeu));
+> 			}
+> 			String result = ""; 
+> 			System.out.println(j.getNom() + " prend " + nbAllumettes + (result = (nbAllumettes == 1) ? "allumette." : "allumettes."));
+> 			jeu.retirer(nbAllumettes);
+> 		} catch(CoupInvalideException e) {
+> 			
+> //			  if (j.getStrategie() instanceof StrategieHumaine) {
+> //			  System.out.println(j.getStrategie().scanner.nextLine()); 
+> //			}
+> 		 
+> 			System.out.println(e.getMessage());
+> 			System.out.println("Recommencez !");
+> 			faireJouer(j, jeu);
+>         } catch(OperationInterditeException e1) {
+>         	System.out.println("Partie abandonnée car " + j.getNom() + " a triché !");
+>         }
+> 	}
+> 	
+> 	/** Arbitrer une partie.
+> 	 * @param jeu le jeu dans lequel on est
+> 	 */
+> 	public void arbitrer(Jeu jeu) {
+> 		System.out.println("Nombre d'allumettes restantes : " + jeu.getNombreAllumettes());
+> 		while (jeu.getNombreAllumettes()!= 0) {
+> 			faireJouer(j1, jeu);
+> 			if (jeu.getNombreAllumettes()!= 0) {
+> 				faireJouer(j2, jeu);
+> 			} else {
+> 				// j1 a perdu
+> 				System.out.println(j1.getNom() + " a perdu!");
+> 				System.out.println(j2.getNom() + " a gagné!");
+> 
+> 			}
+> 		}
+> 		// j2 a gagné
+> 		System.out.println(j2.getNom() + " a perdu!");
+> 		System.out.println(j1.getNom() + " a gagné!");
+> 	}
+> 	
+> 
+> }
+
+./allumettes/Partie.java: line 1-70 [253]
+./src/allumettes/Partie.java: line 1-70
+< package allumettes;
+< 
+< /** Lance une partie des 13 allumettes en fonction des arguments fournis
+<  * sur la ligne de commande.
+<  * @author	Xavier Crégut
+<  * @version	$Revision: 1.5 $
+<  */
+< public class Partie {
+< 
+< 	/** Lancer une partie. En argument sont donnés les deux joueurs sous
+< 	 * la forme nom@stratégie.
+< 	 * @param args la description des deux joueurs
+< 	 */
+< 	public static void main(String[] args) {
+< 		try {
+< 			verifierNombreArguments(args);
+<             Joueur j1, j2;
+<             boolean confiant;
+<             
+<             // Un jeu de 13 allumettes
+<             Jeu jeu = new UnJeu(13);
+<             
+<             // Est-ce que l'arbitre est confiant?
+<             if (args[0].equals("-confiant")) {
+<             	
+<             	// On récupère les noms et stratégies des deux joueurs
+<                 j1 = splitAr(args[1]);
+<                 j2 = splitAr(args[2]);
+<             	confiant = true;
+<             } else {
+<             	// On récupère les noms et stratégies des deux joueurs
+<                 j1 = splitAr(args[0]);
+<                 j2 = splitAr(args[1]);
+<             	confiant = false;
+<             }
+<             Arbitre arbitre = new Arbitre(j1, j2, confiant);
+<             arbitre.arbitrer(jeu);
+< 
+< 		} catch (ConfigurationException e) {
+< 			System.out.println();
+< 			System.out.println("Erreur : " + e.getMessage());
+< 			afficherUsage();
+< 			System.exit(1);
+< 		}
+< 	}
+<     /** Vérifier le nombre d'argume,ts de la ligne de commande.
+<      * @param args chaine de caractère représentant la les arguments saisis
+<      */
+< 	private static void verifierNombreArguments(String[] args) {
+< 		final int nbJoueurs = 2;
+< 		if (args.length < nbJoueurs) {
+< 			throw new ConfigurationException("Trop peu d'arguments : "
+< 					+ args.length);
+< 		}
+< 		if (args.length > nbJoueurs + 1) {
+< 			throw new ConfigurationException("Trop d'arguments : "
+< 					+ args.length);
+< 		}
+< 	}
+< 	
+< 	/** Séparer un argument de la forme nom@stratégie
+< 	 * en un nom de joueur et une stratégie associée.
+< 	 * @param arg un argument 
+< 	 * @return joueur le joueur avec son nom et sa stratégie
+< 	 */
+< 	public static Joueur splitAr(String arg) {
+< 		String[] result;
+< 		result = arg.split("@");
+< 	    Strategie strategie = new StrategieNaive();
+< 		Joueur joueur = new Joueur(result[0], strategie);
+---
+> package allumettes;
+> 
+> /** Lance une partie des 13 allumettes en fonction des arguments fournis
+>  * sur la ligne de commande.
+>  * @author	Xavier Crégut
+>  * @version	$Revision: 1.5 $
+>  */
+> public class Partie {
+> 
+> 	/** Lancer une partie. En argument sont donnés les deux joueurs sous
+> 	 * la forme nom@stratégie.
+> 	 * @param args la description des deux joueurs
+> 	 */
+> 	public static void main(String[] args) {
+> 		try {
+> 			verifierNombreArguments(args);
+>             Joueur j1, j2;
+>             boolean confiant;
+>             
+>             // Un jeu de 13 allumettes
+>             Jeu jeu = new UnJeu(13);
+>             
+>             // Est-ce que l'arbitre est confiant?
+>             if (args[0].equals("-confiant")) {
+>             	
+>             	// On récupère les noms et stratégies des deux joueurs
+>                 j1 = splitArg(args[1]);
+>                 j2 = splitArg(args[2]);
+>             	confiant = true;
+>             } else {
+>             	// On récupère les noms et stratégies des deux joueurs
+>                 j1 = splitArg(args[0]);
+>                 j2 = splitArg(args[1]);
+>             	confiant = false;
+>             }
+>             Arbitre arbitre = new Arbitre(j1, j2, confiant);
+>             arbitre.arbitrer(jeu);
+> 
+> 		} catch (ConfigurationException e) {
+> 			System.out.println();
+> 			System.out.println("Erreur : " + e.getMessage());
+> 			afficherUsage();
+> 			System.exit(1);
+> 		}
+> 	}
+>     /** Vérifier le nombre d'argume,ts de la ligne de commande.
+>      * @param args chaine de caractère représentant la les arguments saisis
+>      */
+> 	private static void verifierNombreArguments(String[] args) {
+> 		final int nbJoueurs = 2;
+> 		if (args.length < nbJoueurs) {
+> 			throw new ConfigurationException("Trop peu d'arguments : "
+> 					+ args.length);
+> 		}
+> 		if (args.length > nbJoueurs + 1) {
+> 			throw new ConfigurationException("Trop d'arguments : "
+> 					+ args.length);
+> 		}
+> 	}
+> 	
+> 	/** Séparer un argument de la forme nom@stratégie
+> 	 * en un nom de joueur et une stratégie associée.
+> 	 * @param arg un argument 
+> 	 * @return joueur le joueur avec son nom et sa stratégie
+> 	 */
+> 	public static Joueur splitArg(String arg) {
+> 		String[] result;
+> 		result = arg.split("@");
+> 	    Strategie strategie = new StrategieNaive();
+> 		Joueur joueur = new Joueur(result[0], strategie);
+
+./allumettes/StrategieHumaine.java: line 1-57 [128]
+./src/allumettes/StrategieHumaine.java: line 1-57
+< package allumettes;
+< import java.util.Scanner;
+< import org.junit.*;
+< import static org.junit.Assert.*;
+< 
+< /** Stratégie qui consiste à demander au joueur ce qu'il veut jouer.
+<  * 
+<  * @author ncazes2
+<  *
+<  */
+< public class StrategieHumaine implements Strategie {
+< 	
+< 	/** Le scanner va peremttre de lire le nombre
+< 	 * d'allumettes que le joueur veut retirer.
+< 	 */
+< 	public Scanner scanner;
+< 	
+< 	public StrategieHumaine(){
+< 		this.scanner = new Scanner(System.in);
+< 	}
+< 	
+< 	/** Demander à un joueur le nombre d'allumettes 
+< 	 * qu'il veut rétirer pour un jeu donné.
+< 	 * @param jeu le jeu donné
+< 	 * @return nbAllumettes le nombre d'allumettes que le joueur veut prendre
+< 	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'allumettes
+< 	 */
+< 	public int getPrise(Jeu jeu) {
+< 		
+< 		int nbAllumettesPrises = 0;
+< 		int nbAllumettesEnJeu = jeu.getNombreAllumettes();
+< 		
+< 		do {
+< 			
+< 			nbAllumettesPrises = this.scanner.nextInt();
+< 			System.out.print("Combien prenez-vous d'allumettes ? ");
+< 			if (this.scanner.hasNextInt()) { // Si le joueur a saisi un entier est un entier
+< 				System.out.print(nbAllumettesPrises);
+< //				if (nbAllumettesPrises <= 0) {
+< //					throw new CoupInvalideException(nbAllumettesPrises, "< 0");
+< //				} else if (nbAllumettesPrises > 3) {
+< //					throw new CoupInvalideException(nbAllumettesPrises, "> 3");
+< //				} else if (nbAllumettesPrises > nbAllumettesEnJeu) {
+< //					throw new CoupInvalideException(nbAllumettesPrises, ">" + nbAllumettesEnJeu);
+< //				}
+< 
+< 			} else {
+< 				System.out.println(this.scanner.nextLine());
+< 				System.out.println("Vous devez donner un entier.");
+< 				
+< 			} 
+< 			
+< 		} while (!this.scanner.hasNextInt());
+< 		return nbAllumettesPrises;
+< 	}
+< 
+< }
+---
+> package allumettes;
+> import java.util.Scanner;
+> import org.junit.*;
+> import static org.junit.Assert.*;
+> 
+> /** Stratégie qui consiste à demander au joueur ce qu'il veut jouer.
+>  * 
+>  * @author ncazes2
+>  *
+>  */
+> public class StrategieHumaine implements Strategie {
+> 	
+> 	/** Le scanner va peremttre de lire le nombre
+> 	 * d'allumettes que le joueur veut retirer.
+> 	 */
+> 	public Scanner scanner;
+> 	
+> 	public StrategieHumaine(){
+> 		this.scanner = new Scanner(System.in);
+> 	}
+> 	
+> 	/** Demander à un joueur le nombre d'allumettes 
+> 	 * qu'il veut rétirer pour un jeu donné.
+> 	 * @param jeu le jeu donné
+> 	 * @return nbAllumettes le nombre d'allumettes que le joueur veut prendre
+> 	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'allumettes
+> 	 */
+> 	public int getPrise(Jeu jeu) {
+> 		
+> 		int nbAllumettesPrises = 0;
+> 		int nbAllumettesEnJeu = jeu.getNombreAllumettes();
+> 		
+> 		do {
+> 			
+> 			nbAllumettesPrises = this.scanner.nextInt();
+> 			System.out.print("Combien prenez-vous d'allumettes ? ");
+> 			if (this.scanner.hasNextInt()) { // Si le joueur a saisi un entier est un entier
+> 				System.out.print(nbAllumettesPrises);
+> //				if (nbAllumettesPrises <= 0) {
+> //					throw new CoupInvalideException(nbAllumettesPrises, "< 0");
+> //				} else if (nbAllumettesPrises > 3) {
+> //					throw new CoupInvalideException(nbAllumettesPrises, "> 3");
+> //				} else if (nbAllumettesPrises > nbAllumettesEnJeu) {
+> //					throw new CoupInvalideException(nbAllumettesPrises, ">" + nbAllumettesEnJeu);
+> //				}
+> 
+> 			} else {
+> 				System.out.println(this.scanner.nextLine());
+> 				System.out.println("Vous devez donner un entier.");
+> 				
+> 			} 
+> 			
+> 		} while (!this.scanner.hasNextInt());
+> 		return nbAllumettesPrises;
+> 	}
+> 
+> }
+
+./allumettes/UnJeu.java: line 1-36 [118]
+./src/allumettes/UnJeu.java: line 1-36
+< package allumettes;
+< public class UnJeu implements Jeu {
+< 	
+< 	private int nombreAllumettes;
+< 	
+< 	public UnJeu(int nbAllumettesDebut) {
+< 		this.nombreAllumettes = nbAllumettesDebut;
+< 	}
+< 	
+< 	/** Obtenir le nombre d'allumettes encore en jeu.
+< 	 * @return nombreAllumettes le nombre d'allumettes encore en jeu
+< 	 */
+< 	public int getNombreAllumettes() {
+< 		return this.nombreAllumettes;
+< 	}
+< 	
+< 	/** Retirer des allumettes.  Le nombre d'allumettes doit être compris
+< 	 * entre 1 et PRISE_MAX, dans la limite du nombre d'allumettes encore
+< 	 * en jeu.
+< 	 * @param nbPrises nombre d'allumettes prises.
+< 	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'allumettes
+< 	 */
+< 	
+< 	public void retirer(int nbPrises) throws CoupInvalideException {
+< 		if (nbPrises <= 0) {
+< 			throw new CoupInvalideException(nbPrises, "< 1");
+< 		} else if (nbPrises > Jeu.PRISE_MAX) {
+< 			throw new CoupInvalideException(nbPrises, "> 3");
+< 		} else if (nbPrises > this.nombreAllumettes) {
+< 			throw new CoupInvalideException(nbPrises, ">" + this.nombreAllumettes);
+< 		} else {
+< 			this.nombreAllumettes = this.nombreAllumettes - nbPrises; 
+< 		} 
+< 	}
+< 
+< }
+---
+> package allumettes;
+> public class UnJeu implements Jeu {
+> 	
+> 	private int nombreAllumettes;
+> 	
+> 	public UnJeu(int nbAllumettesDebut) {
+> 		this.nombreAllumettes = nbAllumettesDebut;
+> 	}
+> 	
+> 	/** Obtenir le nombre d'allumettes encore en jeu.
+> 	 * @return nombreAllumettes le nombre d'allumettes encore en jeu
+> 	 */
+> 	public int getNombreAllumettes() {
+> 		return this.nombreAllumettes;
+> 	}
+> 	
+> 	/** Retirer des allumettes.  Le nombre d'allumettes doit être compris
+> 	 * entre 1 et PRISE_MAX, dans la limite du nombre d'allumettes encore
+> 	 * en jeu.
+> 	 * @param nbPrises nombre d'allumettes prises.
+> 	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'allumettes
+> 	 */
+> 	
+> 	public void retirer(int nbPrises) throws CoupInvalideException {
+> 		if (nbPrises <= 0) {
+> 			throw new CoupInvalideException(nbPrises, "< 1");
+> 		} else if (nbPrises > Jeu.PRISE_MAX) {
+> 			throw new CoupInvalideException(nbPrises, "> 3");
+> 		} else if (nbPrises > this.nombreAllumettes) {
+> 			throw new CoupInvalideException(nbPrises, ">" + this.nombreAllumettes);
+> 		} else {
+> 			this.nombreAllumettes = this.nombreAllumettes - nbPrises; 
+> 		} 
+> 	}
+> 
+> }
+
+./allumettes/Joueur.java: line 1-45 [74]
+./src/allumettes/Joueur.java: line 1-45
+< package allumettes;
+< 
+< 
+< /** Définir un joueur par son nom, 
+<  * on peut lui demander le nombre d'allumettes qu'il veut prendre 
+<  * pour un jeu donné, selon la stratégie choisie (naîf, rapide, expert ou humain).
+<  * @author noa cazes
+<  */
+< 
+< public class Joueur {
+< 	
+< 	/** Un joueur est défini par son nom et la stratégie choisie.
+< 	 */
+< 	private String nom;
+< 	private Strategie strategie;
+< 	
+< 	public Joueur(String nom, Strategie strategie) {
+< 		this.nom = nom;
+< 		this.strategie = strategie;
+< 	}
+< 	
+< 	/** Obtenir le nom du joueur.
+< 	 * @return nom le nom du joueur
+< 	 */
+< 	public String getNom() {
+< 		return this.nom;
+< 	}
+< 	
+< 	/** Obtenir la stratégie du joueur.
+< 	 * @return strategie la stratégie du joueur
+< 	 */
+< 	public Strategie getStrategie() {
+< 		return this.strategie;
+< 	}
+< 	
+< 	/** Demander le nombre d'allumettes que le joueur veut prendre
+< 	 * pour un jeu donné.
+< 	 * @param jeu le jeu donné
+< 	 * @return nbAllumettes le nombre d'allumettes que le joueur veut prendre
+< 	 */
+< 	public int getPrise(Jeu jeu){
+< 		return this.strategie.getPrise(jeu);
+< 	}
+< 
+< }
+---
+> package allumettes;
+> 
+> 
+> /** Définir un joueur par son nom, 
+>  * on peut lui demander le nombre d'allumettes qu'il veut prendre 
+>  * pour un jeu donné, selon la stratégie choisie (naîf, rapide, expert ou humain).
+>  * @author noa cazes
+>  */
+> 
+> public class Joueur {
+> 	
+> 	/** Un joueur est défini par son nom et la stratégie choisie.
+> 	 */
+> 	private String nom;
+> 	private Strategie strategie;
+> 	
+> 	public Joueur(String nom, Strategie strategie) {
+> 		this.nom = nom;
+> 		this.strategie = strategie;
+> 	}
+> 	
+> 	/** Obtenir le nom du joueur.
+> 	 * @return nom le nom du joueur
+> 	 */
+> 	public String getNom() {
+> 		return this.nom;
+> 	}
+> 	
+> 	/** Obtenir la stratégie du joueur.
+> 	 * @return strategie la stratégie du joueur
+> 	 */
+> 	public Strategie getStrategie() {
+> 		return this.strategie;
+> 	}
+> 	
+> 	/** Demander le nombre d'allumettes que le joueur veut prendre
+> 	 * pour un jeu donné.
+> 	 * @param jeu le jeu donné
+> 	 * @return nbAllumettes le nombre d'allumettes que le joueur veut prendre
+> 	 */
+> 	public int getPrise(Jeu jeu){
+> 		return this.strategie.getPrise(jeu);
+> 	}
+> 
+> }
+
+./allumettes/StrategieExperte.java: line 1-26 [67]
+./src/allumettes/StrategieExperte.java: line 1-26
+< package allumettes;
+< /** Stratégie dans laquelle l'ordinateur joue au mieux qu'il peut.
+<  * 
+<  * @author ncazes2
+<  *
+<  */
+< public class StrategieExperte implements Strategie {
+< 	
+< 	/** Obtenir le nombre d'allumettes que l'ordinateur doit
+< 	 * retirer s'il veut gagner. 
+< 	 * @param jeu le jeu donné
+< 	 * @return nbAllumettes le nombre d'allumettes que le joueur veut prendre
+< 	 */
+< 	public int getPrise(Jeu jeu) {
+< 		int nbAllumettesEnJeu = jeu.getNombreAllumettes(); 
+< 		int nbAllumettesPrises = 0; 
+< 		// Il doit rester 1, 5, 9 ou 13 allumettes pour l'adversaire
+< 		// Si l'ordinateur veut gagner à tout prix
+< 		for (int i = 1; i < Jeu.PRISE_MAX; i++) {
+< 			if ((nbAllumettesEnJeu - i)%4 == 1) {
+< 				nbAllumettesPrises = i;
+< 			}
+< 		}
+< 		return nbAllumettesPrises;
+< 	}
+< }
+---
+> package allumettes;
+> /** Stratégie dans laquelle l'ordinateur joue au mieux qu'il peut.
+>  * 
+>  * @author ncazes2
+>  *
+>  */
+> public class StrategieExperte implements Strategie {
+> 	
+> 	/** Obtenir le nombre d'allumettes que l'ordinateur doit
+> 	 * retirer s'il veut gagner. 
+> 	 * @param jeu le jeu donné
+> 	 * @return nbAllumettes le nombre d'allumettes que le joueur veut prendre
+> 	 */
+> 	public int getPrise(Jeu jeu) {
+> 		int nbAllumettesEnJeu = jeu.getNombreAllumettes(); 
+> 		int nbAllumettesPrises = 0; 
+> 		// Il doit rester 1, 5, 9 ou 13 allumettes pour l'adversaire
+> 		// Si l'ordinateur veut gagner à tout prix
+> 		for (int i = 1; i < Jeu.PRISE_MAX; i++) {
+> 			if ((nbAllumettesEnJeu - i)%4 == 1) {
+> 				nbAllumettesPrises = i;
+> 			}
+> 		}
+> 		return nbAllumettesPrises;
+> 	}
+> }
+
+./allumettes/StrategieRapide.java: line 1-28 [61]
+./src/allumettes/StrategieRapide.java: line 1-28
+< package allumettes;
+< 
+< /** Pour cette stratégie, l'ordinateur prend le maximum d'allumettes possible
+<  * (de manière à ce que la partie se termlien le plus rapidement possible).
+<  * @author ncazes2
+<  */
+< public class StrategieRapide implements Strategie {
+< 	
+< 	/** Demander à un joueur le nombre d'allumettes 
+< 	 * qu'il veut rétirer pour un jeu donné.
+< 	 * @param jeu le jeu donné
+< 	 * @return nbAllumettes le nombre d'allumettes que le joueur veut prendre
+< 	 */
+< 	public int getPrise(Jeu jeu) {
+< 		int nbAllumettesPrises = 0;
+< 		int nbAllumettesEnJeu = jeu.getNombreAllumettes();
+< 		
+< 		if (nbAllumettesEnJeu > 0) {
+< 			if (nbAllumettesEnJeu > Jeu.PRISE_MAX) {
+< 				nbAllumettesPrises = Jeu.PRISE_MAX;
+< 			} else { // 1 <= nbAllumettesPrises <= 3
+< 				nbAllumettesPrises = nbAllumettesEnJeu;
+< 			} 
+< 		} 
+< 		return nbAllumettesPrises;
+< 		
+< 	}
+< }
+---
+> package allumettes;
+> 
+> /** Pour cette stratégie, l'ordinateur prend le maximum d'allumettes possible
+>  * (de manière à ce que la partie se termlien le plus rapidement possible).
+>  * @author ncazes2
+>  */
+> public class StrategieRapide implements Strategie {
+> 	
+> 	/** Demander à un joueur le nombre d'allumettes 
+> 	 * qu'il veut rétirer pour un jeu donné.
+> 	 * @param jeu le jeu donné
+> 	 * @return nbAllumettes le nombre d'allumettes que le joueur veut prendre
+> 	 */
+> 	public int getPrise(Jeu jeu) {
+> 		int nbAllumettesPrises = 0;
+> 		int nbAllumettesEnJeu = jeu.getNombreAllumettes();
+> 		
+> 		if (nbAllumettesEnJeu > 0) {
+> 			if (nbAllumettesEnJeu > Jeu.PRISE_MAX) {
+> 				nbAllumettesPrises = Jeu.PRISE_MAX;
+> 			} else { // 1 <= nbAllumettesPrises <= 3
+> 				nbAllumettesPrises = nbAllumettesEnJeu;
+> 			} 
+> 		} 
+> 		return nbAllumettesPrises;
+> 		
+> 	}
+> }
+
+./allumettes/StrategieNaive.java: line 1-31 [58]
+./src/allumettes/StrategieNaive.java: line 1-31
+< package allumettes;
+< import java.util.Random;
+< 
+< /** Dans ce jeu donné, l'oridinateur choisi aléatoirement le nombre
+<  * d'allumettes à jouer.
+<  * @author ncazes2
+<  */
+< public class StrategieNaive implements Strategie {
+<      
+< 	
+< 	/** Demander à un joueur le nombre d'allumettes 
+< 	 * qu'il veut retirer pour un jeu donné, ici un nombre aléatoire
+< 	 * entre 1 et 3.
+< 	 * @param jeu le jeu donné
+< 	 * @return nbAllumettes le nombre d'allumettes que le joueur veut prendre
+< 	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'allumettes
+< 	 */
+< 	public int getPrise(Jeu jeu) {
+< 		Random al = new Random(); // crée un générateur de nombres aléatoires 
+< 		int nbAllumettesVoulues;
+< 		int nbAllumettesEnJeu = jeu.getNombreAllumettes();
+< 		do {
+< 			nbAllumettesVoulues = al.nextInt(Jeu.PRISE_MAX) + 1; // nbre alétoire compris entre 1 et 3
+< 		} while (nbAllumettesEnJeu < nbAllumettesVoulues);
+< 		
+< 		return nbAllumettesVoulues;
+< 		
+< 	}
+< 
+< 
+< }
+---
+> package allumettes;
+> import java.util.Random;
+> 
+> /** Dans ce jeu donné, l'oridinateur choisi aléatoirement le nombre
+>  * d'allumettes à jouer.
+>  * @author ncazes2
+>  */
+> public class StrategieNaive implements Strategie {
+>      
+> 	
+> 	/** Demander à un joueur le nombre d'allumettes 
+> 	 * qu'il veut retirer pour un jeu donné, ici un nombre aléatoire
+> 	 * entre 1 et 3.
+> 	 * @param jeu le jeu donné
+> 	 * @return nbAllumettes le nombre d'allumettes que le joueur veut prendre
+> 	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'allumettes
+> 	 */
+> 	public int getPrise(Jeu jeu) {
+> 		Random al = new Random(); // crée un générateur de nombres aléatoires 
+> 		int nbAllumettesVoulues;
+> 		int nbAllumettesEnJeu = jeu.getNombreAllumettes();
+> 		do {
+> 			nbAllumettesVoulues = al.nextInt(Jeu.PRISE_MAX) + 1; // nbre alétoire compris entre 1 et 3
+> 		} while (nbAllumettesEnJeu < nbAllumettesVoulues);
+> 		
+> 		return nbAllumettesVoulues;
+> 		
+> 	}
+> 
+> 
+> }
+
+./allumettes/Partie.java: line 89-124 [57]
+./src/allumettes/Partie.java: line 104-124
+< 			throw new ConfigurationException("L'argument doit être de la forme nom@strategie avec "
+< 					+ "strategie = naif | rapide | expert | humain | tricheur");
+< 		}
+< 		
+< //		if (result[1] == "naif") {
+< //			strategie = new StrategieNaive();
+< //		} else if (result[1] == "rapide") {
+< //			strategie = new StrategieRapide();
+< //		} else if (result[1] == "expert") {
+< //			strategie = new StrategieExperte();
+< //		} else if (result[1] == "humain") {
+< //			strategie = new StrategieHumaine();
+< //		} else if (result[1] == "tricheur") {
+< //			strategie = new StrategieTricheur();
+< //		} else {
+< //			throw new ConfigurationException("L'argument doit être de la forme nom@strategie avec "
+< //					+ "strategie = naif | rapide | expert | humain | tricheur");
+< //		}
+< 		return joueur;
+< 	}
+< 
+< 	/** Afficher des indications sur la manière d'exécuter cette classe. */
+< 	public static void afficherUsage() {
+< 		System.out.println("\n" + "Usage :"
+< 				+ "\n\t" + "java allumettes.Partie joueur1 joueur2"
+< 				+ "\n\t\t" + "joueur est de la forme nom@stratégie"
+< 				+ "\n\t\t" + "strategie = naif | rapide | expert | humain | tricheur"
+< 				+ "\n"
+< 				+ "\n\t" + "Exemple :"
+< 				+ "\n\t" + "	java allumettes.Partie Xavier@humain "
+< 					   + "Ordinateur@naif"
+< 				+ "\n"
+< 				);
+< 	}
+< 
+< }
+---
+> 			throw new ConfigurationException("L'argument doit être de la forme nom@strategie avec "
+> 					+ "strategie = naif | rapide | expert | humain | tricheur");
+> 		}
+> 		return joueur;
+> 	}
+> 
+> 	/** Afficher des indications sur la manière d'exécuter cette classe. */
+> 	public static void afficherUsage() {
+> 		System.out.println("\n" + "Usage :"
+> 				+ "\n\t" + "java allumettes.Partie joueur1 joueur2"
+> 				+ "\n\t\t" + "joueur est de la forme nom@stratégie"
+> 				+ "\n\t\t" + "strategie = naif | rapide | expert | humain | tricheur"
+> 				+ "\n"
+> 				+ "\n\t" + "Exemple :"
+> 				+ "\n\t" + "	java allumettes.Partie Xavier@humain "
+> 					   + "Ordinateur@naif"
+> 				+ "\n"
+> 				);
+> 	}
+> 
+> }
+
+./allumettes/StrategieTricheur.java: line 1-28 [56]
+./src/allumettes/StrategieTricheur.java: line 1-28
+< package allumettes;
+< 
+< public class StrategieTricheur implements Strategie{
+<     
+< 	
+< 	/** Obtenir le nombre d'allumettes prises par un joueur tricheur.
+< 	 * @param jeu le jeu donné
+< 	 * @return nbAllumettes le nombre d'allumettes que le joueur veut prendre
+< 	 */
+< 	public int getPrise(Jeu jeu) {
+< 		// Le tricheur retire toutes les allumettes sauf 2
+< 		do {
+< 			try {
+< 				jeu.retirer(1);
+< 			} catch (CoupInvalideException e){
+< 				
+< 			} catch (OperationInterditeException e1) {
+< 				
+< 			}
+< 			
+< 		} while (jeu.getNombreAllumettes() > 2);
+< 		
+< 		// Puis le tricheur retire une seule allumette
+< 		// Il est alors sûr de gagner
+< 		return 1;
+< 
+< 	}
+< }
+---
+> package allumettes;
+> 
+> public class StrategieTricheur implements Strategie{
+>     
+> 	
+> 	/** Obtenir le nombre d'allumettes prises par un joueur tricheur.
+> 	 * @param jeu le jeu donné
+> 	 * @return nbAllumettes le nombre d'allumettes que le joueur veut prendre
+> 	 */
+> 	public int getPrise(Jeu jeu) {
+> 		// Le tricheur retire toutes les allumettes sauf 2
+> 		do {
+> 			try {
+> 				jeu.retirer(1);
+> 			} catch (CoupInvalideException e){
+> 				
+> 			} catch (OperationInterditeException e1) {
+> 				
+> 			}
+> 			
+> 		} while (jeu.getNombreAllumettes() > 2);
+> 		
+> 		// Puis le tricheur retire une seule allumette
+> 		// Il est alors sûr de gagner
+> 		return 1;
+> 
+> 	}
+> }
+
+./allumettes/Procuration.java: line 1-26 [55]
+./src/allumettes/Procuration.java: line 1-26
+< package allumettes;
+< //import allumettes2.Joueur;
+< 
+< public class Procuration implements Jeu {
+< 	
+< 	private Jeu jeu; 
+< 	
+< 	public Procuration(Jeu j) {
+< 		this.jeu = j;
+< 	}
+< 	
+< 	/** Obtenir le nombre d'allumettes encore en jeu.
+< 	 * @return nombre d'allumettes encore en jeu
+< 	 */
+< 	public int getNombreAllumettes() {
+< 		return jeu.getNombreAllumettes();
+< 	}
+< 
+< 	/** Lève une exception si le joueur fait appel à la méthode retirer du jeu.
+< 	 * @param nbPrises nombre d'allumettes prises.
+< 	 * @throws OperationInterditeException tentative d'avoir accès au jeu
+< 	 */
+< 	public void retirer(int nbPrises) throws OperationInterditeException {
+< 		throw new OperationInterditeException("");
+< 	}
+< }
+---
+> package allumettes;
+> //import allumettes2.Joueur;
+> 
+> public class Procuration implements Jeu {
+> 	
+> 	private Jeu jeu; 
+> 	
+> 	public Procuration(Jeu j) {
+> 		this.jeu = j;
+> 	}
+> 	
+> 	/** Obtenir le nombre d'allumettes encore en jeu.
+> 	 * @return nombre d'allumettes encore en jeu
+> 	 */
+> 	public int getNombreAllumettes() {
+> 		return jeu.getNombreAllumettes();
+> 	}
+> 
+> 	/** Lève une exception si le joueur fait appel à la méthode retirer du jeu.
+> 	 * @param nbPrises nombre d'allumettes prises.
+> 	 * @throws OperationInterditeException tentative d'avoir accès au jeu
+> 	 */
+> 	public void retirer(int nbPrises) throws OperationInterditeException {
+> 		throw new OperationInterditeException("");
+> 	}
+> }
+
+./src/allumettes/Partie.java: line 93-97 [37]
+./src/allumettes/Partie.java: line 97-101
+< 		if (result[1] == "naif") {
+< 			strategie = new StrategieNaive();
+< 		} else if (result[1] == "rapide") {
+< 			strategie = new StrategieRapide();
+< 		} else if (result[1] == "expert") {
+---
+> 		} else if (result[1] == "expert") {
+> 			strategie = new StrategieExperte();
+> 		} else if (result[1] == "humain") {
+> 			strategie = new StrategieHumaine();
+> 		} else if (result[1] == "tricheur") {
+
+./src/allumettes/Arbitre.java: line 18-37 [33]
+./src/allumettes/Joueur.java: line 18-34
+< 		this.j2 = j2;
+< 		this.confiant = confiant;
+< 		
+< 	}
+< 	
+< 	/** Obtenir le joueur 1.
+< 	 * @return j1 le joueur 1
+< 	 */
+< 	
+< 	public Joueur getJ1(){
+< 		return this.j1;
+< 	}
+< 	
+< 	/** Obtenir le joueur 2.
+< 	 * @return j2 le joueur 2
+< 	 */
+< 	
+< 	public Joueur getJ2(){
+< 		return this.j2;
+< 	}
+---
+> 		this.nom = nom;
+> 		this.strategie = strategie;
+> 	}
+> 	
+> 	/** Obtenir le nom du joueur.
+> 	 * @return nom le nom du joueur
+> 	 */
+> 	public String getNom() {
+> 		return this.nom;
+> 	}
+> 	
+> 	/** Obtenir la stratégie du joueur.
+> 	 * @return strategie la stratégie du joueur
+> 	 */
+> 	public Strategie getStrategie() {
+> 		return this.strategie;
+> 	}
+
+./allumettes/CoupInvalideException.java: line 1-18 [33]
+./src/allumettes/CoupInvalideException.java: line 1-18
+< package allumettes;
+< 
+< /** Exception qui indique qu'un coup invalide est joué.
+<  * @author	Xavier Crégut
+<  * @version	$Revision: 1.3 $
+<  */
+< public class CoupInvalideException extends RuntimeException {
+< 
+< 	/** Nombre d'allumettes prises. */
+< 	private int nbAllumettes;
+< 
+< 	/** Initialiser CoupInvalideException à partir du nombre d'allumettes
+< 	 * prises.
+< 	 * @param nb le nombre d'allumettes prises
+< 	 * @param message le message qui explique pourquoi nb est invalide.
+< 	 */
+< 	public CoupInvalideException(int nb, String message) {
+< 		super("Prise invalide : " + nb + " (" + message + ")");
+---
+> package allumettes;
+> 
+> /** Exception qui indique qu'un coup invalide est joué.
+>  * @author	Xavier Crégut
+>  * @version	$Revision: 1.3 $
+>  */
+> public class CoupInvalideException extends RuntimeException {
+> 
+> 	/** Nombre d'allumettes prises. */
+> 	private int nbAllumettes;
+> 
+> 	/** Initialiser CoupInvalideException à partir du nombre d'allumettes
+> 	 * prises.
+> 	 * @param nb le nombre d'allumettes prises
+> 	 * @param message le message qui explique pourquoi nb est invalide.
+> 	 */
+> 	public CoupInvalideException(int nb, String message) {
+> 		super("Prise invalide : " + nb + " (" + message + ")");
+
+./src/allumettes/Arbitre.java: line 94-98 [30]
+./src/allumettes/Arbitre.java: line 100-105
+< 				System.out.println(j1.getNom() + " a perdu!");
+< 				System.out.println(j2.getNom() + " a gagné!");
+< 
+< 			}
+< 		}
+---
+> 		System.out.println(j2.getNom() + " a perdu!");
+> 		System.out.println(j1.getNom() + " a gagné!");
+> 	}
+> 	
+> 
+> }
+
+./allumettes/Jeu.java: line 1-22 [25]
+./src/allumettes/Jeu.java: line 1-22
+< package allumettes;
+< 
+< public interface Jeu {
+< 
+< 	/** Nombre maximal d'allumettes pouvant Ãªtre prises. */
+< 	int PRISE_MAX = 3;
+< 
+< 	/** Obtenir le nombre d'allumettes encore en jeu.
+< 	 * @return nombre d'allumettes encore en jeu
+< 	 */
+< 	int getNombreAllumettes();
+< 
+< 	/** Retirer des allumettes.  Le nombre d'allumettes doit Ãªtre compris
+< 	 * entre 1 et PRISE_MAX, dans la limite du nombre d'allumettes encore
+< 	 * en jeu.
+< 	 * @param nbPrises nombre d'allumettes prises.
+< 	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'alumettes
+< 	 * @throws OperationInterditeException 
+< 	 */
+< 	void retirer(int nbPrises) throws CoupInvalideException, OperationInterditeException;
+< 
+< }
+---
+> package allumettes;
+> 
+> public interface Jeu {
+> 
+> 	/** Nombre maximal d'allumettes pouvant Ãªtre prises. */
+> 	int PRISE_MAX = 3;
+> 
+> 	/** Obtenir le nombre d'allumettes encore en jeu.
+> 	 * @return nombre d'allumettes encore en jeu
+> 	 */
+> 	int getNombreAllumettes();
+> 
+> 	/** Retirer des allumettes.  Le nombre d'allumettes doit Ãªtre compris
+> 	 * entre 1 et PRISE_MAX, dans la limite du nombre d'allumettes encore
+> 	 * en jeu.
+> 	 * @param nbPrises nombre d'allumettes prises.
+> 	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'allumettes
+> 	 * @throws OperationInterditeException 
+> 	 */
+> 	void retirer(int nbPrises) throws CoupInvalideException, OperationInterditeException;
+> 
+> }
+

@@ -1,0 +1,13 @@
+Début de la vérification...
+[ERROR] Jeu.java:17: La ligne excède 90 caractères (trouvé 93). [LineLength]
+[ERROR] Partie.java:17:13: Chaque déclaration de variable doit faire l'objet d'une instruction à part. [MultipleVariableDeclarations]
+[ERROR] Partie.java:19: Line has trailing spaces. [RegexpSingleline]
+[ERROR] Partie.java:21:33: '13' devrait être défini comme une constante. [MagicNumber]
+[ERROR] Partie.java:22: Line has trailing spaces. [RegexpSingleline]
+[ERROR] Partie.java:25: Line has trailing spaces. [RegexpSingleline]
+[ERROR] Partie.java:60: Line has trailing spaces. [RegexpSingleline]
+[ERROR] Partie.java:63: Line has trailing spaces. [RegexpSingleline]
+[ERROR] Partie.java:89: La ligne excède 90 caractères (trouvé 111). [LineLength]
+[ERROR] Partie.java:90: La ligne excède 90 caractères (trouvé 100). [LineLength]
+[ERROR] Partie.java:100: La ligne excède 90 caractères (trouvé 101). [LineLength]
+Vérification terminée.

@@ -1,0 +1,77 @@
+
+\documentclass[frenchb]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{babel}
+
+\begin{document}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=10cm]{inp_n7.png}
+\end{figure}
+
+\title{\vspace{1cm} \textbf{Technologie Objet - Projet long} \\ \textbf{Développement d'une application Unlock} \\ \textit{\textbf{Rapport individuel - Itération 1}}}
+
+\author{Auteur\\ \textsc{Cazes} Noa  }
+\date{\vspace{10cm} Département Sciences du Numérique - Première année \\
+2019-2020 }
+
+\maketitle
+
+\newpage
+
+\section{Rappel: Objectif général du projet}
+Le but est de recréer le jeu « Unlock » sans l'aspect physique de la boite et de son contenu. Le ou les joueur(s) pourra/pourront jouer sur une ou plusieurs énigmes proposées par l'interface graphique.
+
+Ce produit est destiné à tout public qui souhaite se distraire avec un jeu ludique et qui nécessite réflexion, et à la différence du jeu traditionnel, il est possible de jouer n'importe où au jeu Unlock. 
+
+
+\section{Travail réalisé pour l'itération 1}
+Lors de cette première itération, j'étais en charge de l'interface graphique. 
+
+Le but de cette itération était de réaliser un jeu simple avec seulement une seule carte, de façon à implémenter les fonctionnalités de base de l'application, telles que:
+\begin{enumerate}
+	\item Créer un plateau de jeu simple avec la bibliothèque graphique Swing,
+	\item Démarrer une partie,
+	\item Créer une nouvelle partie,
+	\item Quitter la partie,
+	\item Saisir le numéro d'une carte.
+	
+\end{enumerate}
+
+\par\leavevmode\par
+
+J'ai ainsi réalisé, entièrement ou partiellement, les classes suivantes:
+\begin{enumerate}
+	\item UnlockSwing.java \\
+	Correspond à la classe principale en ce qui concerne l'interface graphique.
+	\item ActionNouvellePartie.java \\
+	Implémente ActionListener, \\
+	Permet de définir l'action engendrée lors de l'évènement
+"appuie sur l'item du menu Nouvelle Partie".
+	\item ActionQuitter.java \\
+	Implémente ActionListener, \\
+	Permet de définir l'action engendrée lors de l'évènement
+"appuie sur l'item du menu Quitter".
+	\item ActionSaisirCode.java \\
+	Implémente ActionListener, \\
+	Permet de définir l'action engendrée lors de l'évènement
+"appuie sur l'item du menu Saisir code".
+	\item SelecCarte.java \\
+	Implémente ActionListener, \\
+	Permet de définir l'action engendrée lors de l'évènement
+"afficher une carte sur le plateau".
+
+
+\end{enumerate}
+
+
+
+
+
+\end{document} 

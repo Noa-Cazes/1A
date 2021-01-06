@@ -1,0 +1,139 @@
+package Unlock;
+//package Unlock
+import javax.swing.*;
+
+import java.awt.*;
+import javax.swing.event.*;
+import java.awt.event.*;
+import java.util.*;
+/* Créer un chronomètre.
+ */
+public class FenetreChrono {
+	
+	private long TempsDepart=0;
+	private long TempsFin=0;
+	private long PauseDepart=0;
+	private long PauseFin=0;
+	private long Duree=0;
+	
+	private JFrame fenetreChrono; 
+	/* Bouton du chrono */
+	private JButton boutonChrono = new JButton("Start");
+	/* Afficher le temps */
+	private JLabel temps = new JLabel();
+	
+	
+	// Construire le chrono
+	public FenetreChrono() {
+		this.fenetreChrono = new JFrame("Chronomètre");
+		
+		// Créer un JPanel
+		JLabel contentPane = new JLabel();
+
+		// Récupérer les dimensions de l'écran
+		Dimension tailleEcran = Toolkit.getDefaultToolkit().getScreenSize();
+		double hauteur = tailleEcran.getHeight();
+		double largeur = tailleEcran.getWidth();
+		// Mettre la fenêtre à droite
+		this.fenetreChrono.setLocation((int) largeur/2, (int) hauteur);
+		
+		
+		// Ajouter le bouton
+	    //contentPane.add(boutonChrono);
+	    
+	    // Appliquer les changements
+	    this.fenetreChrono.getContentPane().add(boutonChrono);
+	    // this.setContentPane(contentPane);
+	    
+		// Associer une action au bouton Chrono
+		boutonChrono.addActionListener(new ActionChronoStartPause(this));
+		
+		// Afficher la fenêtre
+		// Redimensionner la fenêtre
+		//this.pack();
+		this.fenetreChrono.setVisible(true);
+		this.fenetreChrono.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+	public void start () {
+		TempsDepart=System.currentTimeMillis();
+		TempsFin=0;
+		PauseDepart=0;
+		PauseFin=0;
+		Duree=0;
+	}
+
+	public void pause () {
+		PauseFin=System.currentTimeMillis();
+		TempsDepart=TempsDepart+PauseFin-PauseDepart;
+		TempsFin=0;
+		Duree=0;
+		PauseDepart=0;
+		PauseFin=0;
+	}
+	
+	public void resume () {
+		PauseFin=TempsDepart+PauseFin-PauseDepart;
+		TempsFin=0;
+		PauseDepart=0;
+		PauseFin=0;
+		Duree=0;
+	}
+	
+	public void stop () {
+		TempsFin=System.currentTimeMillis();
+		Duree=(TempsFin-TempsDepart)-(PauseFin-PauseDepart);
+		TempsDepart=0;
+		TempsFin=0;
+		PauseDepart=0;
+		PauseFin=0;
+	}
+	
+	public static String TimeToHMS(long TempsS) {
+		int h=(int) (TempsS/3600);
+		int m=(int) ((TempsS%3600)/60);
+		int s=(int) (TempsS%60);
+		String r="";
+		if(h>0) {
+			r+=h+" h ";
+		}
+		if(m>0) {
+			r+=m+" min";
+		}
+		if(s>0) {
+			r+=s+" s";
+		}
+		if(h<=0 && m<=0 && s<=0) {
+			r=" 0 s";
+		}
+		return r;
+	}
+	
+	// Les getters utiles
+	
+	public long GetDureeS() {
+		return Duree/1000;
+	}
+	
+	public String GetDureeTxt() {
+		return TimeToHMS(GetDureeS());
+	}
+	
+	/** Obtenir le texte du bouton boutonStartPause.
+	 * @return boutonStartPause le bouton qui permet de lancer et 
+	 * de mettre sur pause le chrono
+	 */
+	public JButton getBoutonChrono() {
+		return this.boutonChrono;
+	}
+	
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				new FenetreChrono();
+			}
+		});
+	}
+	
+	
+}

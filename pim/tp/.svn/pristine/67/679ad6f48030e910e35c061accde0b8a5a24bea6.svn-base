@@ -1,0 +1,138 @@
+--------------------------------------------------------------------------------
+--  Auteur   : Cazes Noa
+--  Objectif : Réviser les tables de multiplications en affichant pour une table donnée les opérations à affectuer, et en affichant des messages en fonction du
+-- nombre d'erreurs commmises.
+-------------------------------------------------------------------------------
+
+
+-- Cazes, groupe de TP CM1C
+-- R0: Réviser les tables de multiplications en affichant pour une table donnée les opérations à affectuer, et en affichant des messages en fonction du
+-- nombre d'erreurs commmises.
+-- Tests:
+-- 7 * 2 -> 14
+-- 7 * 3 -> 21
+-- 7 * 4 -> 26
+-- 7 * 6 -> 42
+-- 7 * 7 -> 49
+-- 7 * 1 -> 7
+-- 7 * 8 -> 56
+-- 7 * 5 -> 35
+-- 7 * 9 -> 63
+-- 7 * 10 -> 70
+-- => affiche "Une seule erreur. Très bien."
+
+with Ada.Text_IO;           use Ada.Text_IO;
+with Ada.Integer_Text_IO;   use Ada.Integer_Text_IO;
+with Ada.Calendar;          use Ada.Calendar;
+With Alea;
+
+
+procedure Multiplications is
+
+    -- déclarations des variables du programme principal
+    N: Integer;             -- entier lu au clavier
+    N_Aleatoire: Integer;   -- nombre généré aléatoirement entre 1 et 10 inclus
+    N_Duree_Max: Integer;     -- variable où on a placé le nombre alétoire correspondant au temps de réponse maximal
+    Duree_Max: Duration;       -- temps de réponse maximal
+    Temps_Debut: Time;     -- heure à laquelle la question est posée
+    Temps_Fin: Time;       -- heure à laquelle la personne a répondu
+    Duree: Duration;       -- durée de la réponse
+    Temps_Moyen: Duration; -- Temps de réponse moyen
+    Resultat: Integer;        -- résultat de la réponse
+    Nbre_Erreur: Integer;   -- nombre d'erreur au cours de la révision d'une table
+    Somme: Duration;         --pour calculer le temps moyen de réponse
+    Reponse: Character;        -- réponse à la question "On continue?"
+    Stop: Boolean;        -- Condition d'arrêt du programme
+    Condition_Sortie: Boolean;   -- Condition de sortie de la boucle concernant le numéro de la table à entrer
+    -- déclaration du paquetage Mon_Alea
+    package Mon_Alea is new Alea(1,10); -- gnéérateur de nombres dans l'intervalle [1,10]
+    use Mon_Alea;
+
+    -- implémentation du corps du programme
+    begin
+        loop
+            loop
+                Put("Saisir le numéro N de la table, entre 1 et 10, que vous souhaitiez réviser : ");
+                Get(N);      -- entier lu au clavier
+                Skip_Line;
+                Condition_Sortie := (N >= 1 and N <=10);
+            exit when Condition_Sortie;
+            end loop;        -- N entier compris entre 1 et 10, bornes incluses
+            Put("Table à réviser : ");
+            Put(N,1);
+            N_Aleatoire := 1; -- initialisée de façon quelconque
+            N_Duree_max := 0; -- initialisée à 0, chiffre non tiré aléatoirement, pour enlever toute ambiguîté.
+            Duree_Max := 0.0;   -- initialisée à 0, car ne sera pas gardé en tant que tant de réponse maximal, car absurde.
+            Somme := 0.0;       -- pour calculer la moyenne des temps de réponse.
+            Nbre_Erreur := 0;    -- initialisation du nombree d'erreurs à 0, car le joeur ne démarrre pas en ayant des "points" négatifs. 
+            for i in 1..10 loop
+                Get_Random_Number (N_Aleatoire); -- N_Aleatoire est un entier généré entre 1 et 10.
+                New_Line;
+                Temps_debut := Clock; -- plaçé avant l'écriture de la question, mais cela n'a pas d'importance, dans la mesure où on compare les valeurs entre elles.
+                Put("(M"); 
+                Put(i,1);
+                Put(") ");
+                Put(N,1);
+                Put(" * " );
+                Put(N_Aleatoire,1);
+                Put(" ?");
+                Get(Resultat); -- résultat de la multiplication entré par l'utilisateur
+                Temps_Fin := Clock;
+                Duree :=  Temps_Fin - Temps_Debut;
+                Somme :=  Somme + Duree;
+                if Duree > Duree_Max then
+                    Duree_Max := Duree;
+                    N_Duree_Max := N_Aleatoire;
+                else
+                    null;
+                end if;
+                if Resultat = N * N_Aleatoire then
+                    Put_Line ("Bravo !");
+                else
+                    Put_Line ("Mauvaise réponse.");
+                    Nbre_Erreur :=  Nbre_Erreur + 1;
+                end if;
+            end loop;
+            if Nbre_Erreur =0 then
+                Put_Line("Aucune erreur. Excellent!");
+            elsif Nbre_Erreur =1 then
+                Put_Line("Une seule erreur. Très bien.");
+            elsif Nbre_Erreur =10 then
+                Put_Line("Tout est faux ! Volontaire ?");
+            elsif Nbre_Erreur <= 5 then
+                Put("Seulement");
+                Put(1,Nbre_Erreur);
+                if Nbre_Erreur = 1 then
+                    Put(" bonne réponse. Il faut apprendre la table de "); 
+                else
+                    Put(" bonnes réponses. Il faut apprendre la table de ");
+                end if;
+                Put(N,1);
+                Put_Line("!");
+            else
+                Put(Nbre_Erreur);
+                Put(" erreur(s). Il faut encore travailler la table de " );
+                Put(N,1);
+                Put_Line(".");
+            end if;
+            Temps_Moyen := Somme/10;
+            if Duree_Max >= Temps_Moyen + 1.0 then -- temps de réponse moyen + 1 seconde
+                Put("Des hésitations sur la table de ");
+                Put(N_Duree_Max,1);
+                Put(":");
+                Put(Duration'Image(Duree_Max));
+                Put(" secondes contre ");
+                Put(Duration'Image(Temps_Moyen));
+                Put_Line(". Il faut certainement la réviser.");
+            else
+                null;
+            end if; 
+            Put_Line("On continue ? -");
+            Put_Line("Si vous souhaitez continuer de réviser, veuillez saisir 'O'");
+            Put_Line("Sinon veuillez saisir 'N'");
+            Get(Reponse);
+            Stop := (Reponse='N' or Reponse='n');
+        exit when Stop;
+	end loop; -- reponse=non, l'utilisateur veut arrêter de réviser
+    end Multiplications;
+

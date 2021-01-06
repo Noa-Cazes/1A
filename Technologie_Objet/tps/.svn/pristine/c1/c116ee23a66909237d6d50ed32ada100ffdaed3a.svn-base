@@ -1,0 +1,10 @@
+//package Unlock;
+
+/**
+ * Présente une salle et les objects qu'elle recèle.
+ * @author ipeltier
+ *
+ */
+public class CarteLieu {
+
+}

@@ -1,0 +1,96 @@
+with Ada.Unchecked_Deallocation;
+
+package body Ensembles_Chainage is
+    procedure Free is new Ada.Unchecked_Deallocation (T_Cellule, T_Ensemble);
+
+
+    -- Sous-programme permet d'initialiser un ensemble.
+    procedure Initialiser (Ens : out T_Ensemble) is
+    begin
+        Ens := Null;
+    end Initialiser;
+
+       -- Sous-programme qui permet de détruire un ensemble.
+    procedure Detruire (Ens : in out T_Ensemble) is
+    begin
+        if (Ens /= Null) then
+            Detruire(Ens.all.Suivant);
+            Free(Ens);
+        else
+            Null;
+        end if;
+    end Detruire;
+
+    -- Savoir si l'ensemble est vide ou non.
+    function Est_Vide (Ens : in T_Ensemble) return Boolean is
+    begin
+        return (Ens = Null);
+    end Est_Vide;
+
+    -- Obtenir la taille d'un ensemble.
+    function Taille_Ensemble (Ens : in T_Ensemble) return Integer is
+        cpt : Integer; -- compteur (du nombre d'éléments dans l'ensemble)
+        Ens1 : T_Ensemble;
+    begin
+        Ens1 := Ens;
+        cpt := 0;
+        while Ens1 /= Null loop
+            Ens1 := Ens1.all.Suivant;
+            cpt := cpt + 1;
+        end loop;
+        return cpt;
+    end Taille_Ensemble;
+
+    -- savoir si un élément est présent dans un ensemble.
+    function Present (Ens : in T_Ensemble; Elt : in T_Elts) return Boolean is
+        Ens1 : T_Ensemble;
+    begin
+        Ens1 := Ens;
+        while (Ens1 /= Null) and then Ens1.all.Element /= Elt loop
+            Ens1 := Ens1.all.Suivant;
+        end loop;
+        return (Ens1 /= Null);
+    end Present;
+
+
+    -- Ajouter un élément dans un ensemble au début.
+    procedure Ajouter (Ens : in out T_Ensemble; Elt : in T_Elts) is
+        Ens1 : T_Ensemble;   -- adresse mémoire de Elt
+    begin
+        if Present(Ens,Elt) then
+            null;
+        else
+            Ens1 := new T_Cellule;
+            Ens1.all.Element := Elt;
+            Ens1.all.Suivant := Ens;
+            Ens := Ens1;
+        end if;
+    end Ajouter;
+
+    -- Supprimer un élément dans un ensemble, doit utiliser la récursivité.
+    procedure Supprimer (Ens : in out T_Ensemble; Elt : in T_Elts) is
+        Ens1 : T_Ensemble;
+    begin
+        if Ens.all.Element = Elt then
+            Ens1 := Ens.all.Suivant;
+            Free(Ens);
+            Ens := Ens1;
+        else
+            Supprimer(Ens.all.Suivant, Elt);
+        end if;
+    end Supprimer;
+
+
+    -- Sous-programme qui permet d'appliquer à tous les éléments de l'ensemble une opération.
+    procedure Appliquer_Sur_Tous (Ens : in  T_Ensemble) is
+        Ens1 : T_Ensemble;
+    begin
+        Ens1 := Ens;
+        while Ens1 /= Null loop
+            Operation(Ens1.all.Element);
+            Ens1 := Ens1.all.Suivant;
+        end loop;
+    end Appliquer_Sur_Tous;
+end Ensembles_Chainage;
+
+

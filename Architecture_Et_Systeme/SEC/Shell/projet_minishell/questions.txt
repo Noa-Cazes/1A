@@ -1,0 +1,1 @@
+1) et 2) On remarque, comme le processus père n'attend pas la fin du processus fils pour continuer son execution après la fin d'une boucle, l'affichage du prompt se fera avant l'affichage du résultat d'éxecution de la commande entrée par l'utilisateur. 

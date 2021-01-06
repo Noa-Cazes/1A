@@ -1,0 +1,15 @@
+=====[ Relecture du code ]======================================================
+
+Remarque : n points de pénalité ==> n points perdus sur la note.
+
+Fichier LISEZ-MOI.txt : 0 pt
+
+
+Commentaire de documentation : 	0
+
+Forme (total = -5) : 0
+
+
+Test unitaires (total -1) : 0
+--------------------------------------------------------------------------------
+Total: 0 pt

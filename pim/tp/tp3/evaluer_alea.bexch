@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__evaluer_alea.o
+[PROJECT FILES]
+/home/ncazes2/pim/tpbis/tp3/tp3.gpr
+20191007060339
+[BOUND OBJECT FILES]
+/home/ncazes2/pim/tpbis/tp3/alea.o
+/home/ncazes2/pim/tpbis/tp3/evaluer_alea.o
+[GENERATED SOURCE FILES]
+b__evaluer_alea.ads
+b__evaluer_alea.adb
+b__evaluer_alea.ali
+[RESULTING OPTIONS]
+-L/home/ncazes2/pim/tpbis/tp3/
+-L/home/ncazes2/pim/tpbis/tp3/
+-L/applications/gnat/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/
+-static
+-static-libgcc
+/applications/gnat/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/libgnat.a
+-ldl

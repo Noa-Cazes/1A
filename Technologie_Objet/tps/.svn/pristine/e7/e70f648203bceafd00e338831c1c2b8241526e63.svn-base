@@ -1,0 +1,50 @@
+import java.awt.event.*;
+import java.util.HashMap;
+import java.util.Map;
+import javax.swing.*;
+
+import javax.swing.ImageIcon;
+
+/** Permet de définir l'action engendrée lors de l'évènement
+ * cliquer sur une case.
+ *  * @author ncaze
+ *
+ */
+public class cliquerCase implements MouseListener {
+	
+	private ModeleMorpion modele;
+	private MorpionSwing vue;
+	public JLabel uneCase;
+    
+	
+
+	@Override
+	public void mouseClicked(MouseEvent clicked) {
+		this.uneCase.setIcon(vue.getImages().get(modele.getJoueur()));
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent arg0) {
+
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent arg0) {
+		
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent arg0) {
+		
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent arg0) {
+		
+		
+	}
+
+}

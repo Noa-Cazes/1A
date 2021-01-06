@@ -1,0 +1,32 @@
+Partie 2.2
+Section CalculPropositionnel.
+Require Import Naturelle.
+Variable phi psi chi E Y R :Prop.
+
+
+
+Theorem Thm00 : ((phi -> psi) /\ phi)->psi.
+intro H1.
+destruct H1.
+cut phi. 
+exact H.
+exact H0.
+Qed. 
+
+
+Theorem Thm01 : (phi /\psi) ->phi.
+intro H1.
+destruct H1.
+exact H.
+Qed.
+
+Theorem Thm02 : ((phi \/ psi) /\ (phi -> chi) /\ (psi -> chi)) -> chi.
+intro H.
+destruct H.
+destruct H0.
+destruct H.
+apply (H0 H).
+
+apply (H1 H).
+Qed.
+
